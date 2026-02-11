@@ -3,24 +3,24 @@ import { CONTACT_EMAIL } from '@/config';
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground border-t border-border mt-20">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-secondary text-secondary-foreground border-t border-border mt-12">
+      <div className="container py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
           {/* About */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Herzgruppen Reutlingen</h3>
-            <p className="text-sm opacity-90">
+            <h3 className="font-semibold mb-3">Herzgruppen Reutlingen</h3>
+            <p className="text-sm opacity-90 leading-snug">
               Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.
             </p>
-            <p className="text-xs opacity-75 mt-3">
-              Bewegung, Gemeinschaft und Lebensfreude – unter ärztlicher Aufsicht und fachkundiger Anleitung.
+            <p className="text-xs opacity-75 mt-2">
+              Bewegung, Gemeinschaft und Lebensfreude – unter ärztlicher Aufsicht.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold mb-3">Navigation</h4>
+            <ul className="space-y-1.5 text-sm">
               <li>
                 <Link href="/">
                   <a className="hover:underline opacity-90 hover:opacity-100">Startseite</a>
@@ -46,8 +46,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-sm opacity-90">
+            <h4 className="font-semibold mb-3">Kontakt</h4>
+            <ul className="space-y-1.5 text-sm opacity-90">
               <li>
                 <strong>Geschäftsstelle:</strong>
                 <br />
@@ -72,8 +72,8 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-semibold mb-4">Rechtliches</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold mb-3">Rechtliches</h4>
+            <ul className="space-y-1.5 text-sm">
               <li>
                 <Link href="/impressum">
                   <a className="hover:underline opacity-90 hover:opacity-100">Impressum</a>
@@ -94,14 +94,12 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border/50 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
+        <div className="border-t border-border/50 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm opacity-75 gap-2">
             <p>
               &copy; {new Date().getFullYear()} ARGE Reutlingen e.V. Alle Rechte vorbehalten.
             </p>
-            <p className="mt-4 md:mt-0">
-              Zertifiziert durch WBRS | VR 350490 beim Amtsgericht Stuttgart
-            </p>
+            <p>Zertifiziert durch WBRS | VR 350490 beim Amtsgericht Stuttgart</p>
           </div>
         </div>
       </div>

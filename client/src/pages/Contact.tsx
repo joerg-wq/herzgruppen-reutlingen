@@ -13,25 +13,25 @@ export default function Contact() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-16 md:py-24">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Kontakt
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base text-muted-foreground max-w-2xl">
               Kontaktieren Sie uns für Fragen, Anmeldungen oder weitere Informationen.
             </p>
           </div>
         </section>
 
         {/* Contact Info */}
-        <section className="py-16 md:py-20">
+        <section className="py-8 md:py-10">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {/* Main Contact */}
-              <Card className="p-8">
-                <h2 className="text-2xl font-bold mb-8">Geschäftsstelle</h2>
-                <div className="space-y-6">
+              <Card className="p-5">
+                <h2 className="text-xl font-bold mb-5">Geschäftsstelle</h2>
+                <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <MapPin className="text-primary flex-shrink-0 mt-1" size={24} />
                     <div>
@@ -69,9 +69,9 @@ export default function Contact() {
               </Card>
 
               {/* Office Hours */}
-              <Card className="p-8">
-                <h2 className="text-2xl font-bold mb-8">Sprechzeiten</h2>
-                <div className="space-y-4">
+              <Card className="p-5">
+                <h2 className="text-xl font-bold mb-5">Sprechzeiten</h2>
+                <div className="space-y-3">
                   <div className="flex items-start gap-4">
                     <Clock className="text-secondary flex-shrink-0 mt-1" size={24} />
                     <div>
@@ -92,12 +92,12 @@ export default function Contact() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-16 md:py-20 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
             <div className="max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Kontaktformular</h2>
-              <Card className="p-8">
-                <p className="text-muted-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Kontaktformular</h2>
+              <Card className="p-5">
+                <p className="text-sm text-muted-foreground mb-4">
                   Füllen Sie das Formular aus und wir werden uns in Kürze bei Ihnen melden.
                 </p>
                 <Link href="/join">
@@ -111,10 +111,10 @@ export default function Contact() {
         </section>
 
         {/* FAQ Link */}
-        <section className="py-16 md:py-20">
+        <section className="py-8 md:py-10">
           <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Häufig gestellte Fragen</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Häufig gestellte Fragen</h2>
+            <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
               Viele Fragen können Sie in unserem FAQ-Bereich finden.
             </p>
             <Link href="/faq">

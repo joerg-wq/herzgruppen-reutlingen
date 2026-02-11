@@ -12,16 +12,16 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-12 md:py-16">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Ambulante Herzgruppen im Kreis Reutlingen
               </h1>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base text-muted-foreground mb-6">
                 Bewegung, Gemeinschaft und Sicherheit nach einer Herzerkrankung. Unter ärztlicher Aufsicht trainieren Sie in kleinen Gruppen in Ihrer Nähe.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/locations">
                   <a>
                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
@@ -42,16 +42,16 @@ export default function Home() {
         </section>
 
         {/* 30-Sekunden-Überblick */}
-        <section className="py-8 md:py-12 bg-secondary/5 border-b border-border">
+        <section className="py-6 md:py-8 bg-secondary/5 border-b border-border">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+            <h2 className="text-xl md:text-2xl font-bold mb-3 text-foreground">
               In 30&nbsp;Sekunden verstehen
             </h2>
-            <p className="text-muted-foreground mb-6">
-              Drei Fragen – drei Antworten. So funktionieren die Herzgruppen im Kreis Reutlingen:
+            <p className="text-sm text-muted-foreground mb-4">
+              Drei Fragen – drei Antworten:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card className="p-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <Card className="p-4">
                 <h3 className="text-sm font-semibold mb-2 text-foreground">
                   Für wen?
                 </h3>
@@ -80,16 +80,16 @@ export default function Home() {
         </section>
 
         {/* Three Feature Cards */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {/* Card 1: Was sind Herzgruppen */}
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="text-primary" size={24} />
+              <Card className="p-5 hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
+                  <Heart className="text-primary" size={20} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Was sind Herzgruppen?</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg font-semibold mb-2">Was sind Herzgruppen?</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   Ambulante Herzgruppen sind spezialisierte Trainingsgruppen für Herzpatienten. Unter ärztlicher Betreuung trainieren Sie gemeinsam mit anderen Betroffenen.
                 </p>
                 <Link href="/about">
@@ -100,12 +100,12 @@ export default function Home() {
               </Card>
 
               {/* Card 2: Termine & Standorte */}
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="text-secondary" size={24} />
+              <Card className="p-5 hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-3">
+                  <MapPin className="text-secondary" size={20} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Termine & Standorte</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg font-semibold mb-2">Termine & Standorte</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   Wir bieten regelmäßige Trainingsgruppen an mehreren Standorten im Kreis Reutlingen an. Finden Sie die passende Gruppe für Sie.
                 </p>
                 <Link href="/locations">
@@ -116,12 +116,12 @@ export default function Home() {
               </Card>
 
               {/* Card 3: Anmeldung */}
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="text-accent" size={24} />
+              <Card className="p-5 hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-3">
+                  <FileText className="text-accent" size={20} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Anmeldung & Kontakt</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg font-semibold mb-2">Anmeldung & Kontakt</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   Die Anmeldung ist einfach und unkompliziert. Kontaktieren Sie uns oder füllen Sie unser Online-Formular aus.
                 </p>
                 <Link href="/join">
@@ -135,12 +135,12 @@ export default function Home() {
         </section>
 
         {/* How a Session Works */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
               So läuft eine Trainingseinheit ab
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {[
                 {
                   number: '1',
@@ -163,12 +163,12 @@ export default function Home() {
                   description: 'Nach dem Training gibt es Zeit für Entspannung und zum Austausch mit anderen Teilnehmern.',
                 },
               ].map((step, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border border-border">
-                  <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold mb-4">
+                <div key={index} className="bg-white p-4 rounded-lg border border-border">
+                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold mb-3">
                     {step.number}
                   </div>
-                  <h4 className="font-semibold text-lg mb-2">{step.title}</h4>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                  <h4 className="font-semibold text-base mb-1">{step.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-snug">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -176,21 +176,21 @@ export default function Home() {
         </section>
 
         {/* For Whom & What to Bring */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* For Whom */}
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Users className="text-primary" size={20} />
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Users className="text-primary" size={18} />
                   </div>
-                  <h3 className="text-2xl font-semibold">Für wen geeignet?</h3>
+                  <h3 className="text-xl font-semibold">Für wen geeignet?</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm text-muted-foreground mb-4">
                   Unsere Herzgruppen sind für Menschen gedacht, die eine Herzerkrankung haben oder hatten und wieder aktiv werden möchten. Typische Teilnehmer sind:
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2 text-sm">
                   {[
                     'Nach Herzinfarkt oder Herzoperation',
                     'Mit Herzschwäche oder Herzrhythmusstörungen',
@@ -198,8 +198,8 @@ export default function Home() {
                     'Mit erhöhtem Blutdruck oder Cholesterin',
                     'Die ihre Fitness und Lebensqualität verbessern möchten',
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-primary font-bold mt-1">✓</span>
+                    <li key={index} className="flex items-start gap-2">
+                      <span className="text-primary font-bold mt-0.5">✓</span>
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}
@@ -208,17 +208,17 @@ export default function Home() {
 
               {/* What to Bring */}
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Shield className="text-secondary" size={20} />
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center">
+                    <Shield className="text-secondary" size={18} />
                   </div>
-                  <h3 className="text-2xl font-semibold">Was Sie wissen sollten</h3>
+                  <h3 className="text-xl font-semibold">Was Sie wissen sollten</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm text-muted-foreground mb-4">
                   Für die Teilnahme benötigen Sie eine ärztliche Empfehlung oder Verordnung. Dies ist ein wichtiger Sicherheitsaspekt.
                 </p>
-                <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold mb-3">Wichtige Voraussetzungen:</h4>
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-sm mb-2">Wichtige Voraussetzungen:</h4>
                   <ul className="space-y-2 text-sm text-foreground">
                     <li>✓ Ärztliche Freigabe oder Verordnung</li>
                     <li>✓ Sportgeeignete Kleidung und Schuhe</li>
@@ -236,12 +236,12 @@ export default function Home() {
         </section>
 
         {/* Trust Section */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center">
               Sicherheit und Qualität
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 {
                   icon: <Shield className="text-primary" size={32} />,
@@ -259,10 +259,10 @@ export default function Home() {
                   description: 'Trainieren Sie mit anderen Betroffenen. Der Austausch mit Gleichgesinnten ist Teil des Erfolgs.',
                 },
               ].map((item, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg border border-border text-center">
-                  <div className="flex justify-center mb-4">{item.icon}</div>
-                  <h4 className="text-lg font-semibold mb-3">{item.title}</h4>
-                  <p className="text-muted-foreground">{item.description}</p>
+                <div key={index} className="bg-white p-5 rounded-lg border border-border text-center">
+                  <div className="flex justify-center mb-3">{item.icon}</div>
+                  <h4 className="font-semibold mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-snug">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -270,15 +270,15 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Bereit, wieder aktiv zu werden?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
               Kontaktieren Sie uns noch heute. Unser Team hilft Ihnen gerne bei der Anmeldung und beantwortet alle Ihre Fragen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/locations">
                 <a>
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">

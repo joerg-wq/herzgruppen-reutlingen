@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'wouter';
 import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -107,25 +109,25 @@ export default function FAQ() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-12 md:py-16">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Häufig gestellte Fragen
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base text-muted-foreground max-w-2xl">
               Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an unseren Herzgruppen.
             </p>
           </div>
         </section>
 
         {/* FAQ Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container max-w-3xl">
-            <div className="space-y-8">
+            <div className="space-y-6">
               {faqs.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
-                  <h2 className="text-2xl font-bold mb-6 text-foreground">{section.category}</h2>
-                  <div className="space-y-4">
+                  <h2 className="text-xl font-bold mb-4 text-foreground">{section.category}</h2>
+                  <div className="space-y-3">
                     {section.items.map((item, itemIndex) => {
                       const isOpen = openItems.includes(itemIndex);
 
@@ -136,21 +138,21 @@ export default function FAQ() {
                         >
                           <button
                             onClick={() => toggleItem(itemIndex)}
-                            className="w-full px-6 py-4 flex items-center justify-between hover:bg-secondary/5 transition-colors"
+                            className="w-full px-4 py-3 flex items-center justify-between hover:bg-secondary/5 transition-colors text-left"
                           >
-                            <h3 className="text-lg font-semibold text-foreground text-left">
+                            <h3 className="text-base font-semibold text-foreground pr-2">
                               {item.q}
                             </h3>
                             <ChevronDown
-                              size={24}
+                              size={20}
                               className={`flex-shrink-0 text-primary transition-transform ${
                                 isOpen ? 'transform rotate-180' : ''
                               }`}
                             />
                           </button>
                           {isOpen && (
-                            <div className="px-6 py-4 border-t border-border bg-secondary/5">
-                              <p className="text-muted-foreground">{item.a}</p>
+                            <div className="px-4 py-3 border-t border-border bg-secondary/5">
+                              <p className="text-sm text-muted-foreground leading-snug">{item.a}</p>
                             </div>
                           )}
                         </Card>
@@ -164,18 +166,19 @@ export default function FAQ() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Weitere Fragen?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Weitere Fragen?</h2>
+            <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
               Wenn Sie eine Frage haben, die hier nicht beantwortet wird, kontaktieren Sie uns gerne direkt.
             </p>
-            <a
-              href="/contact"
-              className="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-colors"
-            >
-              Kontakt aufnehmen
-            </a>
+            <Link href="/contact">
+              <a>
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Kontakt aufnehmen
+                </Button>
+              </a>
+            </Link>
           </div>
         </section>
       </main>

@@ -99,22 +99,22 @@ export default function Locations() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-12 md:py-16">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Standorte &amp; Termine
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base text-muted-foreground max-w-2xl">
               Finden Sie die Herzgruppe in Ihrer Nähe und die passende Trainingszeit.
             </p>
           </div>
         </section>
 
         {/* Filter Section */}
-        <section className="py-8 bg-secondary/5 border-b border-border">
+        <section className="py-6 bg-secondary/5 border-b border-border">
           <div className="container">
-            <h2 className="text-2xl font-bold mb-6">Gruppen filtern</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h2 className="text-xl font-bold mb-4">Gruppen filtern</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* City Filter */}
               <div>
                 <label className="block text-sm font-medium text-foreground mb-3">
@@ -202,9 +202,9 @@ export default function Locations() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {filteredLocations.map(location => (
-                  <Card key={location.id} className="p-6 hover:shadow-lg transition-shadow">
+                  <Card key={location.id} className="p-5 hover:shadow-md transition-shadow">
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <div>
                         <h3 className="text-xl font-semibold text-foreground">
@@ -227,13 +227,29 @@ export default function Locations() {
                       </span>
                     </div>
 
-                    {/* Location Info */}
-                    <div className="space-y-3 mb-6">
+                    {/* Adresse immer sichtbar; Maps-Link optional (falls Link nicht funktioniert, bleibt Adresse nutzbar) */}
+                    <div className="space-y-3 mb-4">
                       <div className="flex items-start gap-3">
-                        <MapPin className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <MapPin className="text-primary flex-shrink-0 mt-0.5" size={18} />
                         <div>
-                          <p className="font-medium text-foreground">{location.address}</p>
-                          <p className="text-sm text-muted-foreground">{location.city}</p>
+                          <p className="font-medium text-foreground">{location.address}, {location.city}</p>
+                          {(() => {
+                            const mapsQuery = `${location.address}, ${location.city}`;
+                            const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
+                            return (
+                              <p className="mt-1">
+                                <a
+                                  href={mapsHref}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline inline-flex items-center gap-1"
+                                >
+                                  <MapPinned size={12} />
+                                  In Google Maps öffnen
+                                </a>
+                              </p>
+                            );
+                          })()}
                         </div>
                       </div>
 
@@ -277,21 +293,6 @@ export default function Locations() {
                       </div>
                     </div>
 
-                    {/* Maps Link */}
-                    <div className="mb-4">
-                      <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                          `${location.address}, ${location.city}`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                      >
-                        <MapPinned size={16} />
-                        In Google Maps öffnen
-                      </a>
-                    </div>
-
                     {/* Notes */}
                     {location.notes && (
                       <div className="bg-primary/5 border border-primary/20 rounded p-3 mb-4">
@@ -315,13 +316,13 @@ export default function Locations() {
         </section>
 
         {/* Info Section */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Weitere Informationen</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Weitere Informationen</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Wie melde ich mich an?</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg font-semibold mb-3">Wie melde ich mich an?</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   Die Anmeldung ist einfach: Kontaktieren Sie die Gruppe direkt oder füllen Sie unser Online-Formular aus. Sie benötigen eine ärztliche Freigabe oder Verordnung.
                 </p>
                 <p className="text-sm text-muted-foreground mb-4">
@@ -334,8 +335,8 @@ export default function Locations() {
                 </Link>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">Kosten &amp; Abrechnung</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg font-semibold mb-3">Kosten &amp; Abrechnung</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Alle unsere Gruppen sind WBRS-zertifiziert.
                 </p>
                 <Link href="/faq">
