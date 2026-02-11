@@ -1,0 +1,2 @@
+# SPA: alle Pfade auf index.html (200), damit Client-Routing funktioniert (Netlify u.ä.)
+/*    /index.html   200

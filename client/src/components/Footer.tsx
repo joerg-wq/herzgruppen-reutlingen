@@ -1,0 +1,110 @@
+import { Link } from 'wouter';
+import { CONTACT_EMAIL } from '@/config';
+
+export default function Footer() {
+  return (
+    <footer className="bg-secondary text-secondary-foreground border-t border-border mt-20">
+      <div className="container py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* About */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Herzgruppen Reutlingen</h3>
+            <p className="text-sm opacity-90">
+              Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.
+            </p>
+            <p className="text-xs opacity-75 mt-3">
+              Bewegung, Gemeinschaft und Lebensfreude – unter ärztlicher Aufsicht und fachkundiger Anleitung.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/">
+                  <a className="hover:underline opacity-90 hover:opacity-100">Startseite</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations">
+                  <a className="hover:underline opacity-90 hover:opacity-100">Standorte</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/join">
+                  <a className="hover:underline opacity-90 hover:opacity-100">Anmeldung</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq">
+                  <a className="hover:underline opacity-90 hover:opacity-100">FAQ</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Kontakt</h4>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li>
+                <strong>Geschäftsstelle:</strong>
+                <br />
+                Lindachstr. 18
+                <br />
+                72810 Gomaringen
+              </li>
+              <li>
+                <strong>Telefon:</strong>
+                <br />
+                07072 / 80 58 6
+              </li>
+              <li>
+                <strong>E-Mail:</strong>
+                <br />
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:underline">
+                  {CONTACT_EMAIL}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">Rechtliches</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/impressum">
+                  <a className="hover:underline opacity-90 hover:opacity-100">Impressum</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/datenschutz">
+                  <a className="hover:underline opacity-90 hover:opacity-100">Datenschutz</a>
+                </Link>
+              </li>
+              <li>
+                <p className="text-xs opacity-80">
+                  <span className="font-semibold">Über diese Website:</span> Informationsangebot der ARGE Reutlingen e.V. zu den ambulanten Herzgruppen im Kreis Reutlingen.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-border/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
+            <p>
+              &copy; {new Date().getFullYear()} ARGE Reutlingen e.V. Alle Rechte vorbehalten.
+            </p>
+            <p className="mt-4 md:mt-0">
+              Zertifiziert durch WBRS | VR 350490 beim Amtsgericht Stuttgart
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

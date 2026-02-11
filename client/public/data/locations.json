@@ -1,0 +1,67 @@
+[
+  {
+    "id": "reutlingen-1",
+    "name": "Herzsportgruppe Reutlingen - Montag",
+    "city": "Reutlingen",
+    "address": "Sporthalle (Adresse wird noch konkretisiert)",
+    "weekday": "Montag",
+    "time": "19:00 - 20:30",
+    "type": "herzgruppe",
+    "contact_name": "Ansprechpartner wird noch benannt",
+    "contact_email": "arge-herzsport@web.de",
+    "contact_phone": "07072 / 80 58 6",
+    "notes": "Anfänger willkommen"
+  },
+  {
+    "id": "reutlingen-2",
+    "name": "Herzsportgruppe Reutlingen - Mittwoch",
+    "city": "Reutlingen",
+    "address": "Sporthalle (Adresse wird noch konkretisiert)",
+    "weekday": "Mittwoch",
+    "time": "19:00 - 20:30",
+    "type": "herzgruppe",
+    "contact_name": "Ansprechpartner wird noch benannt",
+    "contact_email": "arge-herzsport@web.de",
+    "contact_phone": "07072 / 80 58 6",
+    "notes": "Fortgeschrittene"
+  },
+  {
+    "id": "reutlingen-3",
+    "name": "Herzsportgruppe Reutlingen - Freitag",
+    "city": "Reutlingen",
+    "address": "Sporthalle (Adresse wird noch konkretisiert)",
+    "weekday": "Freitag",
+    "time": "18:00 - 19:30",
+    "type": "herzgruppe",
+    "contact_name": "Ansprechpartner wird noch benannt",
+    "contact_email": "arge-herzsport@web.de",
+    "contact_phone": "07072 / 80 58 6",
+    "notes": "Alle Leistungsstufen"
+  },
+  {
+    "id": "pfullingen-hi",
+    "name": "Rehasport-Gruppe Herzinsuffizienz Pfullingen",
+    "city": "Pfullingen",
+    "address": "Sporthalle des Friedrich-Schiller-Gymnasiums (genaue Adresse folgt)",
+    "weekday": "Samstag",
+    "time": "08:00 - 11:00",
+    "type": "herzinsuffizienz",
+    "contact_name": "Team Herzsportgruppe Pfullingen",
+    "contact_email": "herzgruppe-pfullingen@magenta.de",
+    "contact_phone": "0151 17919037",
+    "notes": "Rehasport-Gruppe für Herzinsuffizienz mit ärztlicher Betreuung"
+  },
+  {
+    "id": "pfullingen-herz",
+    "name": "Herzsportgruppe Pfullingen",
+    "city": "Pfullingen",
+    "address": "Sporthalle des Friedrich-Schiller-Gymnasiums (genaue Adresse folgt)",
+    "weekday": "Samstag",
+    "time": "08:00 - 11:00",
+    "type": "herzgruppe",
+    "contact_name": "Team Herzsportgruppe Pfullingen",
+    "contact_email": "herzgruppe-pfullingen@magenta.de",
+    "contact_phone": "0151 17919037",
+    "notes": "Parallel zur Herzinsuffizienz-Gruppe, unter ärztlicher Aufsicht und professioneller Anleitung"
+  }
+]
