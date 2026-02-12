@@ -60,7 +60,9 @@ export default function Footer() {
               <li>
                 <strong>Telefon:</strong>
                 <br />
-                07072 / 80 58 6
+                <a href="tel:+497072805860" className="hover:underline">
+                  07072 / 80 58 6
+                </a>
               </li>
               <li>
                 <strong>E-Mail:</strong>

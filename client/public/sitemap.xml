@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.example.com/</loc></url>
-  <url><loc>https://www.example.com/about</loc></url>
-  <url><loc>https://www.example.com/locations</loc></url>
-  <url><loc>https://www.example.com/join</loc></url>
-  <url><loc>https://www.example.com/faq</loc></url>
-  <url><loc>https://www.example.com/contact</loc></url>
-  <url><loc>https://www.example.com/impressum</loc></url>
-  <url><loc>https://www.example.com/datenschutz</loc></url>
+  <url><loc>https://herzgruppen.de/</loc></url>
+  <url><loc>https://herzgruppen.de/about</loc></url>
+  <url><loc>https://herzgruppen.de/locations</loc></url>
+  <url><loc>https://herzgruppen.de/join</loc></url>
+  <url><loc>https://herzgruppen.de/faq</loc></url>
+  <url><loc>https://herzgruppen.de/contact</loc></url>
+  <url><loc>https://herzgruppen.de/impressum</loc></url>
+  <url><loc>https://herzgruppen.de/datenschutz</loc></url>
 </urlset>

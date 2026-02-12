@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { CheckCircle, AlertCircle, Upload, Mail } from 'lucide-react';
+import { CheckCircle, AlertCircle, Mail } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CONTACT_EMAIL } from '@/config';
@@ -20,7 +20,6 @@ export default function Join() {
     preferredLocation: '',
     privacy: false,
   });
-  const [documentFile, setDocumentFile] = useState<File | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -31,18 +30,6 @@ export default function Join() {
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
     }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        setError('Datei ist zu groß. Maximum 5MB.');
-        return;
-      }
-      setDocumentFile(file);
-      setError('');
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -106,7 +93,6 @@ export default function Join() {
         preferredLocation: '',
         privacy: false,
       });
-      setDocumentFile(null);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Ein Fehler ist aufgetreten';
       setError(errorMessage);
@@ -229,7 +215,7 @@ export default function Join() {
                       <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                         <li>Mit * markierte Felder sind Pflichtfelder.</li>
                         <li>Ihre Angaben werden nicht auf einem Server gespeichert, sondern nur in einer vorbefüllten E-Mail geöffnet.</li>
-                        <li>Die E-Mail können Sie vor dem Absenden jederzeit prüfen und bearbeiten.</li>
+                        <li>Die E-Mail können Sie vor dem Absenden jederzeit prüfen, bearbeiten und um Anhänge (z.B. ärztliche Verordnung) ergänzen.</li>
                       </ul>
                     </div>
 
@@ -350,43 +336,6 @@ export default function Join() {
                           <option value="Münsingen">Herzsport Münsingen</option>
                           <option value="Bad Urach (Schlaganfallgruppe)">Schlaganfallgruppe Bad Urach</option>
                         </select>
-                      </div>
-                    </div>
-
-                    {/* Document Upload */}
-                    <div>
-                      <h3 className="text-lg font-semibold mb-4">Dokumenten-Upload (optional)</h3>
-                      <div className="border-2 border-dashed border-border rounded-lg p-6 text-center">
-                        <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                        <p className="text-sm text-muted-foreground mb-2">
-                          Laden Sie Ihre ärztliche Empfehlung oder Verordnung hoch (PDF, max. 5MB).
-                        </p>
-                        <p className="text-xs text-muted-foreground mb-4">
-                          Der Upload erfolgt nur lokal in Ihrem Browser. Die Unterlagen werden nicht auf einem Server gespeichert,
-                          sondern von Ihnen später als Anhang zur E-Mail hinzugefügt.
-                        </p>
-                        <input
-                          type="file"
-                          accept=".pdf,.doc,.docx"
-                          onChange={handleFileChange}
-                          className="hidden"
-                          id="document-upload"
-                        />
-                        <label htmlFor="document-upload">
-                          <Button
-                            type="button"
-                            variant="outline"
-                            onClick={() => document.getElementById('document-upload')?.click()}
-                            className="cursor-pointer"
-                          >
-                            Datei auswählen
-                          </Button>
-                        </label>
-                        {documentFile && (
-                          <p className="text-sm text-primary mt-2">
-                            ✓ {documentFile.name} ausgewählt
-                          </p>
-                        )}
                       </div>
                     </div>
 

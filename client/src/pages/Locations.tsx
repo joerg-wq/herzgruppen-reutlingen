@@ -18,6 +18,7 @@ interface Location {
   contact_email: string;
   contact_phone: string;
   notes: string;
+  maps_url?: string;
 }
 
 export default function Locations() {
@@ -61,7 +62,9 @@ export default function Locations() {
     }
 
     if (onlyHeartFailure) {
-      filtered = filtered.filter(loc => loc.type === 'herzinsuffizienz');
+      filtered = filtered.filter(
+        loc => loc.type === 'herzinsuffizienz' || loc.type === 'schlaganfall'
+      );
     }
 
     // Sortierung nach Stadt und Wochentag
@@ -218,11 +221,15 @@ export default function Locations() {
                         className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${
                           location.type === 'herzinsuffizienz'
                             ? 'bg-primary/10 text-primary'
+                            : location.type === 'schlaganfall'
+                            ? 'bg-accent/10 text-accent-foreground'
                             : 'bg-muted text-muted-foreground'
                         }`}
                       >
                         {location.type === 'herzinsuffizienz'
                           ? 'Herzinsuffizienz-Gruppe'
+                          : location.type === 'schlaganfall'
+                          ? 'Schlaganfallgruppe'
                           : 'Herzsport-Gruppe'}
                       </span>
                     </div>
@@ -232,10 +239,13 @@ export default function Locations() {
                       <div className="flex items-start gap-3">
                         <MapPin className="text-primary flex-shrink-0 mt-0.5" size={18} />
                         <div>
-                          <p className="font-medium text-foreground">{location.address}, {location.city}</p>
+                          <p className="font-medium text-foreground">{location.address}</p>
                           {(() => {
-                            const mapsQuery = `${location.address}, ${location.city}`;
-                            const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
+                            const mapsHref =
+                              location.maps_url ||
+                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                                `${location.address}, ${location.city}`
+                              )}`;
                             return (
                               <p className="mt-1">
                                 <a

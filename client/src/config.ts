@@ -13,8 +13,8 @@ export const SITE_DESCRIPTION =
 // Zentrale Kontaktadresse der ARGE Reutlingen (Geschäftsstelle)
 export const CONTACT_EMAIL = "arge-herzsport@web.de";
 
-/** Basis-URL der Live-Seite; bei Deployment anpassen (z.B. für Sitemap). */
+/** Basis-URL der Live-Seite; für Links/Sitemaps wird herzgruppen.de verwendet. */
 export const BASE_URL =
   typeof window !== "undefined"
     ? window.location.origin
-    : "https://www.example.com";
+    : "https://herzgruppen.de";

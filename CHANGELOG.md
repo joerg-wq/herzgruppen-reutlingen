@@ -4,9 +4,20 @@
 
 ---
 
+## [1.2.1] – 2026-02-12 – Rehasport-Text & Kontakte
+
+### Geändert (1.2.1)
+
+- **Hero-Text:** Startseitentext im Hero auf fachlich korrekten Rehasport-Begriff angepasst („Rehasport in Herzgruppen – ärztlich begleitet und wohnortnah im Kreis Reutlingen.“) und primären Button in „Standort & Termine finden“ umbenannt.
+- **Standorte:** Adressen der Herzgruppen präzisiert (inkl. Straßen, Hausnummern, PLZ/Ort) und mit konkreten Google-Maps-Links hinterlegt.
+- **Kontakte:** Sämtliche E-Mail-Adressen und Telefonnummern auf der Seite als klickbare `mailto:`- bzw. `tel:`-Links umgesetzt.
+- **Anmeldung:** Upload-Feld im Anmeldeformular entfernt, sodass die Anmeldung klar als reine E-Mail-Anfrage ohne Dateiupload über die Website erfolgt.
+
+---
+
 ## [1.2.0] – 2026-02-12 – ARGE-Rebranding
 
-### Geändert (1.1.0)
+### Geändert (1.2.0)
 
 - **ARGE-Rebranding:** Website von „Herzsportgruppe Pfullingen“ auf „Herzgruppen im Kreis Reutlingen“ (ARGE Reutlingen e.V.) umgestellt – inkl. Header, Footer, Seiten-Texte und Menüstruktur.
 - **Mehrere Standorte:** `Locations.tsx` zeigt nun alle Herzgruppen im Kreis Reutlingen (Filter nach Ort, Wochentag, Herzinsuffizienz-Gruppen), `Join.tsx` erlaubt die Auswahl verschiedener Ortsgruppen.

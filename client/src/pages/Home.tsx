@@ -19,13 +19,13 @@ export default function Home() {
                 Ambulante Herzgruppen im Kreis Reutlingen
               </h1>
               <p className="text-base text-muted-foreground mb-6">
-                Rehasport für Herzpatienten im gesamten Kreis Reutlingen – mit ärztlicher Betreuung, klarer Struktur und Gruppen in Ihrer Nähe.
+                Rehasport in Herzgruppen – ärztlich begleitet und wohnortnah im Kreis Reutlingen.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/locations">
                   <a>
                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
-                      Übungstermine ansehen
+                      Standort &amp; Termine finden
                     </Button>
                   </a>
                 </Link>
