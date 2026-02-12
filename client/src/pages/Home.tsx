@@ -16,10 +16,10 @@ export default function Home() {
           <div className="container">
             <div className="max-w-2xl">
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-                Ambulante Herzsportgruppe Pfullingen
+                Ambulante Herzgruppen im Kreis Reutlingen
               </h1>
               <p className="text-base text-muted-foreground mb-6">
-                Rehasport für Herzpatienten in Pfullingen – mit ärztlicher Betreuung, klarer Struktur und einer Gruppe, die zusammenhält.
+                Rehasport für Herzpatienten im gesamten Kreis Reutlingen – mit ärztlicher Betreuung, klarer Struktur und Gruppen in Ihrer Nähe.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/locations">
@@ -99,14 +99,14 @@ export default function Home() {
                 </Link>
               </Card>
 
-              {/* Card 2: Übungstermine & Ort */}
+              {/* Card 2: Standorte & Übungstermine */}
               <Card className="p-5 hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-3">
                   <MapPin className="text-secondary" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Übungstermine in Pfullingen</h3>
+                <h3 className="text-lg font-semibold mb-2">Standorte & Übungstermine</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Das Training findet samstags zwischen 8:00 und 11:00 Uhr in der Sporthalle des Friedrich-Schiller-Gymnasiums in Pfullingen statt – mit Herzinsuffizienz-Gruppe und Herzsportgruppen.
+                  Herzgruppen im gesamten Kreis Reutlingen – von Reutlingen und Pfullingen über Metzingen und Dettingen bis Bad Urach und Münsingen. Finden Sie die Gruppe, die zu Ihnen passt.
                 </p>
                 <Link href="/locations">
                   <a className="text-primary hover:underline font-medium">
@@ -246,12 +246,12 @@ export default function Home() {
                 {
                   icon: <Shield className="text-primary" size={32} />,
                   title: 'Zertifiziert & Versichert',
-                  description: 'Die Herzsportgruppe Pfullingen ist über den Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. So ist die Abrechnung mit Krankenkassen und Rentenversicherung möglich.',
+                  description: 'Alle Herzgruppen im Kreis Reutlingen sind über den Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. So ist die Abrechnung mit Krankenkassen und Rentenversicherung möglich.',
                 },
                 {
                   icon: <Smile className="text-secondary" size={32} />,
                   title: '35+ Jahre Erfahrung',
-                  description: 'Seit vielen Jahren trainieren in Pfullingen Herzpatienten regelmäßig gemeinsam – getragen vom Erfahrungsschatz der ARGE Reutlingen e.V.',
+                  description: 'Die ARGE Reutlingen besteht seit über 35 Jahren und hat umfangreiche Erfahrung in der Betreuung von Herzpatienten im gesamten Kreis.',
                 },
                 {
                   icon: <Users className="text-accent" size={32} />,

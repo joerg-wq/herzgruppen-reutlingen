@@ -2,14 +2,16 @@ import { useState } from 'react';
 import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { SITE_NAME } from '@/config';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { label: 'Startseite', href: '/' },
-    { label: 'Herzsport verstehen', href: '/about' },
-    { label: 'Übungstermine', href: '/locations' },
+    { label: 'Herzgruppen verstehen', href: '/about' },
+    { label: 'Standorte & Termine', href: '/locations' },
+    { label: 'Verein & Vorstand', href: '/organization' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Kontakt', href: '/contact' },
   ];
@@ -21,17 +23,17 @@ export default function Header() {
         <Link href="/">
           <a
             className="flex items-center gap-3 group"
-            aria-label="Zur Startseite der ambulanten Herzsportgruppe Pfullingen"
+            aria-label={`Zur Startseite der ARGE Reutlingen – ${SITE_NAME}`}
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-lg font-bold text-primary-foreground">♥</span>
             </div>
             <div className="hidden sm:block">
               <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-                Herzsportgruppe Pfullingen
+                ARGE Reutlingen e.V.
               </p>
               <p className="text-sm font-semibold text-foreground">
-                Rehasport für Herzpatienten
+                {SITE_NAME}
               </p>
             </div>
           </a>
@@ -83,13 +85,6 @@ export default function Header() {
                 </a>
               </Link>
             ))}
-            <Link href="/contact">
-              <a onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Kontakt
-                </Button>
-              </a>
-            </Link>
           </div>
         </nav>
       )}

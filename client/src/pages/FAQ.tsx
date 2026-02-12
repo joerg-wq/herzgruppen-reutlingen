@@ -103,7 +103,7 @@ export default function FAQ() {
               Häufig gestellte Fragen
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an der Herzsportgruppe Pfullingen.
+              Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an den ambulanten Herzgruppen im Kreis Reutlingen.
             </p>
           </div>
         </section>

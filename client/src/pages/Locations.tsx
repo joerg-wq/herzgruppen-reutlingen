@@ -28,25 +28,22 @@ export default function Locations() {
   const [onlyHeartFailure, setOnlyHeartFailure] = useState<boolean>(false);
 
   useEffect(() => {
-    // Load locations from JSON
+    // Standorte und Gruppen aus JSON laden (alle Herzgruppen im Kreis Reutlingen)
     fetch('/data/locations.json')
       .then(res => res.json())
       .then((data: Location[]) => {
-        // Für diese Instanz interessieren uns nur die Gruppen in Pfullingen.
-        const pfullingenLocations = data.filter(loc => loc.city === 'Pfullingen');
-        setLocations(pfullingenLocations);
+        setLocations(data);
 
-        // Initial Filter aus URL-Parametern (z.B. ?type=herzinsuffizienz)
         try {
           const params = new URLSearchParams(window.location.search);
+          const cityParam = params.get('city') ?? '';
           const typeParam = params.get('type') ?? '';
 
-          // Stadtfilter wird für die Pfullingen-Variante nicht benötigt.
-          setSelectedCity('');
+          setSelectedCity(cityParam);
           setOnlyHeartFailure(typeParam === 'herzinsuffizienz');
-          setFilteredLocations(pfullingenLocations);
+          setFilteredLocations(data);
         } catch {
-          setFilteredLocations(pfullingenLocations);
+          setFilteredLocations(data);
         }
       })
       .catch(err => console.error('Error loading locations:', err));
@@ -104,11 +101,85 @@ export default function Locations() {
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Übungstermine in Pfullingen
+              Standorte &amp; Übungstermine
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Rehasport-Gruppe für Herzinsuffizienz und Herzsportgruppen samstags von 8:00 bis 11:00 Uhr in der Sporthalle des Friedrich-Schiller-Gymnasiums in Pfullingen.
+              Herzgruppen im Kreis Reutlingen – von Reutlingen und Pfullingen über Metzingen und Dettingen bis Bad Urach und Münsingen. Wählen Sie die Gruppe, die zu Ihnen passt.
             </p>
+          </div>
+        </section>
+
+        {/* Filter Section */}
+        <section className="py-6 bg-secondary/5 border-b border-border">
+          <div className="container">
+            <h2 className="text-xl font-bold mb-4">Gruppen filtern</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* City Filter */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-3">
+                  Nach Ort filtern
+                </label>
+                <select
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Alle Orte</option>
+                  {cities.map(city => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Day Filter */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-3">
+                  Nach Wochentag filtern
+                </label>
+                <select
+                  value={selectedDay}
+                  onChange={(e) => setSelectedDay(e.target.value)}
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Alle Wochentage</option>
+                  {days.map(day => (
+                    <option key={day} value={day}>
+                      {day}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Type Filter */}
+              <div>
+                <span className="block text-sm font-medium text-foreground mb-3">
+                  Spezielle Gruppen
+                </span>
+                <label className="inline-flex items-center gap-2 text-sm text-foreground">
+                  <input
+                    type="checkbox"
+                    checked={onlyHeartFailure}
+                    onChange={(e) => setOnlyHeartFailure(e.target.checked)}
+                    className="rounded border-border"
+                  />
+                  <span>Nur Herzinsuffizienz- / Schlaganfallgruppen anzeigen</span>
+                </label>
+              </div>
+            </div>
+            {(selectedCity || selectedDay || onlyHeartFailure) && (
+              <button
+                onClick={() => {
+                  setSelectedCity('');
+                  setSelectedDay('');
+                  setOnlyHeartFailure(false);
+                }}
+                className="mt-4 text-primary hover:underline text-sm font-medium"
+              >
+                Filter zurücksetzen
+              </button>
+            )}
           </div>
         </section>
 
@@ -252,10 +323,10 @@ export default function Locations() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">Wie melde ich mich an?</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Die Anmeldung ist einfach: Kontaktieren Sie die Gruppe direkt oder füllen Sie unser Online-Formular aus. Sie benötigen eine ärztliche Freigabe oder Verordnung.
+                  Die Anmeldung ist einfach: Kontaktieren Sie die Gruppe direkt zu den angegebenen Übungszeiten oder füllen Sie unser Online-Formular aus. Sie benötigen eine ärztliche Freigabe oder Verordnung.
                 </p>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Beispiel: In Pfullingen findet eine Rehasport-Gruppe für Herzinsuffizienz sowie parallel dazu Herzsportgruppen samstags zwischen 8:00 und 11:00 Uhr in der Sporthalle des Friedrich-Schiller-Gymnasiums statt. Das Motto dort lautet: Bewegung, Gemeinschaft und Lebensfreude.
+                  Tipp: Kommen Sie einfach zu einer der angegebenen Gruppenstunden – die Ansprechpartner vor Ort beraten Sie gern zu Einstieg und Formalitäten.
                 </p>
                 <Link href="/join">
                   <a className="text-primary hover:underline font-medium">

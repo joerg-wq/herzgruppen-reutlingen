@@ -4,7 +4,18 @@
 
 ---
 
-## [1.1.0] – 2026-02-11
+## [1.2.0] – 2026-02-12 – ARGE-Rebranding
+
+### Geändert (1.1.0)
+
+- **ARGE-Rebranding:** Website von „Herzsportgruppe Pfullingen“ auf „Herzgruppen im Kreis Reutlingen“ (ARGE Reutlingen e.V.) umgestellt – inkl. Header, Footer, Seiten-Texte und Menüstruktur.
+- **Mehrere Standorte:** `Locations.tsx` zeigt nun alle Herzgruppen im Kreis Reutlingen (Filter nach Ort, Wochentag, Herzinsuffizienz-Gruppen), `Join.tsx` erlaubt die Auswahl verschiedener Ortsgruppen.
+- **Rechtliches:** Impressum und Datenschutzerklärung an das offizielle Impressum/Datenschutz von herzgruppen.de angelehnt und konsolidiert.
+- **Deployment:** Cloudflare-Pages-Projekt für ARGE-Variante (`herzgruppen-reutlingen`) eingerichtet und in `package.json`/README dokumentiert.
+
+---
+
+## [1.1.0] – 2026-02-11 – Layout & UX
 
 ### Geändert
 
@@ -16,18 +27,18 @@
 
 ## [1.0.0]
 
-### Hinzugefügt
+### Hinzugefügt (1.0.0)
 
 - SEO: Meta-Tags pro Seite, zentrales Route-Mapping (`routes.ts`), Sitemap und robots.txt
 - Zentrale Konfiguration: `client/src/config.ts` (Kontakt-E-Mail, Seitentitel, Basis-URL)
 - Dokumentation: README um SEO, Security, Rechtliches und Projektstruktur erweitert; CONTRIBUTING.md
 
-### Geändert
+### Geändert (1.0.0)
 
 - `client/index.html`: Sprache auf `lang="de"`, Default-Meta-Description, Analytics-Script entfernt
 - Alle Kontakt-E-Mail-Referenzen nutzen nun `CONTACT_EMAIL` aus der Config
 
-### Verschoben
+### Verschoben (1.0.0)
 
 - Frühere Backend-/DB-Reste nach `_legacy/` (server, drizzle, shared, drizzle.config.ts)
 - Vitest-Konfiguration verweist auf `_legacy/server/**` für Tests

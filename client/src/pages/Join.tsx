@@ -128,7 +128,7 @@ export default function Join() {
               Teilnahme & Anmeldung
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Melden Sie sich für die Herzsportgruppe Pfullingen an. Mit einer ärztlichen Verordnung können Sie am Rehasport teilnehmen.
+              Melden Sie sich für eine ambulante Herzgruppe im Kreis Reutlingen an. Mit einer ärztlichen Verordnung (z.&nbsp;B. Formular&nbsp;56) können Sie am Rehasport teilnehmen.
             </p>
           </div>
         </section>
@@ -136,16 +136,41 @@ export default function Join() {
         {/* Steps */}
         <section className="py-8 md:py-10">
           <div className="container">
-            <h2 className="text-2xl md:py-3xl font-bold mb-6 text-foreground">
-              So funktioniert die Anmeldung
-            </h2>
+              <h2 className="text-2xl md:py-3xl font-bold mb-6 text-foreground">
+                So funktioniert die Anmeldung
+              </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {[
-                { number: '1', title: 'Ärztliche Verordnung holen', description: 'Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport/Herzsport aus.' },
-                { number: '2', title: 'Formular ausfüllen', description: 'Kontaktdaten und medizinische Hinweise im Formular ergänzen.' },
-                { number: '3', title: 'E-Mail senden', description: 'Das vorbefüllte E-Mail-Fenster prüfen, ggf. Verordnung anhängen und absenden.' },
-                { number: '4', title: 'Rückmeldung abwarten', description: 'Wir melden uns mit weiteren Informationen zum Einstieg.' },
-                { number: '5', title: 'Erstes Training', description: 'Zum vereinbarten Termin in die Sporthalle des Friedrich-Schiller-Gymnasiums kommen.' },
+                {
+                  number: '1',
+                  title: 'Ärztliche Verordnung holen',
+                  description:
+                    'Ihr Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport/Herzsport (z. B. Formular 56) aus.',
+                },
+                {
+                  number: '2',
+                  title: 'Krankenkasse genehmigt',
+                  description:
+                    'Lassen Sie die Verordnung von Ihrer Krankenkasse bestätigen (Stempel und Gültigkeitsdauer). Erstverordnungen gelten in der Regel für zwei Jahre.',
+                },
+                {
+                  number: '3',
+                  title: 'Kontakt aufnehmen',
+                  description:
+                    'Melden Sie sich bei der Geschäftsstelle oder kommen Sie mit der genehmigten Verordnung zu einer Gruppenstunde.',
+                },
+                {
+                  number: '4',
+                  title: 'Ärztliche Freigabe vor Ort',
+                  description:
+                    'Der anwesende Arzt/die anwesende Ärztin befürwortet Ihre Teilnahme und legt mit Ihnen gemeinsam die Belastung fest.',
+                },
+                {
+                  number: '5',
+                  title: 'Regelmäßig teilnehmen',
+                  description:
+                    'Sie unterschreiben bei jeder Stunde auf Ihrer Teilnehmerliste – auf dieser Basis rechnen wir direkt mit den Kostenträgern ab.',
+                },
               ].map((step) => (
                 <div key={step.number} className="bg-white p-4 rounded-lg border border-border text-center">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold mb-3 mx-auto">
@@ -308,7 +333,7 @@ export default function Join() {
                     <div>
                       <h3 className="text-lg font-semibold mb-4">Präferenzen</h3>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Hinweis zur Teilnahme (optional)</label>
+                        <label className="block text-sm font-medium mb-2">Bevorzugte Herzgruppe (optional)</label>
                         <select
                           name="preferredLocation"
                           value={formData.preferredLocation}
@@ -316,7 +341,14 @@ export default function Join() {
                           className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                         >
                           <option value="">Keine besondere Angabe</option>
-                          <option value="Pfullingen">Teilnahme in Pfullingen</option>
+                          <option value="Reutlingen">Herzsport Reutlingen</option>
+                          <option value="Pfullingen">Herzsport Pfullingen</option>
+                          <option value="Neckar-Schönbuch">Herzsport Neckar-Schönbuch</option>
+                          <option value="Metzingen">Herzsport Metzingen</option>
+                          <option value="Dettingen">Herzsport Dettingen</option>
+                          <option value="Bad Urach">Herzsport Bad Urach</option>
+                          <option value="Münsingen">Herzsport Münsingen</option>
+                          <option value="Bad Urach (Schlaganfallgruppe)">Schlaganfallgruppe Bad Urach</option>
                         </select>
                       </div>
                     </div>

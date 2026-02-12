@@ -15,51 +15,51 @@ export const ROUTE_META: RouteMeta[] = [
   },
   {
     path: "/about",
-    title: `Herzsport verstehen | ${SITE_NAME}`,
+    title: `Was ist eine Herzgruppe? | ${SITE_NAME}`,
     description:
-      "Wie Herzsport in Pfullingen abläuft, welche Ziele das Training hat und wie wir Sicherheit gewährleisten.",
+      "Erfahren Sie, was eine ambulante Herzgruppe ist, wie das Training abläuft und welchen Nutzen es für Herzpatienten im Kreis Reutlingen hat.",
   },
   {
     path: "/locations",
-    title: `Übungstermine & Ort | ${SITE_NAME}`,
+    title: `Standorte & Übungstermine | ${SITE_NAME}`,
     description:
-      "Übungstermine der Herzsportgruppe Pfullingen in der Sporthalle des Friedrich-Schiller-Gymnasiums.",
+      "Alle Standorte und Übungstermine der Herzgruppen im Kreis Reutlingen – von Reutlingen über Pfullingen bis Bad Urach und Münsingen.",
   },
   {
     path: "/join",
-    title: `Anmeldung | ${SITE_NAME}`,
+    title: `Teilnahme & Voraussetzungen | ${SITE_NAME}`,
     description:
-      "So melden Sie sich für die Herzsportgruppe Pfullingen an – ärztliche Verordnung, Ablauf und Kontakt.",
+      "Informationen zu ärztlicher Verordnung, Genehmigung durch die Krankenkasse und Einstieg in die Herzgruppen im Kreis Reutlingen.",
   },
   {
     path: "/organization",
-    title: `Verein & Struktur | ${SITE_NAME}`,
+    title: `ARGE Reutlingen & Ortsgruppen | ${SITE_NAME}`,
     description:
-      "Informationen zum Trägerverein und zur organisatorischen Struktur der Herzsportgruppe Pfullingen.",
+      "Die ARGE Reutlingen e.V., ihr Vorstand und die Ortsgruppen mit ihren Patientenräten im Kreis Reutlingen.",
   },
   {
     path: "/faq",
     title: `FAQ | ${SITE_NAME}`,
     description:
-      "Antworten auf häufige Fragen zur Teilnahme an der Herzsportgruppe Pfullingen.",
+      "Antworten auf häufige Fragen zu Voraussetzungen, Kostenübernahme, Training und Sicherheit in den Herzgruppen.",
   },
   {
     path: "/contact",
     title: `Kontakt | ${SITE_NAME}`,
     description:
-      "Kontakt zur Herzsportgruppe Pfullingen – Adresse, Telefon und E-Mail.",
+      "Kontakt zur Geschäftsstelle der ARGE Reutlingen – Adresse, Telefon und E-Mail.",
   },
   {
     path: "/impressum",
     title: `Impressum | ${SITE_NAME}`,
     description:
-      "Impressum der ambulanten Herzsportgruppe Pfullingen und der ARGE Reutlingen e.V.",
+      "Impressum der ARGE Reutlingen – Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.",
   },
   {
     path: "/datenschutz",
     title: `Datenschutz | ${SITE_NAME}`,
     description:
-      "Datenschutzerklärung für die Angebote der Herzsportgruppe Pfullingen.",
+      "Datenschutzerklärung für die Online-Angebote der Herzgruppen im Kreis Reutlingen.",
   },
 ];
 

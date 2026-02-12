@@ -1,6 +1,6 @@
-## Ambulante Herzsportgruppe Pfullingen – Website (MVP)
+## Herzgruppen im Kreis Reutlingen – Website (ARGE Reutlingen e.V.)
 
-Dieses Repository enthält die statische Informations-Website für die ambulante Herzsportgruppe Pfullingen (getragen durch die ARGE Reutlingen e.V.).
+Dieses Repository enthält die statische Informations-Website für die ambulanten Herzgruppen im Kreis Reutlingen (getragen durch die ARGE Reutlingen e.V.).
 
 Die Anwendung ist ein reines Frontend (React + Vite), ohne Datenbank und ohne Backend.
 
@@ -77,7 +77,7 @@ npx wrangler pages deploy dist/public --project-name=herzgruppen-reutlingen
 
 Oder ein Aufruf: `pnpm run deploy` (nutzt denselben Projektnamen; ggf. in `package.json` anpassen).
 
-Nach dem ersten Deploy zeigt Cloudflare die URL (z. B. `https://herzgruppen-reutlingen.pages.dev`). Custom Domain optional im Dashboard einrichten.
+Nach dem ersten Deploy zeigt Cloudflare die URL (z. B. `https://herzgruppen-reutlingen.pages.dev`). Custom Domain (z. B. `herzgruppen.de`) optional im Dashboard einrichten.
 
 #### Option B: Netlify
 
@@ -91,18 +91,19 @@ Nach dem ersten Deploy zeigt Cloudflare die URL (z. B. `https://herzgruppen-re
 
 - **Textseiten**
   - Alle Seiten liegen unter `client/src/pages/…`:
-    - `Home.tsx` – Startseite
-    - `About.tsx` – „Herzsport in Pfullingen verstehen“
-    - `Locations.tsx` – Übungstermine & Ort in Pfullingen
-    - `Join.tsx` – Teilnahme & Anmeldung (Formular mit E-Mail-Weiterleitung)
+    - `Home.tsx` – Startseite (Überblick Herzgruppen im Kreis Reutlingen)
+    - `About.tsx` – „Herzgruppen verstehen“ (Was ist eine ambulante Herzgruppe, AHG-Kontext)
+    - `Locations.tsx` – Standorte & Übungstermine aller Herzgruppen im Kreis Reutlingen
+    - `Join.tsx` – Teilnahme & Anmeldung (Formular mit vorbefüllter E-Mail an die Geschäftsstelle)
+    - `Organization.tsx` – Verein & Vorstand (ARGE Reutlingen e.V. und Ortsgruppen)
     - `FAQ.tsx` – Häufig gestellte Fragen
-    - `Contact.tsx` – Kontakt
+    - `Contact.tsx` – Kontakt (Geschäftsstelle ARGE Reutlingen)
     - `Imprint.tsx` – Impressum
     - `Privacy.tsx` – Datenschutzerklärung
 
-- **Übungstermine Pfullingen**
+- **Übungstermine & Standorte**
   - Datei: `client/public/data/locations.json`
-  - Für diese Instanz werden nur Einträge mit `city = "Pfullingen"` verwendet.
+  - Enthält die Herzgruppen im Kreis Reutlingen (Ort, Wochentag, Uhrzeit, Typ, Ansprechpartner).
 
 Nach Änderungen an Texten oder Standorten:
 
@@ -115,11 +116,11 @@ Nach Änderungen an Texten oder Standorten:
 - **Sprache:** `lang="de"` in `client/index.html`
 - **Meta-Tags:** Pro Seite werden Titel und Description aus `client/src/routes.ts` gesetzt (bei Routenwechsel per `document.title` und `<meta name="description">`).
 - **Sitemap & robots:** `client/public/sitemap.xml` und `client/public/robots.txt` sind vorhanden.
-- **Go-Live:** Bei Deployment die **Basis-URL** in `sitemap.xml` und in `robots.txt` (Sitemap-Zeile) auf die finale Domain der Herzsportgruppe Pfullingen umstellen (z. B. `https://www.herzsportgruppe-pfullingen.de`). Optional kann in `client/src/config.ts` eine feste `BASE_URL` für Links genutzt werden.
+- **Go-Live:** Bei Deployment die **Basis-URL** in `sitemap.xml` und in `robots.txt` (Sitemap-Zeile) auf die finale Domain umstellen (z. B. `https://herzgruppen.de`). Optional kann in `client/src/config.ts` eine feste `BASE_URL` für Links genutzt werden.
 
 ### Historie
 
-Die Inhalte orientieren sich an der bestehenden Seite `http://herzsportgruppe-pfullingen.de/`. Diese bleibt (sofern weiter betrieben) als ergänzende Quelle für Rückblicke und Bilder bestehen, während diese Anwendung den kompakten, modernen Auftritt der Herzsportgruppe Pfullingen bildet.
+Die Inhalte orientieren sich an der bisherigen ARGE-Seite unter `https://herzgruppen.de/Reutlingen/` sowie an der früheren Pfullinger Website `http://herzsportgruppe-pfullingen.de/`. Diese Anwendung bildet den kompakten, modernen Auftritt der Herzgruppen im Kreis Reutlingen.
 
 ### Security
 

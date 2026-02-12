@@ -30,9 +30,9 @@ export default function Imprint() {
               {/* Verantwortliche Stelle */}
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">Verantwortliche Stelle</h2>
-                <div className="space-y-1 text-sm text-foreground">
+                <div className="spacey-1 text-sm text-foreground">
                   <p className="font-semibold">ARGE Reutlingen e.V.</p>
-                  <p>Ambulante Herzsportgruppe Pfullingen</p>
+                  <p>Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.</p>
                   <p>Lindachstr. 18</p>
                   <p>72810 Gomaringen</p>
                   <p>Deutschland</p>
@@ -72,7 +72,8 @@ export default function Imprint() {
                 <div className="space-y-1 text-sm text-foreground">
                   <p><span className="font-semibold">Vereinsregister:</span> Amtsgericht Stuttgart</p>
                   <p><span className="font-semibold">Registernummer:</span> VR 350490</p>
-                  <p><span className="font-semibold">Gemeinnützigkeit:</span> Der Verein ist als gemeinnützig anerkannt</p>
+                  <p><span className="font-semibold">Steuernummer:</span> 78042/02157 FA. Reutlingen</p>
+                  <p><span className="font-semibold">Geltungsbereich:</span> Dieses Impressum gilt für die Online-Angebote der Herzgruppen im Kreis Reutlingen (z.&nbsp;B. herzgruppen.de).</p>
                 </div>
               </Card>
 
