@@ -19,7 +19,7 @@ export default function Contact() {
               Kontakt
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Kontaktieren Sie uns für Fragen, Anmeldungen oder weitere Informationen.
+              Kontakt zur ambulanten Herzsportgruppe Pfullingen – für Fragen, Anmeldung oder eine Schnupperstunde.
             </p>
           </div>
         </section>
@@ -30,12 +30,27 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {/* Main Contact */}
               <Card className="p-5">
-                <h2 className="text-xl font-bold mb-5">Geschäftsstelle</h2>
+                <h2 className="text-xl font-bold mb-5">Herzsportgruppe Pfullingen</h2>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <MapPin className="text-primary flex-shrink-0 mt-1" size={24} />
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Adresse</h3>
+                      <h3 className="font-semibold text-foreground mb-2">Trainingsort</h3>
+                      <p className="text-muted-foreground">
+                        Sporthalle des Friedrich-Schiller-Gymnasiums
+                        <br />
+                        72793 Pfullingen
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        Parallel zur Rehasport-Gruppe für Herzinsuffizienz finden hier samstags Herzsportgruppen statt.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <MapPin className="text-primary flex-shrink-0 mt-1" size={24} />
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">Postadresse (Trägerverein)</h3>
                       <p className="text-muted-foreground">
                         ARGE Reutlingen e.V.
                         <br />
@@ -49,7 +64,7 @@ export default function Contact() {
                   <div className="flex items-start gap-4">
                     <Phone className="text-primary flex-shrink-0 mt-1" size={24} />
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Telefon</h3>
+                      <h3 className="font-semibold text-foreground mb-2">Telefon (Geschäftsstelle)</h3>
                       <a href="tel:+497072805860" className="text-primary hover:underline">
                         07072 / 80 58 6
                       </a>

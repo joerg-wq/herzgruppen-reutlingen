@@ -8,9 +8,8 @@ export default function Header() {
 
   const navItems = [
     { label: 'Startseite', href: '/' },
-    { label: 'Herzgruppen verstehen', href: '/about' },
-    { label: 'Standorte & Termine', href: '/locations' },
-    { label: 'Verein & Vorstand', href: '/organization' },
+    { label: 'Herzsport verstehen', href: '/about' },
+    { label: 'Übungstermine', href: '/locations' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Kontakt', href: '/contact' },
   ];
@@ -22,17 +21,17 @@ export default function Header() {
         <Link href="/">
           <a
             className="flex items-center gap-3 group"
-            aria-label="Zur Startseite der Herzgruppen Reutlingen"
+            aria-label="Zur Startseite der ambulanten Herzsportgruppe Pfullingen"
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-lg font-bold text-primary-foreground">♥</span>
             </div>
             <div className="hidden sm:block">
               <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-                ARGE Reutlingen e.V.
+                Herzsportgruppe Pfullingen
               </p>
               <p className="text-sm font-semibold text-foreground">
-                Herzgruppen im Kreis Reutlingen
+                Rehasport für Herzpatienten
               </p>
             </div>
           </a>

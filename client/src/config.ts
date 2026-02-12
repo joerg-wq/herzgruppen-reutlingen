@@ -1,12 +1,18 @@
 /**
  * Zentrale Redaktions- und Site-Konfiguration.
  * Kontakt, Seitentitel und Basis-URL an einer Stelle pflegen.
+ *
+ * Diese Instanz bildet ausschließlich die ambulante Herzsportgruppe
+ * Pfullingen ab.
  */
 
-export const SITE_NAME = "Herzgruppen Reutlingen";
+export const SITE_NAME = "Ambulante Herzsportgruppe Pfullingen";
 export const SITE_DESCRIPTION =
-  "Ambulante Herzgruppen im Kreis Reutlingen – Bewegung, Gemeinschaft und Sicherheit unter ärztlicher Aufsicht.";
-export const CONTACT_EMAIL = "arge-herzsport@web.de";
+  "Ambulante Herzsportgruppe Pfullingen – Rehasport, Gemeinschaft und Lebensfreude für Herzpatienten mit und ohne Herzinsuffizienz.";
+
+// Zentrale Kontaktadresse der Herzsportgruppe Pfullingen
+export const CONTACT_EMAIL = "herzgruppe-pfullingen@magenta.de";
+
 /** Basis-URL der Live-Seite; bei Deployment anpassen (z.B. für Sitemap). */
 export const BASE_URL =
   typeof window !== "undefined"

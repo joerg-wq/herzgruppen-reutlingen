@@ -72,15 +72,11 @@ export default function FAQ() {
       items: [
         {
           q: 'Wie intensiv ist das Training?',
-          a: 'Das Training ist individuell anpassbar. Es beginnt mit leichten Übungen und wird je nach Ihrem Fortschritt und Ihrer Leistungsfähigkeit gesteigert. Sie bestimmen das Tempo mit - es gibt keinen Druck, schneller zu werden.',
+          a: 'Das Training ist individuell anpassbar. Es beginnt mit leichten Übungen und wird je nach Ihrem Fortschritt und Ihrer Leistungsfähigkeit gesteigert. Sie bestimmen das Tempo mit – es gibt keinen Druck, schneller zu werden.',
         },
         {
           q: 'Was muss ich zum Training mitbringen?',
           a: 'Bringen Sie sportgeeignete Kleidung und Schuhe, ein Handtuch, eine Trinkflasche, Ihre Krankenversicherungskarte und alle Ihre Medikamente mit.',
-        },
-        {
-          q: 'Kann ich die Gruppe wechseln?',
-          a: 'Ja, Sie können die Gruppe wechseln, wenn dies für Sie besser passt. Kontaktieren Sie die neue Gruppe und informieren Sie die alte Gruppe über Ihren Wechsel.',
         },
       ],
     },
@@ -90,14 +86,6 @@ export default function FAQ() {
         {
           q: 'Wie lange sollte ich in einer Herzgruppe trainieren?',
           a: 'Das Trainingsprogramm ist langfristig angelegt. Viele Teilnehmer trainieren über Jahre hinweg. Das regelmäßige Training ist wichtig, um die Vorteile zu erhalten und Ihre Gesundheit zu verbessern.',
-        },
-        {
-          q: 'Kann ich auch als Angehöriger teilnehmen?',
-          a: 'Die Herzgruppen sind primär für Herzpatienten konzipiert. Angehörige können aber oft zu speziellen Informationsveranstaltungen oder Ausflügen teilnehmen. Fragen Sie Ihre Gruppe danach.',
-        },
-        {
-          q: 'Gibt es auch Gruppen für Schlaganfallpatienten?',
-          a: 'Ja, die ARGE Reutlingen betreut auch eine Schlaganfallgruppe in Bad Urach. Kontaktieren Sie uns für weitere Informationen.',
         },
       ],
     },
@@ -115,7 +103,7 @@ export default function FAQ() {
               Häufig gestellte Fragen
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an unseren Herzgruppen.
+              Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an der Herzsportgruppe Pfullingen.
             </p>
           </div>
         </section>

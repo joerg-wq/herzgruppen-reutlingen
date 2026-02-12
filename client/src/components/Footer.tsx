@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
           {/* About */}
           <div>
-            <h3 className="font-semibold mb-3">Herzgruppen Reutlingen</h3>
+            <h3 className="font-semibold mb-3">Ambulante Herzsportgruppe Pfullingen</h3>
             <p className="text-sm opacity-90 leading-snug">
-              Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.
+              Herzsport und Rehasport für Herzpatienten in Pfullingen – mit ärztlicher Betreuung und qualifizierten Übungsleiterinnen und Übungsleitern.
             </p>
             <p className="text-xs opacity-75 mt-2">
-              Bewegung, Gemeinschaft und Lebensfreude – unter ärztlicher Aufsicht.
+              Trägerverein: ARGE Reutlingen e.V.
             </p>
           </div>
 
@@ -49,14 +49,14 @@ export default function Footer() {
             <h4 className="font-semibold mb-3">Kontakt</h4>
             <ul className="space-y-1.5 text-sm opacity-90">
               <li>
-                <strong>Geschäftsstelle:</strong>
+                <strong>Trainingsort:</strong>
                 <br />
-                Lindachstr. 18
+                Sporthalle des Friedrich-Schiller-Gymnasiums
                 <br />
-                72810 Gomaringen
+                72793 Pfullingen
               </li>
               <li>
-                <strong>Telefon:</strong>
+                <strong>Geschäftsstelle (Trägerverein):</strong>
                 <br />
                 07072 / 80 58 6
               </li>
@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <p className="text-xs opacity-80">
-                  <span className="font-semibold">Über diese Website:</span> Informationsangebot der ARGE Reutlingen e.V. zu den ambulanten Herzgruppen im Kreis Reutlingen.
+                  <span className="font-semibold">Über diese Website:</span> Informationsangebot der ambulanten Herzsportgruppe Pfullingen (getragen durch die ARGE Reutlingen e.V.).
                 </p>
               </li>
             </ul>
@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="border-t border-border/50 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm opacity-75 gap-2">
             <p>
-              &copy; {new Date().getFullYear()} ARGE Reutlingen e.V. Alle Rechte vorbehalten.
+              &copy; {new Date().getFullYear()} Ambulate Herzsportgruppe Pfullingen / ARGE Reutlingen e.V.
             </p>
             <p>Zertifiziert durch WBRS | VR 350490 beim Amtsgericht Stuttgart</p>
           </div>

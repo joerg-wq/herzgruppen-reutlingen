@@ -122,30 +122,30 @@ export default function Join() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-12 md:py-16">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Teilnahme & Anmeldung
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Melden Sie sich an und werden Sie Teil unserer Herzgruppen-Gemeinschaft.
+            <p className="text-base text-muted-foreground max-w-2xl">
+              Melden Sie sich für die Herzsportgruppe Pfullingen an. Mit einer ärztlichen Verordnung können Sie am Rehasport teilnehmen.
             </p>
           </div>
         </section>
 
         {/* Steps */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
-              5 Schritte zur Anmeldung
+            <h2 className="text-2xl md:py-3xl font-bold mb-6 text-foreground">
+              So funktioniert die Anmeldung
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {[
-                { number: '1', title: 'Formular ausfüllen', description: 'Persönliche Daten' },
-                { number: '2', title: 'Dokument hochladen', description: 'Ärztliche Empfehlung' },
-                { number: '3', title: 'Überprüfung', description: 'Wir prüfen Ihre Unterlagen' },
-                { number: '4', title: 'Bestätigung', description: 'Sie erhalten eine E-Mail' },
-                { number: '5', title: 'Training starten', description: 'Erstes Training' },
+                { number: '1', title: 'Ärztliche Verordnung holen', description: 'Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport/Herzsport aus.' },
+                { number: '2', title: 'Formular ausfüllen', description: 'Kontaktdaten und medizinische Hinweise im Formular ergänzen.' },
+                { number: '3', title: 'E-Mail senden', description: 'Das vorbefüllte E-Mail-Fenster prüfen, ggf. Verordnung anhängen und absenden.' },
+                { number: '4', title: 'Rückmeldung abwarten', description: 'Wir melden uns mit weiteren Informationen zum Einstieg.' },
+                { number: '5', title: 'Erstes Training', description: 'Zum vereinbarten Termin in die Sporthalle des Friedrich-Schiller-Gymnasiums kommen.' },
               ].map((step) => (
                 <div key={step.number} className="bg-white p-4 rounded-lg border border-border text-center">
                   <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold mb-3 mx-auto">
@@ -160,7 +160,7 @@ export default function Join() {
         </section>
 
         {/* Form Section */}
-        <section className="py-12 md:py-16 bg-secondary/5">
+        <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
             <div className="max-w-2xl mx-auto">
               <Card className="p-8">
@@ -308,18 +308,15 @@ export default function Join() {
                     <div>
                       <h3 className="text-lg font-semibold mb-4">Präferenzen</h3>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Bevorzugter Standort</label>
+                        <label className="block text-sm font-medium mb-2">Hinweis zur Teilnahme (optional)</label>
                         <select
                           name="preferredLocation"
                           value={formData.preferredLocation}
                           onChange={handleChange}
                           className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                         >
-                          <option value="">-- Bitte wählen --</option>
-                          <option value="Reutlingen">Reutlingen</option>
-                          <option value="Gomaringen">Gomaringen</option>
-                          <option value="Bad Urach">Bad Urach</option>
-                          <option value="Metzingen">Metzingen</option>
+                          <option value="">Keine besondere Angabe</option>
+                          <option value="Pfullingen">Teilnahme in Pfullingen</option>
                         </select>
                       </div>
                     </div>

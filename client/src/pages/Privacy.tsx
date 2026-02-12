@@ -31,7 +31,7 @@ export default function Privacy() {
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">1. Einleitung</h2>
                 <p className="text-sm text-muted-foreground">
-                  Die ARGE Reutlingen e.V. nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie wir Ihre personenbezogenen Daten verarbeiten, wenn Sie unsere Website besuchen oder sich bei uns anmelden.
+                  Die ARGE Reutlingen e.V. und die ambulante Herzsportgruppe Pfullingen nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie wir Ihre personenbezogenen Daten verarbeiten, wenn Sie unsere Website besuchen oder sich bei der Herzsportgruppe Pfullingen anmelden.
                 </p>
               </Card>
 

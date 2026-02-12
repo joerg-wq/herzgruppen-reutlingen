@@ -15,10 +15,10 @@ export default function About() {
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Herzgruppen verstehen
+              Herzsport in Pfullingen verstehen
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Erfahren Sie, was ambulante Herzgruppen sind, wie sie funktionieren und welche Vorteile sie bieten.
+              Erfahren Sie, wie der Herzsport in Pfullingen aufgebaut ist, welche Ziele das Training hat und wie wir Sicherheit gewährleisten.
             </p>
           </div>
         </section>
@@ -27,15 +27,15 @@ export default function About() {
         <section className="py-8 md:py-10">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Was sind ambulante Herzgruppen?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Was ist die Herzsportgruppe Pfullingen?</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                Ambulante Herzgruppen sind spezialisierte Trainingsgruppen für Menschen mit Herzerkrankungen. Sie bieten ein strukturiertes, ärztlich überwachtes Trainingsprogramm, das es Patienten ermöglicht, ihre körperliche Fitness und Lebensqualität zu verbessern.
+                Die ambulante Herzsportgruppe Pfullingen ist eine spezialisierte Trainingsgruppe für Menschen mit Herzerkrankungen. Sie bietet ein strukturiertes, ärztlich überwachtes Trainingsprogramm, das es Ihnen ermöglicht, Ihre körperliche Fitness und Lebensqualität zu verbessern.
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                Im Gegensatz zu Rehabilitationskliniken trainieren Sie bei ambulanten Herzgruppen in Ihrer Nähe und können zu Hause leben. Das Training ist regelmäßig und kontinuierlich – nicht nur für ein paar Wochen.
+                Im Gegensatz zu einer stationären Reha trainieren Sie bei uns in Pfullingen und bleiben in Ihrem Alltag verankert. Das Training ist regelmäßig und langfristig angelegt – nicht nur für ein paar Wochen.
               </p>
               <p className="text-sm text-muted-foreground">
-                Die Gruppen werden von ausgebildeten Trainern geleitet und sind medizinisch betreut. Alle Trainer haben spezielle Qualifikationen für die Arbeit mit Herzpatienten.
+                Die Gruppe wird von speziell geschulten Übungsleiterinnen und Übungsleitern geleitet und ist ärztlich betreut. Alle Beteiligten haben Erfahrung in der Arbeit mit Herzpatienten.
               </p>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-5 md:p-8 border border-primary/20">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Zertifizierung & Qualitätssicherung</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                Alle Herzgruppen der ARGE Reutlingen sind vom Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. Dies bedeutet:
+                Die Herzsportgruppe Pfullingen ist Teil der ARGE Reutlingen und über den Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. Dies bedeutet:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                 {[

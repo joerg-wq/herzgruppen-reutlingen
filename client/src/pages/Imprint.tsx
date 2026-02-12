@@ -32,7 +32,7 @@ export default function Imprint() {
                 <h2 className="text-xl font-bold mb-3">Verantwortliche Stelle</h2>
                 <div className="space-y-1 text-sm text-foreground">
                   <p className="font-semibold">ARGE Reutlingen e.V.</p>
-                  <p>Ambulante Herzgruppen im Kreis Reutlingen</p>
+                  <p>Ambulante Herzsportgruppe Pfullingen</p>
                   <p>Lindachstr. 18</p>
                   <p>72810 Gomaringen</p>
                   <p>Deutschland</p>
@@ -61,11 +61,8 @@ export default function Imprint() {
               {/* Vertretungsberechtigte */}
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">Vertretungsberechtigte Personen</h2>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Der Verein wird vertreten durch die Mitglieder des Vorstands gemäß der Satzung der ARGE Reutlingen e.V.
-                </p>
                 <p className="text-sm text-muted-foreground">
-                  Aktuelle Vorstandsmitglieder finden Sie auf der Seite <Link href="/verein"><a className="text-primary hover:underline">Verein & Vorstand</a></Link>.
+                  Der Verein wird vertreten durch die Mitglieder des Vorstands gemäß der Satzung der ARGE Reutlingen e.V. Die Herzsportgruppe Pfullingen ist ein Angebot der ARGE Reutlingen e.V.
                 </p>
               </Card>
 

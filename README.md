@@ -1,6 +1,6 @@
-## Herzgruppen Reutlingen – Statische Website (MVP)
+## Ambulante Herzsportgruppe Pfullingen – Website (MVP)
 
-Diese Repository enthält die statische Informations-Website für die ambulanten Herzgruppen im Kreis Reutlingen (ARGE Reutlingen e.V.).
+Dieses Repository enthält die statische Informations-Website für die ambulante Herzsportgruppe Pfullingen (getragen durch die ARGE Reutlingen e.V.).
 
 Die Anwendung ist ein reines Frontend (React + Vite), ohne Datenbank und ohne Backend.
 
@@ -69,11 +69,13 @@ Die Anwendung ist ein statischer Vite-Build. Output-Verzeichnis: **dist/public**
 1. Projekt einmalig im Dashboard anlegen: Pages → **Create a project** → **Direct Upload** → Projektnamen vergeben (z. B. `herzgruppen-reutlingen`).
 2. [Wrangler installieren](https://developers.cloudflare.com/workers/wrangler/install/) und anmelden: `npx wrangler login`.
 3. Deploy ausführen:
-   ```bash
-   pnpm run build
-   npx wrangler pages deploy dist/public --project-name=herzgruppen-reutlingen
-   ```
-   Oder ein Aufruf: `pnpm run deploy` (nutzt denselben Projektnamen; ggf. in `package.json` anpassen).
+
+```bash
+pnpm run build
+npx wrangler pages deploy dist/public --project-name=herzgruppen-reutlingen
+```
+
+Oder ein Aufruf: `pnpm run deploy` (nutzt denselben Projektnamen; ggf. in `package.json` anpassen).
 
 Nach dem ersten Deploy zeigt Cloudflare die URL (z. B. `https://herzgruppen-reutlingen.pages.dev`). Custom Domain optional im Dashboard einrichten.
 
@@ -90,21 +92,17 @@ Nach dem ersten Deploy zeigt Cloudflare die URL (z. B. `https://herzgruppen-re
 - **Textseiten**
   - Alle Seiten liegen unter `client/src/pages/…`:
     - `Home.tsx` – Startseite
-    - `About.tsx` – „Herzgruppen verstehen“
-    - `Locations.tsx` – Standorte & Termine
+    - `About.tsx` – „Herzsport in Pfullingen verstehen“
+    - `Locations.tsx` – Übungstermine & Ort in Pfullingen
     - `Join.tsx` – Teilnahme & Anmeldung (Formular mit E-Mail-Weiterleitung)
-    - `Organization.tsx` – Verein & Vorstand
     - `FAQ.tsx` – Häufig gestellte Fragen
     - `Contact.tsx` – Kontakt
     - `Imprint.tsx` – Impressum
     - `Privacy.tsx` – Datenschutzerklärung
 
-- **Standorte & Termine**
+- **Übungstermine Pfullingen**
   - Datei: `client/public/data/locations.json`
-  - Jede Gruppe ist ein Objekt mit Feldern u.a.:
-    - `city`, `address`, `weekday`, `time`
-    - `type` (`"herzgruppe"` oder `"herzinsuffizienz"`)
-  - Neue Gruppen können durch Hinzufügen eines weiteren Objekts ergänzt werden.
+  - Für diese Instanz werden nur Einträge mit `city = "Pfullingen"` verwendet.
 
 Nach Änderungen an Texten oder Standorten:
 
@@ -117,7 +115,11 @@ Nach Änderungen an Texten oder Standorten:
 - **Sprache:** `lang="de"` in `client/index.html`
 - **Meta-Tags:** Pro Seite werden Titel und Description aus `client/src/routes.ts` gesetzt (bei Routenwechsel per `document.title` und `<meta name="description">`).
 - **Sitemap & robots:** `client/public/sitemap.xml` und `client/public/robots.txt` sind vorhanden.
-- **Go-Live:** Bei Deployment die **Basis-URL** in `sitemap.xml` und in `robots.txt` (Sitemap-Zeile) auf die finale Domain umstellen (z. B. `https://www.herzgruppen-reutlingen.de`). Optional kann in `client/src/config.ts` eine feste `BASE_URL` für Links genutzt werden.
+- **Go-Live:** Bei Deployment die **Basis-URL** in `sitemap.xml` und in `robots.txt` (Sitemap-Zeile) auf die finale Domain der Herzsportgruppe Pfullingen umstellen (z. B. `https://www.herzsportgruppe-pfullingen.de`). Optional kann in `client/src/config.ts` eine feste `BASE_URL` für Links genutzt werden.
+
+### Historie
+
+Die Inhalte orientieren sich an der bestehenden Seite `http://herzsportgruppe-pfullingen.de/`. Diese bleibt (sofern weiter betrieben) als ergänzende Quelle für Rückblicke und Bilder bestehen, während diese Anwendung den kompakten, modernen Auftritt der Herzsportgruppe Pfullingen bildet.
 
 ### Security
 
@@ -125,12 +127,13 @@ Nach Änderungen an Texten oder Standorten:
 - Externe Links (z. B. Google Maps, ODR, bfdi.bund.de) sind mit `rel="noopener noreferrer"` gesetzt.
 - **HTTPS** sollte am Hoster erzwungen werden (Redirect von HTTP auf HTTPS).
 - Optional kann eine **Content-Security-Policy (CSP)** beim Hoster gesetzt werden, z. B. für Cloudflare Pages oder Netlify. Beispiel (nur erlaubte Script-/Style-Quellen):
-  ```http
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self';
-  ```
-  Konkrete Umsetzung je nach Hoster (z. B. `_headers` bei Netlify oder Cloudflare Dashboard).
+
+```http
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self';
+```
+
+Konkrete Umsetzung je nach Hoster (z. B. `_headers` bei Netlify oder Cloudflare Dashboard).
 
 ### Rechtliches
 
 Impressum und Datenschutzerklärung inhaltlich von fachkundiger Stelle (z. B. Anwalt) prüfen lassen.
-
