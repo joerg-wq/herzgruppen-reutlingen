@@ -28,13 +28,10 @@ export default function Organization() {
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Über die ARGE Reutlingen</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Die Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V. (ARGE RT) ist ein gemeinnütziger Verein, der sich der Unterstützung von Herzpatienten verschrieben hat.
+                Die Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V. (ARGE RT) ist ein gemeinnütziger Verein, der Herzgruppen im gesamten Kreis unterstützt und koordiniert.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Seit über 35 Jahren kümmern wir uns um die Gründung, den Aufbau und die Verwaltung von Herzgruppen in der Region. Unser Ziel ist es, Herzpatienten die Möglichkeit zu geben, ihre körperliche und psychische Gesundheit durch regelmäßiges, ärztlich überwachtes Training zu verbessern.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Die ARGE RT ist verantwortlich für den Betrieb und Fortbestand der Herzgruppen und überwacht die Einhaltung strenger Qualitätskriterien. Alle unsere Gruppen sind vom Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert.
+                Seit über 35 Jahren fördern wir den Aufbau und die Betreuung von Herzgruppen in der Region und achten auf klare Qualitätsstandards im Rehasport.
               </p>
             </div>
           </div>

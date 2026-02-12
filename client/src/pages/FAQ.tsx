@@ -21,7 +21,7 @@ export default function FAQ() {
       items: [
         {
           q: 'Was kostet die Teilnahme an einer Herzgruppe?',
-          a: 'Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Dies ist möglich, weil alle unsere Gruppen vom Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert sind. Sie müssen lediglich eine ärztliche Verordnung vorlegen.',
+          a: 'Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Voraussetzung ist in der Regel eine ärztliche Verordnung (z. B. für Rehasport).',
         },
         {
           q: 'Übernimmt meine Krankenkasse die Kosten?',

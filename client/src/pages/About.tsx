@@ -191,7 +191,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-5 md:p-8 border border-primary/20">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Zertifizierung & Qualitätssicherung</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                Alle Herzgruppen der ARGE Reutlingen sind über den Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. Dies bedeutet:
+                Alle Herzgruppen der ARGE Reutlingen unterliegen klar definierten Qualitätskriterien des Rehasports. Dies bedeutet:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                 {[

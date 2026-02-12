@@ -228,7 +228,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Alle unsere Gruppen sind vom Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. Dies ermöglicht die Abrechnung mit Krankenkassen und Rentenversicherung.
+                  Unsere Herzgruppen erfüllen die anerkannten Qualitätskriterien des Rehasports. So ist die Abrechnung mit Krankenkassen und Rentenversicherung möglich.
                 </p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function Home() {
                 {
                   icon: <Shield className="text-primary" size={32} />,
                   title: 'Zertifiziert & Versichert',
-                  description: 'Alle Herzgruppen im Kreis Reutlingen sind über den Württembergischen Behinderten- und Rehabilitationssportverband (WBRS) zertifiziert. So ist die Abrechnung mit Krankenkassen und Rentenversicherung möglich.',
+                  description: 'Alle Herzgruppen im Kreis Reutlingen erfüllen die Qualitätsanforderungen des Rehasports. So ist die Abrechnung mit Krankenkassen und Rentenversicherung möglich.',
                 },
                 {
                   icon: <Smile className="text-secondary" size={32} />,

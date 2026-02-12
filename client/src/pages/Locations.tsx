@@ -107,7 +107,7 @@ export default function Locations() {
               Standorte &amp; Übungstermine
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Herzgruppen im Kreis Reutlingen – von Reutlingen und Pfullingen über Metzingen und Dettingen bis Bad Urach und Münsingen. Wählen Sie die Gruppe, die zu Ihnen passt.
+              Herzgruppen im gesamten Kreis Reutlingen. Wählen Sie den Standort, der zu Ihnen passt.
             </p>
           </div>
         </section>
@@ -347,7 +347,7 @@ export default function Locations() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">Kosten &amp; Abrechnung</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Alle unsere Gruppen sind WBRS-zertifiziert.
+                  Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen.
                 </p>
                 <Link href="/faq">
                   <a className="text-primary hover:underline font-medium">

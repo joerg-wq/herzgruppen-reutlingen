@@ -76,10 +76,13 @@ export default function Contact() {
                     <Clock className="text-secondary flex-shrink-0 mt-1" size={24} />
                     <div>
                       <h3 className="font-semibold text-foreground mb-4">Telefonische Erreichbarkeit</h3>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li><strong>Montag - Freitag:</strong> 09:00 - 12:00 Uhr</li>
-                        <li><strong>Montag - Freitag:</strong> 14:00 - 17:00 Uhr</li>
-                      </ul>
+                      <p className="text-muted-foreground">
+                        <strong>Montag – Freitag</strong>
+                        <br />
+                        09:00 – 12:00 Uhr
+                        <br />
+                        14:00 – 17:00 Uhr
+                      </p>
                       <p className="text-sm text-muted-foreground mt-4">
                         Außerhalb dieser Zeiten können Sie uns eine E-Mail schreiben oder eine Nachricht hinterlassen.
                       </p>
