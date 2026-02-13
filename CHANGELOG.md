@@ -4,6 +4,17 @@
 
 ---
 
+## [1.2.2] – 2026-02-11 – About, FAQ, SEO & Impressum
+
+### Geändert (1.2.2)
+
+- **About:** Hero-Untertitel gekürzt („Ärztlich betreuter Rehasport in fester Gruppe – Ziele, Ablauf und Sicherheit.“); SEO-Titel und Description für `/about` angepasst (ambulante Herzgruppe, wohnortnah, Sicherheit).
+- **FAQ:** Auf-/Zuklappen pro Frage mit eindeutigem Schlüssel pro Kategorie (Bugfix: gleicher Index in verschiedenen Kategorien kollidierte vorher).
+- **Impressum:** Formulierung verallgemeinert („Ortsgruppen z. B. Pfullingen, Reutlingen“ statt nur Herzsportgruppe Pfullingen).
+- **Verein & Vorstand:** Telefon-Link für Vorstand normalisiert (`tel:+49…`) bei unveränderter lesbarer Anzeige.
+
+---
+
 ## [1.2.1] – 2026-02-12 – Rehasport-Text & Kontakte
 
 ### Geändert (1.2.1)

@@ -6,12 +6,17 @@ import { ChevronDown } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+function faqKey(sectionIndex: number, itemIndex: number) {
+  return `${sectionIndex}-${itemIndex}`;
+}
 
-  const toggleItem = (index: number) => {
+export default function FAQ() {
+  const [openItems, setOpenItems] = useState<string[]>([]);
+
+  const toggleItem = (sectionIndex: number, itemIndex: number) => {
+    const key = faqKey(sectionIndex, itemIndex);
     setOpenItems(prev =>
-      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
+      prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
     );
   };
 
@@ -117,15 +122,16 @@ export default function FAQ() {
                   <h2 className="text-xl font-bold mb-4 text-foreground">{section.category}</h2>
                   <div className="space-y-3">
                     {section.items.map((item, itemIndex) => {
-                      const isOpen = openItems.includes(itemIndex);
+                      const key = faqKey(sectionIndex, itemIndex);
+                      const isOpen = openItems.includes(key);
 
                       return (
                         <Card
-                          key={itemIndex}
+                          key={key}
                           className="overflow-hidden border border-border"
                         >
                           <button
-                            onClick={() => toggleItem(itemIndex)}
+                            onClick={() => toggleItem(sectionIndex, itemIndex)}
                             className="w-full px-4 py-3 flex items-center justify-between hover:bg-secondary/5 transition-colors text-left"
                           >
                             <h3 className="text-base font-semibold text-foreground pr-2">

@@ -15,9 +15,9 @@ export const ROUTE_META: RouteMeta[] = [
   },
   {
     path: "/about",
-    title: `Was ist eine Herzgruppe? | ${SITE_NAME}`,
+    title: `Was ist eine ambulante Herzgruppe? | ${SITE_NAME}`,
     description:
-      "Erfahren Sie, was eine ambulante Herzgruppe ist, wie das Training abläuft und welchen Nutzen es für Herzpatienten im Kreis Reutlingen hat.",
+      "Ärztlich betreute Rehasport-Gruppe wohnortnah im Kreis Reutlingen – Ziele, Ablauf und Sicherheit des Trainings.",
   },
   {
     path: "/locations",

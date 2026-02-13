@@ -62,7 +62,7 @@ export default function Imprint() {
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">Vertretungsberechtigte Personen</h2>
                 <p className="text-sm text-muted-foreground">
-                  Der Verein wird vertreten durch die Mitglieder des Vorstands gemäß der Satzung der ARGE Reutlingen e.V. Die Herzsportgruppe Pfullingen ist ein Angebot der ARGE Reutlingen e.V.
+                  Der Verein wird vertreten durch die Mitglieder des Vorstands gemäß der Satzung der ARGE Reutlingen e.V. Die Ortsgruppen (z.&nbsp;B. Pfullingen, Reutlingen) sind Angebote der ARGE Reutlingen e.V.
                 </p>
               </Card>
 

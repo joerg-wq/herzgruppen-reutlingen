@@ -4,6 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CONTACT_EMAIL } from '@/config';
 
+/** Normalisiert eine deutsche Telefonnummer für tel:-Links (ohne Leerzeichen/Schrägstrich). */
+function normalizePhoneForLink(display: string): string {
+  const digits = display.replace(/\D/g, '');
+  if (digits.startsWith('0')) return `+49${digits.slice(1)}`;
+  if (!digits.startsWith('49')) return `+49${digits}`;
+  return `+${digits}`;
+}
+
 export default function Organization() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -104,7 +112,7 @@ export default function Organization() {
                     {member.phone && (
                       <div className="flex items-start gap-2">
                         <Phone size={16} className="flex-shrink-0 mt-1" />
-                        <a href={`tel:${member.phone}`} className="hover:text-primary">
+                        <a href={`tel:${normalizePhoneForLink(member.phone)}`} className="hover:text-primary">
                           {member.phone}
                         </a>
                       </div>

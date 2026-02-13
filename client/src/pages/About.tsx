@@ -18,7 +18,7 @@ export default function About() {
               Was ist eine ambulante Herzgruppe?
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Erfahren Sie, wie ambulante Herzgruppen im Kreis Reutlingen funktionieren, welche Ziele das Training hat und wie wir Sicherheit gewährleisten.
+              Ärztlich betreuter Rehasport in fester Gruppe – Ziele, Ablauf und Sicherheit.
             </p>
           </div>
         </section>
@@ -27,15 +27,12 @@ export default function About() {
         <section className="py-8 md:py-10">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Was sind ambulante Herzgruppen?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">So funktioniert eine ambulante Herzgruppe</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                Ambulante Herzgruppen sind spezialisierte Trainingsgruppen für Menschen mit Herzerkrankungen. Sie bieten ein strukturiertes, ärztlich überwachtes Trainingsprogramm, das es Ihnen ermöglicht, Ihre körperliche Fitness und Lebensqualität zu verbessern.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                Im Gegensatz zu einer stationären Reha trainieren Sie wohnortnah in einer Gruppe und bleiben in Ihrem Alltag verankert. Das Training ist regelmäßig und langfristig angelegt – nicht nur für ein paar Wochen.
+                Ambulante Herzgruppen sind ärztlich betreute Rehasport-Gruppen für Menschen mit Herzerkrankungen. Sie trainieren wohnortnah in einer festen Gruppe und verbessern langfristig Belastbarkeit, Sicherheit und Lebensqualität im Alltag.
               </p>
               <p className="text-sm text-muted-foreground">
-                Die Gruppen werden von speziell geschulten Übungsleiterinnen und Übungsleitern geleitet und sind ärztlich betreut. Alle Beteiligten haben Erfahrung in der Arbeit mit Herzpatienten.
+                Die Einheiten sind strukturiert aufgebaut und werden von speziell geschulten Übungsleiterinnen und Übungsleitern durchgeführt. Eine medizinische Betreuung stellt sicher, dass das Training individuell angepasst und sicher durchgeführt wird.
               </p>
             </div>
           </div>
@@ -140,47 +137,52 @@ export default function About() {
         {/* Training Structure */}
         <section className="py-8 md:py-10 bg-secondary/5">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Trainingsstruktur</h2>
-            <div className="max-w-3xl">
-              <p className="text-sm text-muted-foreground mb-5">
-                Ein typisches Trainingsprogramm dauert etwa 60 Minuten und besteht aus folgenden Komponenten:
-              </p>
-              <div className="space-y-4">
-                {[
-                  {
-                    time: '10 Minuten',
-                    title: 'Ankommen & Vitalwerte',
-                    description: 'Messung von Blutdruck und Puls, Begrüßung und Vorbereitung',
-                  },
-                  {
-                    time: '10 Minuten',
-                    title: 'Aufwärmen',
-                    description: 'Leichte Bewegungsübungen, Stretching und Mobilisierung',
-                  },
-                  {
-                    time: '30 Minuten',
-                    title: 'Haupttraining',
-                    description: 'Ausdauertraining (z.B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung',
-                  },
-                  {
-                    time: '10 Minuten',
-                    title: 'Abwärmen & Entspannung',
-                    description: 'Beruhigung des Herzrhythmus, Stretching und Entspannungsübungen',
-                  },
-                ].map((phase, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold text-xs">
-                        {phase.time}
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold mb-1">{phase.title}</h4>
-                      <p className="text-sm text-muted-foreground leading-snug">{phase.description}</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+              Trainingsstruktur
+            </h2>
+            <p className="text-sm text-muted-foreground mb-6 text-center max-w-2xl mx-auto">
+              Ein typisches Trainingsprogramm dauert etwa 60 Minuten und besteht aus folgenden Komponenten:
+            </p>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                {
+                  time: '10 Minuten',
+                  title: 'Ankommen & Vitalwerte',
+                  description: 'Messung von Blutdruck und Puls, Begrüßung und Vorbereitung.',
+                },
+                {
+                  time: '10 Minuten',
+                  title: 'Aufwärmen',
+                  description: 'Leichte Bewegungsübungen, Stretching und Mobilisierung.',
+                },
+                {
+                  time: '30 Minuten',
+                  title: 'Haupttraining',
+                  description: 'Ausdauertraining (z.B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung.',
+                },
+                {
+                  time: '10 Minuten',
+                  title: 'Abwärmen & Entspannung',
+                  description: 'Beruhigung des Herzrhythmus, Stretching und Entspannungsübungen.',
+                },
+              ].map((phase, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 items-stretch bg-white rounded-lg border border-border px-4 py-3"
+                >
+                  <div className="flex-shrink-0 flex items-center">
+                    <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold text-xs text-center leading-tight">
+                      {phase.time}
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold mb-1">{phase.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-snug">
+                      {phase.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
