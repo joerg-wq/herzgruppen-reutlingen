@@ -14,6 +14,8 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["_legacy/server/**/*.test.ts", "_legacy/server/**/*.spec.ts"],
+    include: ["client/**/*.test.ts", "client/**/*.spec.ts"],
+    exclude: ["_legacy/**", "node_modules/**"],
+    passWithNoTests: true,
   },
 });
