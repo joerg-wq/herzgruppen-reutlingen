@@ -174,10 +174,10 @@ export default function Locations() {
               </div>
             ) : (
               <motion.div
+                key={`${selectedCity}-${selectedDay}-${onlySpecial}`}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-60px' }}
+                animate="visible"
                 variants={stagger}
               >
                 {filteredVenues.map(venue => (
