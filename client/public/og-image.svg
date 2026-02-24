@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef2f2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fafafa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0fdf4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Decorative circles -->
+  <circle cx="950" cy="315" r="200" fill="#dc2626" opacity="0.06" />
+  <circle cx="950" cy="315" r="140" fill="#dc2626" opacity="0.04" />
+
+  <!-- Heart icon -->
+  <g transform="translate(900, 200)">
+    <path d="M50 120 C50 120 0 80 0 45 C0 20 18 0 40 0 C52 0 60 8 60 8 C60 8 68 0 80 0 C102 0 120 20 120 45 C120 80 70 120 60 130 C50 120 50 120 50 120Z" fill="#dc2626" opacity="0.15" stroke="#dc2626" stroke-width="2"/>
+    <!-- EKG line -->
+    <polyline points="-20,55 15,55 25,35 35,80 45,45 55,55 75,55 85,40 92,70 100,50 140,55" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text content -->
+  <text x="80" y="200" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#dc2626" letter-spacing="2">ARGE REUTLINGEN E.V.</text>
+
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700" fill="#1a1a1a">Ambulante Herzgruppen</text>
+  <text x="80" y="345" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700" fill="#1a1a1a">im Kreis Reutlingen</text>
+
+  <text x="80" y="410" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#666666">Rehasport in Herzgruppen – ärztlich begleitet</text>
+  <text x="80" y="445" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#666666">und wohnortnah im Kreis Reutlingen.</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="560" width="1200" height="70" fill="#dc2626" opacity="0.9" />
+  <text x="80" y="603" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="white">herzgruppen-reutlingen.de</text>
+  <text x="1120" y="603" font-family="Inter, system-ui, sans-serif" font-size="18" fill="white" text-anchor="end">35+ Jahre Erfahrung · 8 Standorte</text>
+</svg>

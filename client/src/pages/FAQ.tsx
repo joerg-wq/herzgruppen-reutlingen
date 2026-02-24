@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { fadeInUp, stagger } from '@/lib/animations';
 
 function faqKey(sectionIndex: number, itemIndex: number) {
   return `${sectionIndex}-${itemIndex}`;
@@ -102,24 +104,48 @@ export default function FAQ() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 section-padding">
           <div className="container">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Häufig gestellte Fragen
-            </h1>
-            <p className="text-base text-muted-foreground max-w-2xl">
-              Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an den ambulanten Herzgruppen im Kreis Reutlingen.
-            </p>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={stagger}
+            >
+              <motion.h1
+                className="text-4xl md:text-5xl font-bold text-foreground mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Häufig gestellte Fragen
+              </motion.h1>
+              <motion.p
+                className="text-lg text-muted-foreground max-w-2xl"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Finden Sie Antworten auf die wichtigsten Fragen zur Teilnahme an den ambulanten Herzgruppen im Kreis Reutlingen.
+              </motion.p>
+            </motion.div>
           </div>
         </section>
 
         {/* FAQ Content */}
-        <section className="py-8 md:py-10">
+        <section className="section-padding">
           <div className="container max-w-3xl">
-            <div className="space-y-6">
+            <motion.div
+              className="space-y-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={stagger}
+            >
               {faqs.map((section, sectionIndex) => (
-                <div key={sectionIndex}>
-                  <h2 className="text-xl font-bold mb-4 text-foreground">{section.category}</h2>
+                <motion.div
+                  key={sectionIndex}
+                  variants={fadeInUp}
+                  transition={{ duration: 0.4 }}
+                >
+                  <h2 className="text-xl font-bold mb-5 text-foreground">{section.category}</h2>
                   <div className="space-y-3">
                     {section.items.map((item, itemIndex) => {
                       const key = faqKey(sectionIndex, itemIndex);
@@ -132,47 +158,83 @@ export default function FAQ() {
                         >
                           <button
                             onClick={() => toggleItem(sectionIndex, itemIndex)}
-                            className="w-full px-4 py-3 flex items-center justify-between hover:bg-secondary/5 transition-colors text-left"
+                            className="w-full px-5 py-4 flex items-center justify-between hover:bg-secondary/5 transition-colors text-left"
                           >
-                            <h3 className="text-base font-semibold text-foreground pr-2">
+                            <h3 className="text-base font-semibold text-foreground pr-3">
                               {item.q}
                             </h3>
-                            <ChevronDown
-                              size={20}
-                              className={`flex-shrink-0 text-primary transition-transform ${
-                                isOpen ? 'transform rotate-180' : ''
-                              }`}
-                            />
+                            <motion.div
+                              animate={{ rotate: isOpen ? 180 : 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <ChevronDown
+                                size={20}
+                                className="flex-shrink-0 text-primary"
+                              />
+                            </motion.div>
                           </button>
-                          {isOpen && (
-                            <div className="px-4 py-3 border-t border-border bg-secondary/5">
-                              <p className="text-sm text-muted-foreground leading-snug">{item.a}</p>
-                            </div>
-                          )}
+                          <AnimatePresence initial={false}>
+                            {isOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.25, ease: 'easeInOut' }}
+                                className="overflow-hidden"
+                              >
+                                <div className="px-5 py-4 border-t border-border bg-secondary/5">
+                                  <p className="text-base text-muted-foreground leading-relaxed">{item.a}</p>
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </Card>
                       );
                     })}
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Contact CTA */}
-        <section className="py-8 md:py-10 bg-secondary/5">
+        <section className="section-padding bg-secondary/5">
           <div className="container text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Weitere Fragen?</h2>
-            <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
-              Wenn Sie eine Frage haben, die hier nicht beantwortet wird, kontaktieren Sie uns gerne direkt.
-            </p>
-            <Link href="/contact">
-              <a>
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Kontakt aufnehmen
-                </Button>
-              </a>
-            </Link>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={stagger}
+            >
+              <motion.h2
+                className="text-2xl md:text-3xl font-bold mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Weitere Fragen?
+              </motion.h2>
+              <motion.p
+                className="text-base text-muted-foreground mb-8 max-w-xl mx-auto"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Wenn Sie eine Frage haben, die hier nicht beantwortet wird, kontaktieren Sie uns gerne direkt.
+              </motion.p>
+              <motion.div
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                <Link href="/contact">
+                  <a>
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-3 h-auto shadow-md">
+                      Kontakt aufnehmen
+                      <ArrowRight className="ml-2" size={18} />
+                    </Button>
+                  </a>
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
       </main>
