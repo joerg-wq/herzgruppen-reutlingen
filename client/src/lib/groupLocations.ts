@@ -52,7 +52,7 @@ const DAY_ORDER: Record<string, number> = {
 };
 
 function extractDoctor(notes: string): string {
-  const match = notes.match(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*([^.]+)/);
+  const match = notes.match(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*(.+?)\.(?:\s|$)/);
   return match ? match[1].trim() : '';
 }
 
