@@ -24,15 +24,36 @@ export default function FAQ() {
 
   const faqs = [
     {
+      category: 'Einstieg & Voraussetzungen',
+      items: [
+        {
+          q: 'Wer kann am Herzsport teilnehmen?',
+          a: 'Teilnahmeberechtigt sind Patienten mit chronischen Herz-Kreislauf-Erkrankungen. Vor dem ersten Training findet ein persönliches Gespräch mit dem Herzsportgruppenarzt statt, um auf Basis Ihrer Befunde (z. B. Belastungs-EKG, Echokardiographie) die richtige Belastung festzulegen.',
+        },
+        {
+          q: 'Benötige ich eine ärztliche Verordnung?',
+          a: 'Ja, Sie benötigen eine Rehasportverordnung (Muster 56) von Ihrem Hausarzt oder Kardiologen. Dieses Formular ist der Schlüssel zur Kostenübernahme und dokumentiert, dass der Herzsport medizinisch notwendig und für Sie sicher ist.',
+        },
+        {
+          q: 'Kann ich auch ohne vorherige Reha-Maßnahme teilnehmen?',
+          a: 'Ja, Sie benötigen nicht zwingend eine vorherige Reha-Maßnahme. Wichtig ist nur, dass Sie eine ärztliche Verordnung haben und eine Herzerkrankung diagnostiziert wurde.',
+        },
+        {
+          q: 'Wann kann ich mit dem Training beginnen?',
+          a: 'Das hängt von Ihrem Gesundheitszustand ab. Nach einem Herzinfarkt oder einer Operation sollten Sie mindestens 4–6 Wochen warten. Ihr Arzt wird Ihnen den richtigen Zeitpunkt empfehlen.',
+        },
+      ],
+    },
+    {
       category: 'Kosten & Abrechnung',
       items: [
         {
           q: 'Was kostet die Teilnahme an einer Herzgruppe?',
-          a: 'Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Voraussetzung ist in der Regel eine ärztliche Verordnung (z. B. für Rehasport).',
+          a: 'Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen. Voraussetzung ist eine ärztliche Verordnung für Rehasport (Muster 56).',
         },
         {
           q: 'Übernimmt meine Krankenkasse die Kosten?',
-          a: 'Ja, in der Regel übernehmen gesetzliche Krankenkassen die Kosten für zertifizierte Herzgruppen. Private Krankenkassen regeln dies individuell. Sprechen Sie mit Ihrer Krankenkasse oder Ihrem Arzt für Details.',
+          a: 'Ja, gesetzliche Krankenkassen übernehmen in der Regel die Kosten für zertifizierte Herzgruppen. Private Krankenkassen regeln dies individuell – sprechen Sie mit Ihrer Kasse für Details.',
         },
         {
           q: 'Kann ich die Kosten von der Rentenversicherung erstattet bekommen?',
@@ -40,54 +61,78 @@ export default function FAQ() {
         },
         {
           q: 'Muss ich auf die Genehmigung meiner Krankenkasse warten?',
-          a: 'Viele Krankenkassen verzichten auf eine vorherige Genehmigung der Rehasportverordnung – Sie können dann sofort mit dem Training beginnen, ohne auf einen Genehmigungsbescheid zu warten. Ob Ihre Kasse dazugehört, erfahren Sie in der Übersicht des WBRS: wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht',
+          a: 'Viele Krankenkassen verzichten auf eine vorherige Genehmigung – Sie können dann sofort starten. Ob Ihre Kasse dazugehört, erfahren Sie in der Übersicht des WBRS: wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht',
         },
       ],
     },
     {
-      category: 'Einstieg & Voraussetzungen',
+      category: 'Ärztliche Betreuung & Qualifikation',
       items: [
         {
-          q: 'Benötige ich eine ärztliche Freigabe?',
-          a: 'Ja, eine ärztliche Freigabe oder Verordnung ist erforderlich. Dies ist ein wichtiger Sicherheitsaspekt, um sicherzustellen, dass das Training für Ihren Gesundheitszustand geeignet ist. Sprechen Sie mit Ihrem Hausarzt oder Kardiologen.',
+          q: 'Muss immer ein Arzt während des Trainings anwesend sein?',
+          a: 'Es gibt zwei Durchführungsvarianten: Bei der klassischen Variante ist der Arzt ständig im Übungsraum anwesend. Bei der neuen Variante (seit 2021) visitiert der Arzt mindestens alle 6 Wochen – dafür ist eine qualifizierte Rettungskraft (z. B. Notfallsanitäter) ständig vor Ort. Bei Herzinsuffizienzgruppen bleibt die ständige ärztliche Anwesenheit aufgrund des höheren Risikos ausnahmslos vorgeschrieben.',
         },
         {
-          q: 'Kann ich auch ohne vorherige Reha-Maßnahme teilnehmen?',
-          a: 'Ja, Sie benötigen nicht zwingend eine vorherige Reha-Maßnahme. Wichtig ist nur, dass Sie eine ärztliche Freigabe haben und eine Herzerkrankung diagnostiziert wurde.',
+          q: 'Welche Aufgaben hat der Herzsportgruppenarzt?',
+          a: 'Der Arzt prüft Ihre Untersuchungsbefunde, beurteilt Ihre Belastbarkeit und legt in Abstimmung mit der Übungsleitung Ihre individuellen Belastungsvorgaben schriftlich fest. Zudem berät er Sie zu Medikation und Lebensstil. Die Ärzte sind Fachärzte für Innere Medizin, Kardiologie oder Sportmedizin.',
         },
         {
-          q: 'Wann kann ich mit dem Training beginnen?',
-          a: 'Das hängt von Ihrem persönlichen Gesundheitszustand ab. Nach einem Herzinfarkt oder einer Operation sollten Sie mindestens 4-6 Wochen warten, bevor Sie mit einem Trainingsprogramm beginnen. Ihr Arzt wird Ihnen den richtigen Zeitpunkt empfehlen.',
+          q: 'Welche Qualifikation haben die Übungsleiter?',
+          a: 'Unsere Übungsleiter besitzen die Lizenz „Übungsleiter B Innere Medizin". Diese Spezialausbildung umfasst tiefgehendes Wissen über Kardiologie und Notfallmanagement – weit über das hinaus, was ein normaler Fitnesstrainer mitbringt.',
         },
       ],
     },
     {
-      category: 'Sicherheit & Betreuung',
+      category: 'Sicherheit & Notfallmanagement',
       items: [
         {
           q: 'Ist das Training sicher?',
-          a: 'Ja, das Training in unseren Herzgruppen ist sehr sicher. Jede Trainingseinheit wird von geschultem Personal geleitet, die Vitalwerte werden überwacht, und Notfallausrüstung ist vorhanden. Das Training wird individuell an Ihre Leistungsfähigkeit angepasst.',
+          a: 'Ja, das Training ist sehr sicher. Jede Einheit wird von geschultem Personal geleitet, Ihre Vitalwerte werden überwacht, und Notfallausrüstung ist vorhanden. Die Trainingsintensität wird individuell an Ihre Leistungsfähigkeit angepasst.',
         },
         {
-          q: 'Was passiert, wenn ich während des Trainings Probleme bekomme?',
-          a: 'Unser Personal ist geschult, um mit medizinischen Notfällen umzugehen. Jede Gruppe hat Erste-Hilfe-Ausrüstung und einen automatisierten externen Defibrillator (AED). Im Notfall wird sofort der Rettungsdienst gerufen.',
+          q: 'Welche Notfallausrüstung ist vorhanden?',
+          a: 'Jede Gruppe verfügt über einen netzunabhängigen, tragbaren Defibrillator (AED) und einen professionellen Notfallkoffer. Der AED ist ein lebensrettendes Instrument bei Herzrhythmusstörungen und überbrückt die Zeit bis zum Eintreffen des Rettungsdienstes.',
+        },
+        {
+          q: 'Wie schnell ist im Notfall Hilfe vor Ort?',
+          a: 'Unsere Sicherheitskette ist auf Unverzüglichkeit ausgelegt. Im Ernstfall wird parallel zum internen Alarm immer sofort der Notruf 112 abgesetzt. Die Rettungskraft oder der Arzt trifft ohne Verzögerung im Übungsraum ein – orientiert an der regionalen 8-Minuten-Hilfsfrist.',
+        },
+        {
+          q: 'Welche Qualifikation hat das Notfallpersonal?',
+          a: 'Wenn kein Arzt im Raum ist, übernehmen hochqualifizierte Fachkräfte die Sicherheit – z. B. Notfallsanitäter, Rettungsassistenten, Physician Assistants oder Fachkrankenpflegekräfte für Intensivpflege.',
+        },
+        {
+          q: 'Werden Notfälle regelmäßig geübt?',
+          a: 'Ja, mindestens zweimal pro Jahr finden verpflichtende Notfallübungen statt. Das Team trainiert die medizinischen Handgriffe und auch Sie als Teilnehmer lernen die Funktionsweise des AED kennen.',
         },
         {
           q: 'Kann ich meine Medikamente weiterhin nehmen?',
-          a: 'Ja, Sie sollten Ihre Medikamente wie verschrieben weiterhin nehmen. Bitte informieren Sie das Trainerpersonal über alle Ihre Medikamente, damit sie Ihre Trainingsintensität entsprechend anpassen können.',
+          a: 'Ja, nehmen Sie Ihre Medikamente wie verschrieben weiterhin. Bitte informieren Sie das Trainerpersonal über Ihre Medikation, damit die Trainingsintensität entsprechend angepasst werden kann.',
         },
       ],
     },
     {
-      category: 'Training & Aktivitäten',
+      category: 'Gruppen & Training',
       items: [
         {
+          q: 'Was ist der Unterschied zwischen Herzsport- und Herzinsuffizienzgruppe?',
+          a: 'Die Einteilung erfolgt nach dem Risikoprofil. Herzinsuffizienzgruppen sind für Patienten mit schweren Einschränkungen (z. B. NYHA III oder dauerhaften Rhythmusstörungen) konzipiert – hier ist die ständige ärztliche Anwesenheit vorgeschrieben, die Gruppengröße kleiner (max. 12) und das Belastungsniveau wird besonders feinfühlig angepasst. Herzsportgruppen sind für Patienten mit stabilem Krankheitsverlauf (max. 20 Teilnehmer).',
+        },
+        {
+          q: 'Wie groß sind die Gruppen?',
+          a: 'Eine reguläre Herzsportgruppe umfasst maximal 20 Teilnehmer. Bei Herzinsuffizienzgruppen ist die Zahl auf maximal 12 begrenzt, da hier die medizinische Überwachung noch engmaschiger erfolgt.',
+        },
+        {
+          q: 'Wie lange dauert eine Übungseinheit?',
+          a: 'Jede Einheit dauert mindestens 60 Minuten: medizinische Eingangsbefragung mit Vitalwerten, Aufwärmphase, gezieltes Training und eine Entspannungs- bzw. Beratungsphase am Ende.',
+        },
+        {
           q: 'Wie intensiv ist das Training?',
-          a: 'Das Training ist individuell anpassbar. Es beginnt mit leichten Übungen und wird je nach Ihrem Fortschritt und Ihrer Leistungsfähigkeit gesteigert. Sie bestimmen das Tempo mit – es gibt keinen Druck, schneller zu werden.',
+          a: 'Das Training ist individuell anpassbar. Es beginnt mit leichten Übungen und wird je nach Fortschritt und Leistungsfähigkeit gesteigert. Sie bestimmen das Tempo mit – es gibt keinen Druck.',
         },
         {
           q: 'Was muss ich zum Training mitbringen?',
-          a: 'Bringen Sie sportgeeignete Kleidung und Schuhe, ein Handtuch, eine Trinkflasche, Ihre Krankenversicherungskarte und alle Ihre Medikamente mit.',
+          a: 'Sportgeeignete Kleidung und Schuhe, ein Handtuch, eine Trinkflasche, Ihre Krankenversicherungskarte und Ihre Medikamente.',
         },
       ],
     },
@@ -96,11 +141,11 @@ export default function FAQ() {
       items: [
         {
           q: 'Was genau ist Rehasport in Herzgruppen?',
-          a: 'Rehabilitationssport in Herzsport- und Herzinsuffizienzgruppen ist ärztlich betreutes Training für Menschen mit Herzerkrankungen. Ziel ist die Verbesserung von Ausdauer, Kraft und Lebensqualität. Detaillierte Informationen finden Sie in der Broschüre des WBRS: wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file',
+          a: 'Ärztlich betreutes Training für Menschen mit Herzerkrankungen. Neben der Stärkung von Ausdauer und Kraft geht es um Risikofaktorenmanagement und psychosoziale Unterstützung – der Austausch mit Gleichgesinnten wirkt oft genauso heilend wie die Bewegung selbst. Details in der Broschüre des WBRS: wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file',
         },
         {
           q: 'Wie lange sollte ich in einer Herzgruppe trainieren?',
-          a: 'Das Trainingsprogramm ist langfristig angelegt. Viele Teilnehmer trainieren über Jahre hinweg. Das regelmäßige Training ist wichtig, um die Vorteile zu erhalten und Ihre Gesundheit zu verbessern.',
+          a: 'Das Programm ist langfristig angelegt. Viele Teilnehmer trainieren über Jahre hinweg. Regelmäßiges Training ist wichtig, um die gesundheitlichen Vorteile zu erhalten.',
         },
       ],
     },

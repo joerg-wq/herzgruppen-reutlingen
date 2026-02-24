@@ -148,7 +148,7 @@ export default function Contact() {
                     <p className="text-base text-muted-foreground mb-5">
                       Füllen Sie das Formular aus und wir werden uns in Kürze bei Ihnen melden.
                     </p>
-                    <Link href="/join">
+                    <Link href="/join#formular">
                       <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base py-3 h-auto">
                         Zum Kontaktformular
                         <ArrowRight className="ml-2" size={18} />

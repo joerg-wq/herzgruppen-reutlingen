@@ -32,7 +32,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/join">
+                <Link href="/join#formular">
                   <a className="opacity-90 hover:opacity-100 hover:underline underline-offset-2 transition-opacity">Mitmachen</a>
                 </Link>
               </li>

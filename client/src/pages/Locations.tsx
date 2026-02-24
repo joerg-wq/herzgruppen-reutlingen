@@ -351,7 +351,7 @@ export default function Locations() {
                       )}
 
                       {/* CTA */}
-                      <Link href="/join">
+                      <Link href="/join#formular">
                         <a>
                           <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground text-base py-3 h-auto shadow-md transition-all">
                             Jetzt mitmachen
@@ -392,7 +392,7 @@ export default function Locations() {
                   <p className="text-base text-muted-foreground mb-5 leading-relaxed">
                     Tipp: Kommen Sie einfach zu einer der angegebenen Gruppenstunden – die Ansprechpartner vor Ort beraten Sie gern zu Einstieg und Formalitäten.
                   </p>
-                  <Link href="/join">
+                  <Link href="/join#formular">
                     <a className="text-primary hover:underline font-medium inline-flex items-center gap-1 text-base">
                       Zum Kontaktformular <ArrowRight size={16} />
                     </a>

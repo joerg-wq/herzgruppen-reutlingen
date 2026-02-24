@@ -46,7 +46,7 @@ export default function Header() {
             <img
               src="/logo-512.png"
               alt="ARGE Reutlingen Logo"
-              className="w-11 h-11 rounded-xl shadow-sm group-hover:shadow-md transition-shadow object-contain"
+              className="w-11 h-11 shadow-sm group-hover:shadow-md transition-shadow object-contain"
             />
             <div className="hidden sm:block">
               <p className="text-xs font-semibold tracking-wide text-primary uppercase">
@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden sm:block">
-          <Link href="/join">
+          <Link href="/join#formular">
             <a>
               <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
                 Jetzt mitmachen
@@ -125,7 +125,7 @@ export default function Header() {
                 transition={{ delay: navItems.length * 0.04, duration: 0.2 }}
                 className="pt-2"
               >
-                <Link href="/join">
+                <Link href="/join#formular">
                   <a onClick={() => setIsMenuOpen(false)}>
                     <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
                       Jetzt mitmachen

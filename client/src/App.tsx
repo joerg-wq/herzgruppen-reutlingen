@@ -16,6 +16,27 @@ import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Let the page render, then scroll to the anchor
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+  return null;
+}
+
 function MetaUpdater() {
   const [location] = useLocation();
   useEffect(() => {
@@ -32,6 +53,7 @@ function MetaUpdater() {
 function Router() {
   return (
     <>
+      <ScrollToTop />
       <MetaUpdater />
       <Switch>
       <Route path="/" component={Home} />

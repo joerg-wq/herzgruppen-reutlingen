@@ -378,7 +378,7 @@ export default function About() {
                     </Button>
                   </a>
                 </Link>
-                <Link href="/join">
+                <Link href="/join#formular">
                   <a>
                     <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md transition-all">
                       Jetzt mitmachen

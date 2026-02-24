@@ -225,7 +225,7 @@ export default function Join() {
         </section>
 
         {/* Form Section */}
-        <section className="section-padding bg-secondary/5">
+        <section id="formular" className="section-padding bg-secondary/5 scroll-mt-24">
           <div className="container">
             <div className="max-w-2xl mx-auto">
               <motion.div

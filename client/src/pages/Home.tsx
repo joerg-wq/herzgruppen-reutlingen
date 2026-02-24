@@ -199,7 +199,7 @@ export default function Home() {
                       </Button>
                     </a>
                   </Link>
-                  <Link href="/join">
+                  <Link href="/join#formular">
                     <a>
                       <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md transition-all">
                         Jetzt mitmachen
@@ -335,7 +335,7 @@ export default function Home() {
                   <p className="text-base text-muted-foreground mb-4">
                     Der Einstieg ist einfach und unkompliziert. Melden Sie Ihr Interesse – wir kümmern uns um den Rest.
                   </p>
-                  <Link href="/join">
+                  <Link href="/join#formular">
                     <a className="text-primary hover:underline font-medium inline-flex items-center gap-1">
                       Jetzt mitmachen <ArrowRight size={16} />
                     </a>
