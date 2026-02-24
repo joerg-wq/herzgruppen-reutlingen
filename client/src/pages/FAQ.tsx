@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fadeInUp, stagger } from '@/lib/animations';
@@ -22,7 +22,7 @@ export default function FAQ() {
     );
   };
 
-  const faqs = [
+  const faqs: { category: string; items: { q: string; a: string; link?: { href: string; label: string } }[] }[] = [
     {
       category: 'Einstieg & Voraussetzungen',
       items: [
@@ -61,7 +61,8 @@ export default function FAQ() {
         },
         {
           q: 'Muss ich auf die Genehmigung meiner Krankenkasse warten?',
-          a: 'Viele Krankenkassen verzichten auf eine vorherige Genehmigung – Sie können dann sofort starten. Ob Ihre Kasse dazugehört, erfahren Sie in der Übersicht des WBRS: wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht',
+          a: 'Viele Krankenkassen verzichten auf eine vorherige Genehmigung – Sie können dann sofort starten. Ob Ihre Kasse dazugehört, erfahren Sie beim WBRS.',
+          link: { href: 'https://www.wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht', label: 'Übersicht Genehmigungsverzicht (WBRS)' },
         },
       ],
     },
@@ -141,7 +142,8 @@ export default function FAQ() {
       items: [
         {
           q: 'Was genau ist Rehasport in Herzgruppen?',
-          a: 'Ärztlich betreutes Training für Menschen mit Herzerkrankungen. Neben der Stärkung von Ausdauer und Kraft geht es um Risikofaktorenmanagement und psychosoziale Unterstützung – der Austausch mit Gleichgesinnten wirkt oft genauso heilend wie die Bewegung selbst. Details in der Broschüre des WBRS: wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file',
+          a: 'Ärztlich betreutes Training für Menschen mit Herzerkrankungen. Neben der Stärkung von Ausdauer und Kraft geht es um Risikofaktorenmanagement und psychosoziale Unterstützung – der Austausch mit Gleichgesinnten wirkt oft genauso heilend wie die Bewegung selbst.',
+          link: { href: 'https://www.wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file', label: 'Broschüre herunterladen (PDF)' },
         },
         {
           q: 'Wie lange sollte ich in einer Herzgruppe trainieren?',
@@ -257,6 +259,16 @@ export default function FAQ() {
                               >
                                 <div className="px-5 py-4 border-t border-border bg-secondary/5">
                                   <p className="text-base text-muted-foreground leading-relaxed">{item.a}</p>
+                                  {item.link && (
+                                    <a
+                                      href={item.link.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-1 text-primary hover:underline text-base mt-2"
+                                    >
+                                      {item.link.label} <ExternalLink size={14} />
+                                    </a>
+                                  )}
                                 </div>
                               </motion.div>
                             )}

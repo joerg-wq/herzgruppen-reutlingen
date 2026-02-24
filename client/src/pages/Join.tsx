@@ -495,14 +495,15 @@ export default function Join() {
                 Häufig gestellte Fragen
               </motion.h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
+                {([
                   {
                     question: 'Benötige ich eine ärztliche Verordnung?',
                     answer: 'Ja, für die Teilnahme benötigen Sie eine Rehasportverordnung (Formular 56) von Ihrem Arzt. Über unser Formular melden Sie erst einmal Ihr Interesse – die Verordnung bringen Sie dann zum Einstieg mit.',
                   },
                   {
                     question: 'Muss ich auf die Genehmigung der Kasse warten?',
-                    answer: 'Viele Krankenkassen verzichten auf eine Vorab-Genehmigung. Sie können oft sofort starten. Fragen Sie bei Ihrer Kasse nach oder schauen Sie auf wbrs-online.net.',
+                    answer: 'Viele Krankenkassen verzichten auf eine Vorab-Genehmigung. Sie können oft sofort starten.',
+                    link: { href: 'https://www.wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht', label: 'Liste der Kassen mit Genehmigungsverzicht (WBRS)' },
                   },
                   {
                     question: 'Kann ich meine Gruppe später wechseln?',
@@ -512,7 +513,7 @@ export default function Join() {
                     question: 'Welche Kosten entstehen?',
                     answer: 'Die Kosten werden von den meisten Krankenkassen übernommen. Kontaktieren Sie uns für Details.',
                   },
-                ].map((item, index) => (
+                ] as { question: string; answer: string; link?: { href: string; label: string } }[]).map((item, index) => (
                   <motion.div
                     key={index}
                     className="bg-white p-6 rounded-xl border border-border card-hover"
@@ -521,6 +522,16 @@ export default function Join() {
                   >
                     <h4 className="font-semibold text-base mb-2">{item.question}</h4>
                     <p className="text-base text-muted-foreground leading-relaxed">{item.answer}</p>
+                    {item.link && (
+                      <a
+                        href={item.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-primary hover:underline text-base mt-2"
+                      >
+                        {item.link.label} <ExternalLink size={14} />
+                      </a>
+                    )}
                   </motion.div>
                 ))}
               </div>

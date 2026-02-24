@@ -221,6 +221,89 @@ export default function About() {
         </section>
         <WaveDivider flip className="text-secondary/5 -mt-px" />
 
+        {/* Group Types Comparison */}
+        <section id="gruppentypen" className="section-padding scroll-mt-24">
+          <div className="container">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={stagger}
+            >
+              <motion.h2
+                className="text-2xl md:text-3xl font-bold mb-3"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Herzsport vs. Herzinsuffizienz
+              </motion.h2>
+              <motion.p
+                className="text-base text-muted-foreground mb-8 max-w-2xl"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                Je nach Schwere der Erkrankung gibt es zwei Gruppentypen mit unterschiedlichem Betreuungskonzept.
+              </motion.p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div variants={fadeInUp} transition={{ duration: 0.4 }}>
+                  <Card className="p-6 h-full">
+                    <h3 className="text-lg font-semibold mb-4">Herzsportgruppe</h3>
+                    <dl className="space-y-4 text-base">
+                      <div>
+                        <dt className="font-medium text-foreground">Für wen</dt>
+                        <dd className="text-muted-foreground">Stabiler Krankheitsverlauf</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Belastungsniveau</dt>
+                        <dd className="text-muted-foreground">Moderate bis höhere Intensität, individuell anpassbar</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Gruppengröße</dt>
+                        <dd className="text-muted-foreground">Max. 20 Teilnehmer</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Ärztliche Betreuung</dt>
+                        <dd className="text-muted-foreground">Regelmäßige Visite (mind. alle 6 Wochen)</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Standorte</dt>
+                        <dd className="text-muted-foreground">Alle 7 Standorte</dd>
+                      </div>
+                    </dl>
+                  </Card>
+                </motion.div>
+                <motion.div variants={fadeInUp} transition={{ duration: 0.4 }}>
+                  <Card className="p-6 h-full border-primary">
+                    <h3 className="text-lg font-semibold mb-4">Herzinsuffizienzgruppe</h3>
+                    <dl className="space-y-4 text-base">
+                      <div>
+                        <dt className="font-medium text-foreground">Für wen</dt>
+                        <dd className="text-muted-foreground">Schwere Einschränkungen (NYHA III, Rhythmusstörungen)</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Belastungsniveau</dt>
+                        <dd className="text-muted-foreground">Niedrige Intensität, besonders feinfühlig angepasst</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Gruppengröße</dt>
+                        <dd className="text-muted-foreground">Max. 12 Teilnehmer</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Ärztliche Betreuung</dt>
+                        <dd className="text-muted-foreground">Arzt ständig im Übungsraum</dd>
+                      </div>
+                      <div>
+                        <dt className="font-medium text-foreground">Standorte</dt>
+                        <dd className="text-muted-foreground">Bad Urach, Metzingen, Pfullingen</dd>
+                      </div>
+                    </dl>
+                  </Card>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Training Structure */}
         <section className="section-padding">
           <div className="container">

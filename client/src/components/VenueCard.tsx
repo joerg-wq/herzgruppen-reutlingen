@@ -114,9 +114,9 @@ export default function VenueCard({ venue }: VenueCardProps) {
             {venue.contactEmail}
           </a>
           {venue.doctor && (
-            <div className="flex items-center gap-2 text-foreground whitespace-nowrap">
+            <div className="flex items-center gap-2 text-foreground">
               <Stethoscope size={16} className="text-primary flex-shrink-0" aria-hidden="true" />
-              <span>Arzt: {venue.doctor}</span>
+              <span className="truncate">{venue.doctor}</span>
             </div>
           )}
         </div>

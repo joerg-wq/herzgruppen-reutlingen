@@ -52,8 +52,10 @@ const DAY_ORDER: Record<string, number> = {
 };
 
 function extractDoctor(notes: string): string {
-  const match = notes.match(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*(.+?)\.(?:\s|$)/);
-  return match ? match[1].trim() : '';
+  const match = notes.match(/Verantwortliche[r]?\s+(Arzt|Ärztin):\s*((?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+)/);
+  if (!match) return '';
+  const label = match[1] === 'Ärztin' ? 'Ihre Ärztin' : 'Ihr Arzt';
+  return `${label}: ${match[2].trim()}`;
 }
 
 function extractVenueName(address: string): string {
@@ -103,8 +105,8 @@ export function groupByVenue(locations: Location[]): Venue[] {
     const noteSet = new Set<string>();
     for (const loc of group.locations) {
       const cleaned = loc.notes
-        .replace(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*[^.]+\.\s*/g, '')
-        .replace(/Zweite\s+(parallele\s+)?(Gruppe|Übungsgruppe|Trainingsgruppe|Herzinsuffizienz-Gruppe)[^.]*\.\s*/gi, '')
+        .replace(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*(?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+\.?\s*/g, '')
+        .replace(/Zweite\s+(parallele\s+)?(Gruppe|Übungsgruppe|Trainingsgruppe|Herzinsuffizienz-Gruppe)[^.]*\.?\s*/gi, '')
         .trim();
       if (cleaned) noteSet.add(cleaned);
     }
@@ -180,7 +182,7 @@ export function filterVenues(
   venues: Venue[],
   city: string,
   day: string,
-  onlySpecial: boolean,
+  selectedType: string,
 ): Venue[] {
   let result = venues;
 
@@ -192,13 +194,12 @@ export function filterVenues(
     result = result.filter(v => v.weekday === day);
   }
 
-  if (onlySpecial) {
-    // Filter slots within each venue, keep venue if it has matching slots
+  if (selectedType) {
     result = result
       .map(v => ({
         ...v,
         slots: v.slots.filter(s =>
-          s.types.some(t => t.type === 'herzinsuffizienz' || t.type === 'schlaganfall')
+          s.types.some(t => t.type === selectedType)
         ),
       }))
       .filter(v => v.slots.length > 0);

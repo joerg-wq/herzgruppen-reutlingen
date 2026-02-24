@@ -14,7 +14,7 @@ export default function Locations() {
   const [filteredVenues, setFilteredVenues] = useState<Venue[]>([]);
   const [selectedCity, setSelectedCity] = useState<string>('');
   const [selectedDay, setSelectedDay] = useState<string>('');
-  const [onlySpecial, setOnlySpecial] = useState<boolean>(false);
+  const [selectedType, setSelectedType] = useState<string>('');
 
   useEffect(() => {
     fetch('/data/locations.json')
@@ -28,7 +28,9 @@ export default function Locations() {
           const cityParam = params.get('city') ?? '';
           const typeParam = params.get('type') ?? '';
           setSelectedCity(cityParam);
-          setOnlySpecial(typeParam === 'herzinsuffizienz');
+          if (['herzgruppe', 'herzinsuffizienz', 'schlaganfall'].includes(typeParam)) {
+            setSelectedType(typeParam);
+          }
         } catch {
           // ignore
         }
@@ -37,13 +39,13 @@ export default function Locations() {
   }, []);
 
   useEffect(() => {
-    setFilteredVenues(filterVenues(venues, selectedCity, selectedDay, onlySpecial));
-  }, [selectedCity, selectedDay, onlySpecial, venues]);
+    setFilteredVenues(filterVenues(venues, selectedCity, selectedDay, selectedType));
+  }, [selectedCity, selectedDay, selectedType, venues]);
 
   const cities = Array.from(new Set(venues.map(v => v.city))).sort((a, b) => a.localeCompare(b, 'de'));
   const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
 
-  const hasFilter = selectedCity || selectedDay || onlySpecial;
+  const hasFilter = selectedCity || selectedDay || selectedType;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -123,19 +125,20 @@ export default function Locations() {
 
               {/* Type Filter */}
               <div>
-                <span className="block text-base font-medium text-foreground mb-3">
-                  Spezielle Gruppen
-                </span>
-                <label htmlFor="filter-special" className="inline-flex items-center gap-2 text-base text-foreground">
-                  <input
-                    id="filter-special"
-                    type="checkbox"
-                    checked={onlySpecial}
-                    onChange={(e) => setOnlySpecial(e.target.checked)}
-                    className="rounded border-border w-4 h-4"
-                  />
-                  <span>Nur Herzinsuffizienz- / Schlaganfallgruppen anzeigen</span>
+                <label htmlFor="filter-type" className="block text-base font-medium text-foreground mb-3">
+                  Nach Gruppentyp filtern
                 </label>
+                <select
+                  id="filter-type"
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full px-4 py-3 border border-border rounded-xl bg-white text-foreground text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Alle Gruppentypen</option>
+                  <option value="herzgruppe">Herzsport</option>
+                  <option value="herzinsuffizienz">Herzinsuffizienz</option>
+                  <option value="schlaganfall">Schlaganfall</option>
+                </select>
               </div>
             </div>
             {hasFilter && (
@@ -143,7 +146,7 @@ export default function Locations() {
                 onClick={() => {
                   setSelectedCity('');
                   setSelectedDay('');
-                  setOnlySpecial(false);
+                  setSelectedType('');
                 }}
                 className="mt-5 text-primary hover:underline text-base font-medium"
               >
@@ -165,7 +168,7 @@ export default function Locations() {
                   onClick={() => {
                     setSelectedCity('');
                     setSelectedDay('');
-                    setOnlySpecial(false);
+                    setSelectedType('');
                   }}
                   className="text-primary hover:underline font-medium text-base"
                 >
@@ -174,7 +177,7 @@ export default function Locations() {
               </div>
             ) : (
               <motion.div
-                key={`${selectedCity}-${selectedDay}-${onlySpecial}`}
+                key={`${selectedCity}-${selectedDay}-${selectedType}`}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 initial="hidden"
                 animate="visible"

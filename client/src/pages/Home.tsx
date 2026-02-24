@@ -439,6 +439,19 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-5 bg-primary/5 border border-primary/20 rounded-xl p-4">
+                  <p className="text-base text-foreground">
+                    <strong>Spezialgruppen für Herzinsuffizienz</strong>
+                  </p>
+                  <p className="text-base text-muted-foreground mt-1">
+                    Für Patienten mit schwerer Herzschwäche (z.B. NYHA III) gibt es eigene Gruppen mit ständiger ärztlicher Anwesenheit und kleinerer Teilnehmerzahl.
+                  </p>
+                  <Link href="/about#gruppentypen">
+                    <a className="text-primary hover:underline font-medium inline-flex items-center gap-1 mt-2 text-base">
+                      Mehr erfahren <ArrowRight size={16} />
+                    </a>
+                  </Link>
+                </div>
               </motion.div>
 
               {/* What to Bring */}
