@@ -38,6 +38,10 @@ export default function FAQ() {
           q: 'Kann ich die Kosten von der Rentenversicherung erstattet bekommen?',
           a: 'Ja, wenn Sie eine Verordnung von der Rentenversicherung haben, können die Kosten erstattet werden. Dies ist besonders relevant, wenn Sie sich in einer Rehabilitationsmaßnahme befinden oder eine solche abgeschlossen haben.',
         },
+        {
+          q: 'Muss ich auf die Genehmigung meiner Krankenkasse warten?',
+          a: 'Viele Krankenkassen verzichten auf eine vorherige Genehmigung der Rehasportverordnung – Sie können dann sofort mit dem Training beginnen, ohne auf einen Genehmigungsbescheid zu warten. Ob Ihre Kasse dazugehört, erfahren Sie in der Übersicht des WBRS: wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht',
+        },
       ],
     },
     {

@@ -384,8 +384,19 @@ export default function Locations() {
                 </motion.div>
                 <motion.div variants={fadeInUp} transition={{ duration: 0.5 }}>
                   <h3 className="text-lg font-semibold mb-3">Kosten &amp; Abrechnung</h3>
-                  <p className="text-base text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-3 leading-relaxed">
                     Die Kosten werden in der Regel von Ihrer Krankenkasse oder Rentenversicherung übernommen.
+                  </p>
+                  <p className="text-base text-muted-foreground mb-5 leading-relaxed">
+                    Viele Kassen verzichten auf eine vorherige Genehmigung – Sie können sofort starten.{' '}
+                    <a
+                      href="https://www.wbrs-online.net/reha-sport/infos-zum-rehasport/genehmigungsverzicht"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Liste der Kassen mit Genehmigungsverzicht (WBRS)
+                    </a>
                   </p>
                   <Link href="/faq">
                     <a className="text-primary hover:underline font-medium inline-flex items-center gap-1 text-base">

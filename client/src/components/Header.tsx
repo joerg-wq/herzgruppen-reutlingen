@@ -43,9 +43,11 @@ export default function Header() {
             className="flex items-center gap-3 group"
             aria-label={`Zur Startseite der ARGE Reutlingen – ${SITE_NAME}`}
           >
-            <div className="w-11 h-11 bg-primary rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-              <span className="text-xl font-bold text-primary-foreground">&#9829;</span>
-            </div>
+            <img
+              src="/logo-512.png"
+              alt="ARGE Reutlingen Logo"
+              className="w-11 h-11 rounded-xl shadow-sm group-hover:shadow-md transition-shadow object-contain"
+            />
             <div className="hidden sm:block">
               <p className="text-xs font-semibold tracking-wide text-primary uppercase">
                 ARGE Reutlingen e.V.

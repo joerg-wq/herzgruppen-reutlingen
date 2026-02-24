@@ -559,9 +559,9 @@ export default function Home() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { end: 35, suffix: '+', label: 'Jahre Erfahrung', icon: <Shield className="text-primary" size={28} /> },
-                  { end: 8, suffix: '', label: 'Standorte im Kreis', icon: <MapPin className="text-secondary" size={28} /> },
-                  { end: 15, suffix: '+', label: 'Herzgruppen', icon: <Heart className="text-primary" size={28} /> },
-                  { end: 20, suffix: '+', label: 'Trainingseinheiten / Woche', icon: <Activity className="text-accent" size={28} /> },
+                  { end: 7, suffix: '', label: 'Standorte im Kreis', icon: <MapPin className="text-secondary" size={28} /> },
+                  { end: 29, suffix: '', label: 'Herzgruppen', icon: <Heart className="text-primary" size={28} /> },
+                  { end: 29, suffix: '', label: 'Trainingseinheiten / Woche', icon: <Activity className="text-accent" size={28} /> },
                 ].map((stat, index) => {
                   const { count, ref } = useCountUp(stat.end);
                   return (
