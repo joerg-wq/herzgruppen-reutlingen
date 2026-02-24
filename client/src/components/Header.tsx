@@ -46,7 +46,7 @@ export default function Header() {
             <img
               src="/logo-512.png"
               alt="ARGE Reutlingen Logo"
-              className="w-11 h-11 shadow-sm group-hover:shadow-md transition-shadow object-contain"
+              className="w-11 h-11 object-contain"
             />
             <div className="hidden sm:block">
               <p className="text-xs font-semibold tracking-wide text-primary uppercase">

@@ -11,7 +11,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07125 / 4645",
     "maps_url": "https://maps.app.goo.gl/MZQjveHw8t6s1q2Y9",
-    "notes": "Verantwortlicher Arzt: Dr. Schmelz (07125/4946). Patientenrat: Willi Baumann (01525 9935756)."
+    "notes": "Verantwortlicher Arzt: Dr. Schmelz."
   },
   {
     "id": "badurach-herz1",
@@ -25,7 +25,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07125 / 4645",
     "maps_url": "https://maps.app.goo.gl/MZQjveHw8t6s1q2Y9",
-    "notes": "Verantwortlicher Arzt: Dr. Schmelz (07125/4946)."
+    "notes": "Verantwortlicher Arzt: Dr. Schmelz."
   },
   {
     "id": "badurach-herz2",
@@ -39,7 +39,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07125 / 4645",
     "maps_url": "https://maps.app.goo.gl/MZQjveHw8t6s1q2Y9",
-    "notes": "Verantwortlicher Arzt: Dr. Schmelz (07125/4946)."
+    "notes": "Verantwortlicher Arzt: Dr. Schmelz."
   },
   {
     "id": "metzingen-hig1",
@@ -53,7 +53,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
     "maps_url": "https://maps.app.goo.gl/g8bfNH9VzD6yNk1x8",
-    "notes": "Verantwortlicher Arzt: Dr. Autenrieth (07123/60962). Auch erreichbar unter 0152 08672984."
+    "notes": "Verantwortlicher Arzt: Dr. Autenrieth."
   },
   {
     "id": "metzingen-hig2",
@@ -67,7 +67,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
     "maps_url": "https://maps.app.goo.gl/g8bfNH9VzD6yNk1x8",
-    "notes": "Verantwortlicher Arzt: Dr. Autenrieth (07123/60962). Zweite Herzinsuffizienz-Gruppe, parallel zur ersten."
+    "notes": "Verantwortlicher Arzt: Dr. Autenrieth. Zweite Herzinsuffizienz-Gruppe, parallel zur ersten."
   },
   {
     "id": "metzingen-herz1",
@@ -81,7 +81,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
     "maps_url": "https://maps.app.goo.gl/g8bfNH9VzD6yNk1x8",
-    "notes": "Verantwortlicher Arzt: Dr. Autenrieth (07123/60962)."
+    "notes": "Verantwortlicher Arzt: Dr. Autenrieth."
   },
   {
     "id": "metzingen-herz2",
@@ -95,7 +95,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
     "maps_url": "https://maps.app.goo.gl/g8bfNH9VzD6yNk1x8",
-    "notes": "Verantwortlicher Arzt: Dr. Autenrieth (07123/60962). Zweite Übungsgruppe, parallel zur ersten."
+    "notes": "Verantwortlicher Arzt: Dr. Autenrieth. Zweite Übungsgruppe, parallel zur ersten."
   },
   {
     "id": "dettingen-herz1",
@@ -108,7 +108,7 @@
     "contact_name": "Frau Grauer",
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
-    "notes": "Verantwortliche Ärztin: Frau Dr. Bräuchle (07123/87404). Patientenrat: Hr. Kleih (07123/7598). Auch erreichbar unter 0152 08672984."
+    "notes": "Verantwortliche Ärztin: Frau Dr. Bräuchle."
   },
   {
     "id": "dettingen-herz2",
@@ -121,7 +121,7 @@
     "contact_name": "Frau Grauer",
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07071 / 995954",
-    "notes": "Verantwortliche Ärztin: Frau Dr. Bräuchle (07123/87404). Zweite Gruppe, parallel zur ersten."
+    "notes": "Verantwortliche Ärztin: Frau Dr. Bräuchle. Zweite Gruppe, parallel zur ersten."
   },
   {
     "id": "muensingen-herz1",
@@ -135,7 +135,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07385 / 418",
     "maps_url": "https://maps.app.goo.gl/cQfx7PjU6NgDKUcW8",
-    "notes": "Verantwortlicher Arzt: Dr. Reiff (07381/93814-0). Patientenrat: Hr. Lamparter (07381/8791)."
+    "notes": "Verantwortlicher Arzt: Dr. Reiff."
   },
   {
     "id": "muensingen-herz2",
@@ -149,7 +149,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07385 / 418",
     "maps_url": "https://maps.app.goo.gl/cQfx7PjU6NgDKUcW8",
-    "notes": "Verantwortlicher Arzt: Dr. Reiff (07381/93814-0)."
+    "notes": "Verantwortlicher Arzt: Dr. Reiff."
   },
   {
     "id": "muensingen-herz3",
@@ -163,7 +163,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07385 / 418",
     "maps_url": "https://maps.app.goo.gl/cQfx7PjU6NgDKUcW8",
-    "notes": "Verantwortlicher Arzt: Dr. Reiff (07381/93814-0). Zweite parallele Gruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Reiff. Zweite parallele Gruppe."
   },
   {
     "id": "muensingen-herz4",
@@ -177,7 +177,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07385 / 418",
     "maps_url": "https://maps.app.goo.gl/cQfx7PjU6NgDKUcW8",
-    "notes": "Verantwortlicher Arzt: Dr. Reiff (07381/93814-0)."
+    "notes": "Verantwortlicher Arzt: Dr. Reiff."
   },
   {
     "id": "muensingen-herz5",
@@ -191,7 +191,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07385 / 418",
     "maps_url": "https://maps.app.goo.gl/cQfx7PjU6NgDKUcW8",
-    "notes": "Verantwortlicher Arzt: Dr. Reiff (07381/93814-0). Zweite parallele Gruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Reiff. Zweite parallele Gruppe."
   },
   {
     "id": "pfullingen-hig",
@@ -205,7 +205,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07123 / 71698",
     "maps_url": "https://maps.app.goo.gl/f3pVrmoBbe1KXMuu9",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Patientenrat: Herr Ahrens (07121/940956). Weitere Infos: herzsportgruppe-pfullingen.de"
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Weitere Infos: herzsportgruppe-pfullingen.de"
   },
   {
     "id": "pfullingen-herz1",
@@ -219,7 +219,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07123 / 71698",
     "maps_url": "https://maps.app.goo.gl/f3pVrmoBbe1KXMuu9",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Weitere Infos: herzsportgruppe-pfullingen.de"
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Weitere Infos: herzsportgruppe-pfullingen.de"
   },
   {
     "id": "pfullingen-herz2",
@@ -233,7 +233,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07123 / 71698",
     "maps_url": "https://maps.app.goo.gl/f3pVrmoBbe1KXMuu9",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Weitere Infos: herzsportgruppe-pfullingen.de"
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Weitere Infos: herzsportgruppe-pfullingen.de"
   },
   {
     "id": "pfullingen-herz3",
@@ -247,7 +247,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07123 / 71698",
     "maps_url": "https://maps.app.goo.gl/f3pVrmoBbe1KXMuu9",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Weitere Infos: herzsportgruppe-pfullingen.de"
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Weitere Infos: herzsportgruppe-pfullingen.de"
   },
   {
     "id": "neckar-schoenbuch-herz1",
@@ -261,7 +261,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/ve7ttmpjBes6AW336",
-    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch (07125/15136323). Patientenrat: Herr Dietrich Suck (07127/31091). Auch erreichbar unter 01578 3467676."
+    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch."
   },
   {
     "id": "neckar-schoenbuch-herz2",
@@ -275,7 +275,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/ve7ttmpjBes6AW336",
-    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch (07125/15136323)."
+    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch."
   },
   {
     "id": "neckar-schoenbuch-herz3",
@@ -289,7 +289,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/ve7ttmpjBes6AW336",
-    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch (07125/15136323)."
+    "notes": "Verantwortliche Ärztin: Frau Dr. Guksch."
   },
   {
     "id": "reutlingen-herz1",
@@ -303,7 +303,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Patientenrat: Hr. Neumeir (07121/45909). Auch erreichbar unter 01578 3467676."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig."
   },
   {
     "id": "reutlingen-herz2",
@@ -317,7 +317,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Zweite parallele Übungsgruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Zweite parallele Übungsgruppe."
   },
   {
     "id": "reutlingen-herz3",
@@ -331,7 +331,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830)."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig."
   },
   {
     "id": "reutlingen-herz4",
@@ -345,7 +345,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Zweite parallele Übungsgruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Zweite parallele Übungsgruppe."
   },
   {
     "id": "reutlingen-train1",
@@ -359,7 +359,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Trainingsgruppe für fortgeschrittene Teilnehmer."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Trainingsgruppe für fortgeschrittene Teilnehmer."
   },
   {
     "id": "reutlingen-train2",
@@ -373,7 +373,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Zweite parallele Trainingsgruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Zweite parallele Trainingsgruppe."
   },
   {
     "id": "reutlingen-train3",
@@ -387,7 +387,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Trainingsgruppe für fortgeschrittene Teilnehmer."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Trainingsgruppe für fortgeschrittene Teilnehmer."
   },
   {
     "id": "reutlingen-train4",
@@ -401,7 +401,7 @@
     "contact_email": "arge-herzsport@web.de",
     "contact_phone": "07121 / 230152",
     "maps_url": "https://maps.app.goo.gl/EurLk2MggKFfoUCE7",
-    "notes": "Verantwortlicher Arzt: Dr. Jauernig (07121/203830). Zweite parallele Trainingsgruppe."
+    "notes": "Verantwortlicher Arzt: Dr. Jauernig. Zweite parallele Trainingsgruppe."
   },
   {
     "id": "badurach-schlaganfall",
