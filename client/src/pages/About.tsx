@@ -247,17 +247,17 @@ export default function About() {
               <div className="max-w-3xl mx-auto space-y-4">
                 {[
                   {
-                    time: '15 Minuten',
+                    minutes: 15,
                     title: 'Aufwärmen',
                     description: 'Begrüßung, leichte Bewegungsübungen, Stretching und Mobilisierung.',
                   },
                   {
-                    time: '30 Minuten',
+                    minutes: 30,
                     title: 'Haupttraining',
                     description: 'Ausdauertraining (z. B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung.',
                   },
                   {
-                    time: '15 Minuten',
+                    minutes: 15,
                     title: 'Abwärmen & Entspannung',
                     description: 'Stretching, Entspannungsübungen und Zeit für den Austausch in der Gruppe.',
                   },
@@ -269,8 +269,9 @@ export default function About() {
                     transition={{ duration: 0.4 }}
                   >
                     <div className="flex-shrink-0 flex items-center">
-                      <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-bold text-xs text-center leading-tight">
-                        {phase.time}
+                      <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex flex-col items-center justify-center text-center leading-none">
+                        <span className="text-xl font-bold">{phase.minutes}</span>
+                        <span className="text-[10px] font-medium mt-0.5">Min.</span>
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
