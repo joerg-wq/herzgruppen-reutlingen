@@ -72,7 +72,7 @@ export default function Header() {
         <div className="hidden sm:block">
           <Link href="/join">
             <a>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm">
+              <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
                 Anmelden
               </Button>
             </a>
@@ -125,7 +125,7 @@ export default function Header() {
               >
                 <Link href="/join">
                   <a onClick={() => setIsMenuOpen(false)}>
-                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
                       Anmelden
                     </Button>
                   </a>
