@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 30-Sekunden-Überblick */}
+        {/* Kurz erklärt */}
         <WaveDivider className="text-secondary/5 -mb-px" />
         <section className="bg-secondary/5 section-padding">
           <div className="container max-w-5xl">
@@ -233,14 +233,14 @@ export default function Home() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                In 30&nbsp;Sekunden verstehen
+                Kurz erklärt
               </motion.h2>
               <motion.p
                 className="text-base text-muted-foreground mb-6"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Drei Fragen – drei Antworten:
+                Die wichtigsten Fragen auf einen Blick:
               </motion.p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -364,30 +364,25 @@ export default function Home() {
                 So läuft eine Trainingseinheit ab
               </motion.h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
                 {/* Desktop connecting line */}
-                <div className="hidden md:block absolute top-7 left-[calc(12.5%+28px)] right-[calc(12.5%+28px)] h-0.5 bg-primary/20" />
+                <div className="hidden md:block absolute top-7 left-[calc(16.7%+28px)] right-[calc(16.7%+28px)] h-0.5 bg-primary/20" />
 
                 {[
                   {
                     number: '1',
-                    title: 'Ankommen & Vorbereitung',
-                    description: 'Sie kommen 15 Minuten vor Beginn an. Unser Team begrüßt Sie und nimmt Ihre Vitalwerte auf.',
+                    title: 'Aufwärmen',
+                    description: 'Die Übungsleitung begrüßt Sie und startet mit leichten Bewegungsübungen und Stretching.',
                   },
                   {
                     number: '2',
-                    title: 'Aufwärmen',
-                    description: 'Mit leichten Bewegungsübungen und Stretching bereiten wir Ihren Körper auf das Training vor.',
-                  },
-                  {
-                    number: '3',
                     title: 'Haupttraining',
                     description: 'Unter Anleitung trainieren Sie mit anderen Teilnehmern. Das Tempo ist individuell anpassbar.',
                   },
                   {
-                    number: '4',
-                    title: 'Austausch & Entspannung',
-                    description: 'Nach dem Training gibt es Zeit für Entspannung und zum Austausch mit anderen Teilnehmern.',
+                    number: '3',
+                    title: 'Abwärmen & Austausch',
+                    description: 'Entspannungsübungen zum Abschluss und Zeit für den Austausch mit Gleichgesinnten.',
                   },
                 ].map((step, index) => (
                   <motion.div

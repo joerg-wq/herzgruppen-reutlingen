@@ -177,7 +177,7 @@ export default function About() {
                   <h3 className="text-xl font-semibold mb-5">Wie funktioniert die medizinische Betreuung?</h3>
                   <ul className="space-y-3 text-base">
                     {[
-                      'Vor Trainingsbeginn werden Ihre Vitalwerte (Blutdruck, Puls, EKG) gemessen',
+                      'Ärztliche Betreuung durch Fachärzte für Innere Medizin, Kardiologie oder Sportmedizin',
                       'Trainingsintensität wird individuell angepasst',
                       'Geschultes Personal ist während des Trainings anwesend',
                       'Notfallausrüstung (Defibrillator) ist vorhanden',
@@ -247,24 +247,19 @@ export default function About() {
               <div className="max-w-3xl mx-auto space-y-4">
                 {[
                   {
-                    time: '10 Minuten',
-                    title: 'Ankommen & Vitalwerte',
-                    description: 'Messung von Blutdruck und Puls, Begrüßung und Vorbereitung.',
-                  },
-                  {
-                    time: '10 Minuten',
+                    time: '15 Minuten',
                     title: 'Aufwärmen',
-                    description: 'Leichte Bewegungsübungen, Stretching und Mobilisierung.',
+                    description: 'Begrüßung, leichte Bewegungsübungen, Stretching und Mobilisierung.',
                   },
                   {
                     time: '30 Minuten',
                     title: 'Haupttraining',
-                    description: 'Ausdauertraining (z.B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung.',
+                    description: 'Ausdauertraining (z. B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung.',
                   },
                   {
-                    time: '10 Minuten',
+                    time: '15 Minuten',
                     title: 'Abwärmen & Entspannung',
-                    description: 'Beruhigung des Herzrhythmus, Stretching und Entspannungsübungen.',
+                    description: 'Stretching, Entspannungsübungen und Zeit für den Austausch in der Gruppe.',
                   },
                 ].map((phase, index) => (
                   <motion.div

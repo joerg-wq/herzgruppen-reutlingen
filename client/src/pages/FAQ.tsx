@@ -87,7 +87,7 @@ export default function FAQ() {
       items: [
         {
           q: 'Ist das Training sicher?',
-          a: 'Ja, das Training ist sehr sicher. Jede Einheit wird von geschultem Personal geleitet, Ihre Vitalwerte werden überwacht, und Notfallausrüstung ist vorhanden. Die Trainingsintensität wird individuell an Ihre Leistungsfähigkeit angepasst.',
+          a: 'Ja, das Training ist sehr sicher. Jede Einheit wird von geschultem Personal geleitet und Notfallausrüstung ist vorhanden. Die Trainingsintensität wird individuell an Ihre Leistungsfähigkeit angepasst.',
         },
         {
           q: 'Welche Notfallausrüstung ist vorhanden?',
@@ -124,7 +124,7 @@ export default function FAQ() {
         },
         {
           q: 'Wie lange dauert eine Übungseinheit?',
-          a: 'Jede Einheit dauert mindestens 60 Minuten: medizinische Eingangsbefragung mit Vitalwerten, Aufwärmphase, gezieltes Training und eine Entspannungs- bzw. Beratungsphase am Ende.',
+          a: 'Jede Einheit dauert etwa 60 Minuten: Aufwärmphase, gezieltes Haupt­training und Abwärmen mit Entspannungsübungen.',
         },
         {
           q: 'Wie intensiv ist das Training?',
