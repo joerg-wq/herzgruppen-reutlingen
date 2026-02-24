@@ -330,7 +330,23 @@ export default function Locations() {
                       {/* Notes */}
                       {location.notes && (
                         <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-4">
-                          <p className="text-base text-foreground">{location.notes}</p>
+                          <p className="text-base text-foreground">
+                            {location.notes.split(/((?:https?:\/\/)?[\w.-]+\.[a-z]{2,}(?:\/\S*)?)/gi).map((part, i) =>
+                              /^(?:https?:\/\/)?[\w.-]+\.[a-z]{2,}/i.test(part) ? (
+                                <a
+                                  key={i}
+                                  href={part.startsWith('http') ? part : `http://${part}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:underline"
+                                >
+                                  {part}
+                                </a>
+                              ) : (
+                                <span key={i}>{part}</span>
+                              )
+                            )}
+                          </p>
                         </div>
                       )}
 
