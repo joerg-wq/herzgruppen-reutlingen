@@ -337,7 +337,7 @@ export default function Locations() {
                       {/* CTA */}
                       <Link href="/join">
                         <a>
-                          <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-base py-3 h-auto">
+                          <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground text-base py-3 h-auto shadow-md transition-all">
                             Anmelden
                             <ArrowRight className="ml-2" size={18} />
                           </Button>

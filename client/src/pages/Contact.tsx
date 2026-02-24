@@ -189,7 +189,7 @@ export default function Contact() {
                 transition={{ duration: 0.5 }}
               >
                 <Link href="/faq">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-3 h-auto shadow-md">
+                  <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground text-base px-8 py-3 h-auto shadow-md transition-all">
                     Zu den FAQ
                     <ArrowRight className="ml-2" size={18} />
                   </Button>

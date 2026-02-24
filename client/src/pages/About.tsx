@@ -369,7 +369,7 @@ export default function About() {
                 </Link>
                 <Link href="/join">
                   <a>
-                    <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md">
+                    <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md transition-all">
                       Jetzt anmelden
                       <ArrowRight className="ml-2" size={18} />
                     </Button>
