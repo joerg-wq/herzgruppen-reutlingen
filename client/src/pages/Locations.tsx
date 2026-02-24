@@ -247,7 +247,7 @@ export default function Locations() {
                             location.type === 'herzinsuffizienz'
                               ? 'bg-primary/10 text-primary'
                               : location.type === 'schlaganfall'
-                              ? 'bg-accent/10 text-accent-foreground'
+                              ? 'bg-secondary/15 text-secondary'
                               : 'bg-muted text-muted-foreground'
                           }`}
                         >
