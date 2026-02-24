@@ -150,7 +150,7 @@ export default function Contact() {
                     </p>
                     <Link href="/join">
                       <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base py-3 h-auto">
-                        Zum Anmeldeformular
+                        Zum Kontaktformular
                         <ArrowRight className="ml-2" size={18} />
                       </Button>
                     </Link>

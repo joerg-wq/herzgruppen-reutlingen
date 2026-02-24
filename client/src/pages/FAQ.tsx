@@ -95,6 +95,10 @@ export default function FAQ() {
       category: 'Allgemein',
       items: [
         {
+          q: 'Was genau ist Rehasport in Herzgruppen?',
+          a: 'Rehabilitationssport in Herzsport- und Herzinsuffizienzgruppen ist ärztlich betreutes Training für Menschen mit Herzerkrankungen. Ziel ist die Verbesserung von Ausdauer, Kraft und Lebensqualität. Detaillierte Informationen finden Sie in der Broschüre des WBRS: wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file',
+        },
+        {
           q: 'Wie lange sollte ich in einer Herzgruppe trainieren?',
           a: 'Das Trainingsprogramm ist langfristig angelegt. Viele Teilnehmer trainieren über Jahre hinweg. Das regelmäßige Training ist wichtig, um die Vorteile zu erhalten und Ihre Gesundheit zu verbessern.',
         },

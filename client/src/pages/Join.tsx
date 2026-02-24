@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { CheckCircle, AlertCircle, Mail, ArrowRight } from 'lucide-react';
+import { CheckCircle, AlertCircle, Mail, ArrowRight, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CONTACT_EMAIL } from '@/config';
@@ -12,14 +12,16 @@ import { fadeInUp, stagger } from '@/lib/animations';
 
 export default function Join() {
   const [formData, setFormData] = useState({
-    firstName: '',
     lastName: '',
-    email: '',
-    phone: '',
+    firstName: '',
     dateOfBirth: '',
-    medicalCondition: '',
-    doctorRecommendation: '',
+    street: '',
+    zipCode: '',
+    city: '',
+    phone: '',
+    email: '',
     preferredLocation: '',
+    message: '',
     privacy: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -38,7 +40,7 @@ export default function Join() {
     e.preventDefault();
     setError('');
 
-    if (!formData.firstName || !formData.lastName || !formData.email) {
+    if (!formData.lastName || !formData.firstName || !formData.email) {
       setError('Bitte füllen Sie alle erforderlichen Felder aus.');
       return;
     }
@@ -51,27 +53,25 @@ export default function Join() {
     try {
       setIsLoading(true);
       const mailto = CONTACT_EMAIL;
-      const subject = encodeURIComponent('Anmeldung Herzgruppe');
+      const subject = encodeURIComponent('Interesse an Herzgruppe – Kontaktaufnahme');
       const bodyLines = [
         'Guten Tag,',
         '',
-        'ich möchte mich für die Herzgruppe anmelden.',
+        'ich interessiere mich für die Teilnahme an einer Herzgruppe und bitte um Kontaktaufnahme.',
         '',
+        `Name: ${formData.lastName}`,
         `Vorname: ${formData.firstName}`,
-        `Nachname: ${formData.lastName}`,
-        `E-Mail: ${formData.email}`,
-        `Telefon: ${formData.phone || '-'}`,
         `Geburtsdatum: ${formData.dateOfBirth || '-'}`,
         '',
-        'Medizinische Informationen:',
-        formData.medicalCondition || '-',
+        `Straße: ${formData.street || '-'}`,
+        `PLZ / Ort: ${formData.zipCode || '-'} ${formData.city || '-'}`,
         '',
-        'Ärztliche Empfehlung / Verordnung:',
-        formData.doctorRecommendation || '-',
+        `Telefon: ${formData.phone || '-'}`,
+        `E-Mail: ${formData.email}`,
         '',
         `Bevorzugter Standort: ${formData.preferredLocation || '-'}`,
         '',
-        'Hinweis: Bitte fügen Sie Ihrer E-Mail die ärztliche Empfehlung / Verordnung als Anhang hinzu, sofern vorhanden.',
+        formData.message ? `Nachricht:\n${formData.message}` : '',
         '',
         'Mit freundlichen Grüßen',
         `${formData.firstName} ${formData.lastName}`,
@@ -81,16 +81,18 @@ export default function Join() {
       window.location.href = `mailto:${mailto}?subject=${subject}&body=${body}`;
 
       setSubmitted(true);
-      toast.success('E-Mail-Anmeldung vorbereitet. Bitte prüfen und absenden.');
+      toast.success('E-Mail vorbereitet. Bitte prüfen und absenden.');
       setFormData({
-        firstName: '',
         lastName: '',
-        email: '',
-        phone: '',
+        firstName: '',
         dateOfBirth: '',
-        medicalCondition: '',
-        doctorRecommendation: '',
+        street: '',
+        zipCode: '',
+        city: '',
+        phone: '',
+        email: '',
         preferredLocation: '',
+        message: '',
         privacy: false,
       });
     } catch (err) {
@@ -120,14 +122,14 @@ export default function Join() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Teilnahme & Anmeldung
+                Mitmachen
               </motion.h1>
               <motion.p
                 className="text-lg text-muted-foreground max-w-2xl"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Melden Sie sich für eine ambulante Herzgruppe im Kreis Reutlingen an. Mit einer ärztlichen Verordnung (z.&nbsp;B. Formular&nbsp;56) können Sie am Rehasport teilnehmen.
+                Sie möchten in einer Herzgruppe im Kreis Reutlingen trainieren? Melden Sie hier Ihr Interesse – wir setzen uns mit Ihnen in Verbindung.
               </motion.p>
             </motion.div>
           </div>
@@ -147,7 +149,7 @@ export default function Join() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                So funktioniert die Anmeldung
+                So kommen Sie in eine Herzgruppe
               </motion.h2>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-5 relative">
                 {/* Desktop connecting line */}
@@ -156,33 +158,33 @@ export default function Join() {
                 {[
                   {
                     number: '1',
-                    title: 'Ärztliche Verordnung holen',
+                    title: 'Interesse melden',
                     description:
-                      'Ihr Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport/Herzsport (z. B. Formular 56) aus.',
+                      'Füllen Sie unser Kontaktformular aus oder rufen Sie uns an. Das ist noch keine formelle Anmeldung.',
                   },
                   {
                     number: '2',
-                    title: 'Krankenkasse genehmigt',
+                    title: 'Rehasportverordnung holen',
                     description:
-                      'Lassen Sie die Verordnung von Ihrer Krankenkasse bestätigen (Stempel und Gültigkeitsdauer). Erstverordnungen gelten in der Regel für zwei Jahre.',
+                      'Ihr Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport aus (Formular 56).',
                   },
                   {
                     number: '3',
-                    title: 'Kontakt aufnehmen',
+                    title: 'Krankenkasse genehmigt',
                     description:
-                      'Melden Sie sich bei der Geschäftsstelle oder kommen Sie mit der genehmigten Verordnung zu einer Gruppenstunde.',
+                      'Lassen Sie die Verordnung bestätigen. Viele Kassen verzichten auf eine Vorab-Genehmigung – Sie können sofort starten.',
                   },
                   {
                     number: '4',
                     title: 'Ärztliche Freigabe vor Ort',
                     description:
-                      'Der anwesende Arzt/die anwesende Ärztin befürwortet Ihre Teilnahme und legt mit Ihnen gemeinsam die Belastung fest.',
+                      'Der anwesende Arzt befürwortet Ihre Teilnahme und legt gemeinsam mit Ihnen die Belastung fest.',
                   },
                   {
                     number: '5',
-                    title: 'Regelmäßig teilnehmen',
+                    title: 'Regelmäßig trainieren',
                     description:
-                      'Sie unterschreiben bei jeder Stunde auf Ihrer Teilnehmerliste – auf dieser Basis rechnen wir direkt mit den Kostenträgern ab.',
+                      'Sie unterschreiben bei jeder Stunde auf Ihrer Teilnehmerliste – wir rechnen direkt mit den Kostenträgern ab.',
                   },
                 ].map((step) => (
                   <motion.div
@@ -199,6 +201,25 @@ export default function Join() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Formular 56 Hinweis */}
+              <motion.div
+                className="mt-8 bg-primary/5 border border-primary/20 rounded-xl p-5 max-w-3xl mx-auto"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="text-base text-foreground">
+                  <strong>Gut zu wissen:</strong> Die eigentliche Anmeldung erfolgt über die Rehasportverordnung (Formular 56) Ihres Arztes.{' '}
+                  <a
+                    href="https://www.dmrz.de/wissen/ratgeber/rehasportverordnung"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    Mehr zur Rehasportverordnung <ExternalLink size={14} />
+                  </a>
+                </p>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -218,9 +239,9 @@ export default function Join() {
                   {submitted ? (
                     <div className="text-center py-12">
                       <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold mb-3">Anmeldung erfolgreich!</h3>
+                      <h3 className="text-2xl font-bold mb-3">Vielen Dank für Ihr Interesse!</h3>
                       <p className="text-base text-muted-foreground mb-6 leading-relaxed">
-                        Vielen Dank für Ihre Anmeldung. Ihr E-Mail-Programm sollte sich geöffnet haben – bitte prüfen Sie die vorbefüllte Nachricht, ergänzen Sie ggf. Anhänge (z.B. ärztliche Verordnung) und senden Sie die E-Mail ab.
+                        Ihr E-Mail-Programm sollte sich geöffnet haben. Bitte prüfen Sie die vorbefüllte Nachricht und senden Sie sie ab. Wir melden uns bei Ihnen.
                       </p>
                       <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Button
@@ -229,7 +250,7 @@ export default function Join() {
                           size="lg"
                           className="text-base py-3 h-auto"
                         >
-                          Neue Anmeldung
+                          Neue Anfrage
                         </Button>
                         <a
                           href={`mailto:${CONTACT_EMAIL}`}
@@ -253,11 +274,11 @@ export default function Join() {
 
                       {/* Hint */}
                       <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-base text-foreground">
-                        <p className="font-semibold mb-2">Wichtige Hinweise zur Anmeldung</p>
+                        <p className="font-semibold mb-2">Unverbindliche Interessensbekundung</p>
                         <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                          <li>Mit * markierte Felder sind Pflichtfelder.</li>
+                          <li>Dies ist <strong>keine formelle Anmeldung</strong>, sondern eine Kontaktanfrage an den Verein.</li>
                           <li>Ihre Angaben werden nicht auf einem Server gespeichert, sondern nur in einer vorbefüllten E-Mail geöffnet.</li>
-                          <li>Die E-Mail können Sie vor dem Absenden jederzeit prüfen, bearbeiten und um Anhänge (z.B. ärztliche Verordnung) ergänzen.</li>
+                          <li>Die eigentliche Anmeldung erfolgt später mit einer Rehasportverordnung (Formular 56).</li>
                         </ul>
                       </div>
 
@@ -265,6 +286,17 @@ export default function Join() {
                       <div>
                         <h3 className="text-lg font-semibold mb-4">Persönliche Daten</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-base font-medium mb-2">Name *</label>
+                            <input
+                              type="text"
+                              name="lastName"
+                              value={formData.lastName}
+                              onChange={handleChange}
+                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                              required
+                            />
+                          </div>
                           <div>
                             <label className="block text-base font-medium mb-2">Vorname *</label>
                             <input
@@ -276,24 +308,73 @@ export default function Join() {
                               required
                             />
                           </div>
+                        </div>
+                        <div className="mt-4">
+                          <label className="block text-base font-medium mb-2">Geburtsdatum</label>
+                          <input
+                            type="date"
+                            name="dateOfBirth"
+                            value={formData.dateOfBirth}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Address */}
+                      <div>
+                        <h3 className="text-lg font-semibold mb-4">Adresse</h3>
+                        <div className="space-y-4">
                           <div>
-                            <label className="block text-base font-medium mb-2">Nachname *</label>
+                            <label className="block text-base font-medium mb-2">Straße & Hausnummer</label>
                             <input
                               type="text"
-                              name="lastName"
-                              value={formData.lastName}
+                              name="street"
+                              value={formData.street}
                               onChange={handleChange}
                               className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                              required
                             />
+                          </div>
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                              <label className="block text-base font-medium mb-2">PLZ</label>
+                              <input
+                                type="text"
+                                name="zipCode"
+                                value={formData.zipCode}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                                maxLength={5}
+                              />
+                            </div>
+                            <div className="md:col-span-2">
+                              <label className="block text-base font-medium mb-2">Ort</label>
+                              <input
+                                type="text"
+                                name="city"
+                                value={formData.city}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Contact Information */}
+                      {/* Contact */}
                       <div>
                         <h3 className="text-lg font-semibold mb-4">Kontaktdaten</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-base font-medium mb-2">Telefon</label>
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleChange}
+                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
                           <div>
                             <label className="block text-base font-medium mb-2">E-Mail *</label>
                             <input
@@ -305,80 +386,40 @@ export default function Join() {
                               required
                             />
                           </div>
-                          <div>
-                            <label className="block text-base font-medium mb-2">Telefon</label>
-                            <input
-                              type="tel"
-                              name="phone"
-                              value={formData.phone}
-                              onChange={handleChange}
-                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Medical Information */}
-                      <div>
-                        <h3 className="text-lg font-semibold mb-4">Medizinische Informationen</h3>
-                        <div className="space-y-4">
-                          <div>
-                            <label className="block text-base font-medium mb-2">Geburtsdatum</label>
-                            <input
-                              type="date"
-                              name="dateOfBirth"
-                              value={formData.dateOfBirth}
-                              onChange={handleChange}
-                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-base font-medium mb-2">Herzerkrankung / Diagnose</label>
-                            <textarea
-                              name="medicalCondition"
-                              value={formData.medicalCondition}
-                              onChange={handleChange}
-                              rows={3}
-                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                              placeholder="z.B. Herzinfarkt, Herzschwäche, etc."
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-base font-medium mb-2">Ärztliche Empfehlung / Verordnung</label>
-                            <textarea
-                              name="doctorRecommendation"
-                              value={formData.doctorRecommendation}
-                              onChange={handleChange}
-                              rows={2}
-                              className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                              placeholder="Name und Kontakt des Arztes"
-                            />
-                          </div>
                         </div>
                       </div>
 
                       {/* Preferences */}
                       <div>
-                        <h3 className="text-lg font-semibold mb-4">Präferenzen</h3>
-                        <div>
-                          <label className="block text-base font-medium mb-2">Bevorzugte Herzgruppe (optional)</label>
-                          <select
-                            name="preferredLocation"
-                            value={formData.preferredLocation}
-                            onChange={handleChange}
-                            className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                          >
-                            <option value="">Keine besondere Angabe</option>
-                            <option value="Reutlingen">Herzsport Reutlingen</option>
-                            <option value="Pfullingen">Herzsport Pfullingen</option>
-                            <option value="Neckar-Schönbuch">Herzsport Neckar-Schönbuch</option>
-                            <option value="Metzingen">Herzsport Metzingen</option>
-                            <option value="Dettingen">Herzsport Dettingen</option>
-                            <option value="Bad Urach">Herzsport Bad Urach</option>
-                            <option value="Münsingen">Herzsport Münsingen</option>
-                            <option value="Bad Urach (Schlaganfallgruppe)">Schlaganfallgruppe Bad Urach</option>
-                          </select>
-                        </div>
+                        <h3 className="text-lg font-semibold mb-4">Bevorzugter Standort</h3>
+                        <select
+                          name="preferredLocation"
+                          value={formData.preferredLocation}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                        >
+                          <option value="">Keine besondere Angabe</option>
+                          <option value="Reutlingen">Herzsport Reutlingen</option>
+                          <option value="Pfullingen">Herzsport Pfullingen</option>
+                          <option value="Neckar-Schönbuch">Herzsport Neckar-Schönbuch</option>
+                          <option value="Metzingen">Herzsport Metzingen</option>
+                          <option value="Dettingen">Herzsport Dettingen</option>
+                          <option value="Bad Urach">Herzsport Bad Urach</option>
+                          <option value="Münsingen">Herzsport Münsingen</option>
+                        </select>
+                      </div>
+
+                      {/* Message */}
+                      <div>
+                        <label className="block text-base font-medium mb-2">Nachricht (optional)</label>
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          rows={3}
+                          className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                          placeholder="z.B. Fragen, besondere Wünsche oder Hinweise"
+                        />
                       </div>
 
                       {/* Privacy */}
@@ -396,9 +437,7 @@ export default function Join() {
                             Ich akzeptiere die{' '}
                             <Link href="/datenschutz">
                               <span className="text-primary hover:underline cursor-pointer">Datenschutzerklärung</span>
-                            </Link>
-                            {' '}und{' '}
-                            <span className="text-primary">Nutzungsbedingungen</span> *
+                            </Link> *
                           </span>
                         </label>
                       </div>
@@ -408,9 +447,9 @@ export default function Join() {
                         type="submit"
                         size="lg"
                         disabled={isLoading}
-                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base py-3 h-auto"
+                        className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground text-base py-3 h-auto shadow-md transition-all"
                       >
-                        {isLoading ? 'Wird eingereicht...' : 'Anmeldung einreichen'}
+                        {isLoading ? 'Wird gesendet...' : 'Interesse melden'}
                         {!isLoading && <ArrowRight className="ml-2" size={18} />}
                       </Button>
                     </form>
@@ -440,12 +479,12 @@ export default function Join() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
-                    question: 'Benötige ich eine ärztliche Empfehlung?',
-                    answer: 'Ja, eine ärztliche Empfehlung oder Verordnung ist erforderlich. Dies ist ein wichtiger Sicherheitsaspekt für Ihr Training.',
+                    question: 'Benötige ich eine ärztliche Verordnung?',
+                    answer: 'Ja, für die Teilnahme benötigen Sie eine Rehasportverordnung (Formular 56) von Ihrem Arzt. Über unser Formular melden Sie erst einmal Ihr Interesse – die Verordnung bringen Sie dann zum Einstieg mit.',
                   },
                   {
-                    question: 'Wie lange dauert die Überprüfung?',
-                    answer: 'Normalerweise benötigen wir 3-5 Werktage zur Überprüfung Ihrer Unterlagen.',
+                    question: 'Muss ich auf die Genehmigung der Kasse warten?',
+                    answer: 'Viele Krankenkassen verzichten auf eine Vorab-Genehmigung. Sie können oft sofort starten. Fragen Sie bei Ihrer Kasse nach oder schauen Sie auf wbrs-online.net.',
                   },
                   {
                     question: 'Kann ich meine Gruppe später wechseln?',

@@ -338,7 +338,7 @@ export default function Locations() {
                       <Link href="/join">
                         <a>
                           <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground text-base py-3 h-auto shadow-md transition-all">
-                            Anmelden
+                            Jetzt mitmachen
                             <ArrowRight className="ml-2" size={18} />
                           </Button>
                         </a>
@@ -371,14 +371,14 @@ export default function Locations() {
                 <motion.div variants={fadeInUp} transition={{ duration: 0.5 }}>
                   <h3 className="text-lg font-semibold mb-3">Wie melde ich mich an?</h3>
                   <p className="text-base text-muted-foreground mb-3 leading-relaxed">
-                    Die Anmeldung ist einfach: Kontaktieren Sie die Gruppe direkt zu den angegebenen Übungszeiten oder füllen Sie unser Online-Formular aus. Sie benötigen eine ärztliche Freigabe oder Verordnung.
+                    Der Einstieg ist einfach: Kontaktieren Sie die Gruppe direkt zu den angegebenen Übungszeiten oder melden Sie Ihr Interesse über unser Online-Formular. Sie benötigen eine ärztliche Freigabe oder Verordnung.
                   </p>
                   <p className="text-base text-muted-foreground mb-5 leading-relaxed">
                     Tipp: Kommen Sie einfach zu einer der angegebenen Gruppenstunden – die Ansprechpartner vor Ort beraten Sie gern zu Einstieg und Formalitäten.
                   </p>
                   <Link href="/join">
                     <a className="text-primary hover:underline font-medium inline-flex items-center gap-1 text-base">
-                      Zum Anmeldeformular <ArrowRight size={16} />
+                      Zum Kontaktformular <ArrowRight size={16} />
                     </a>
                   </Link>
                 </motion.div>

@@ -75,7 +75,7 @@ export default function Header() {
           <Link href="/join">
             <a>
               <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
-                Anmelden
+                Jetzt mitmachen
               </Button>
             </a>
           </Link>
@@ -128,7 +128,7 @@ export default function Header() {
                 <Link href="/join">
                   <a onClick={() => setIsMenuOpen(false)}>
                     <Button size="lg" className="w-full bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground shadow-md transition-all">
-                      Anmelden
+                      Jetzt mitmachen
                     </Button>
                   </a>
                 </Link>

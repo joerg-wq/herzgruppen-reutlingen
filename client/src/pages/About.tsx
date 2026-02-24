@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Heart, Zap, Users, TrendingUp, ArrowRight } from 'lucide-react';
+import { Heart, Zap, Users, TrendingUp, ArrowRight, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fadeInUp, stagger } from '@/lib/animations';
@@ -325,6 +325,17 @@ export default function About() {
                     </div>
                   ))}
                 </ul>
+                <p className="mt-5 text-base text-muted-foreground">
+                  Ausführliche Informationen zum Rehasport in Herzsportgruppen finden Sie in der{' '}
+                  <a
+                    href="https://www.wbrs-online.net/reha-sport/downloads/sonstiges/266-rehabilitationssport-in-herzsportgruppen-und-herzinsuffizienzgruppen/file"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    Broschüre des WBRS (PDF) <ExternalLink size={14} />
+                  </a>
+                </p>
               </motion.div>
             </motion.div>
           </div>
@@ -370,7 +381,7 @@ export default function About() {
                 <Link href="/join">
                   <a>
                     <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md transition-all">
-                      Jetzt anmelden
+                      Jetzt mitmachen
                       <ArrowRight className="ml-2" size={18} />
                     </Button>
                   </a>

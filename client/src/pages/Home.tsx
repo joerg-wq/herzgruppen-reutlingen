@@ -202,7 +202,7 @@ export default function Home() {
                   <Link href="/join">
                     <a>
                       <Button size="lg" className="bg-accent hover:bg-accent/85 active:scale-[0.97] text-accent-foreground w-full sm:w-auto text-base px-8 py-3 h-auto shadow-md transition-all">
-                        Anmelden
+                        Jetzt mitmachen
                         <ArrowRight className="ml-2" size={18} />
                       </Button>
                     </a>
@@ -255,7 +255,7 @@ export default function Home() {
                   },
                   {
                     q: 'Wie komme ich rein?',
-                    a: 'Mit einer ärztlichen Empfehlung oder Verordnung. Suchen Sie einen passenden Standort aus und senden Sie uns eine Anmeldung über das Formular.',
+                    a: 'Mit einer ärztlichen Empfehlung oder Verordnung. Suchen Sie einen passenden Standort aus und melden Sie Ihr Interesse über unser Kontaktformular.',
                   },
                 ].map((item, i) => (
                   <motion.div
@@ -325,19 +325,19 @@ export default function Home() {
                 </Card>
               </motion.div>
 
-              {/* Card 3: Anmeldung */}
+              {/* Card 3: Mitmachen */}
               <motion.div variants={fadeInUp} transition={{ duration: 0.4 }}>
                 <Card className="p-6 h-full card-hover">
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                     <FileText className="text-accent" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">Anmeldung & Kontakt</h3>
+                  <h3 className="text-lg font-semibold mb-2">Mitmachen & Kontakt</h3>
                   <p className="text-base text-muted-foreground mb-4">
-                    Die Anmeldung ist einfach und unkompliziert. Kontaktieren Sie uns oder füllen Sie unser Online-Formular aus.
+                    Der Einstieg ist einfach und unkompliziert. Melden Sie Ihr Interesse – wir kümmern uns um den Rest.
                   </p>
                   <Link href="/join">
                     <a className="text-primary hover:underline font-medium inline-flex items-center gap-1">
-                      Jetzt anmelden <ArrowRight size={16} />
+                      Jetzt mitmachen <ArrowRight size={16} />
                     </a>
                   </Link>
                 </Card>
@@ -695,7 +695,7 @@ export default function Home() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Kontaktieren Sie uns noch heute. Unser Team hilft Ihnen gerne bei der Anmeldung und beantwortet alle Ihre Fragen.
+                Kontaktieren Sie uns noch heute. Unser Team hilft Ihnen gerne beim Einstieg und beantwortet alle Ihre Fragen.
               </motion.p>
 
               <motion.div
