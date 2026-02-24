@@ -19,7 +19,7 @@ export default function Organization() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         {/* Hero */}
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 section-padding">
           <div className="container">

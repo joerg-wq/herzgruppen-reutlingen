@@ -15,6 +15,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
+import Accessibility from "./pages/Accessibility";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -65,6 +66,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/impressum" component={Imprint} />
       <Route path="/datenschutz" component={Privacy} />
+      <Route path="/barrierefreiheit" component={Accessibility} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>

@@ -108,7 +108,7 @@ export default function Join() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         {/* Hero */}
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 section-padding">
           <div className="container">
@@ -266,8 +266,8 @@ export default function Join() {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       {error && (
-                        <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex gap-3">
-                          <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
+                        <div id="form-error" role="alert" className="bg-red-50 border border-red-200 rounded-xl p-4 flex gap-3">
+                          <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} aria-hidden="true" />
                           <p className="text-base text-red-800">{error}</p>
                         </div>
                       )}
@@ -287,31 +287,38 @@ export default function Join() {
                         <h3 className="text-lg font-semibold mb-4">Persönliche Daten</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-base font-medium mb-2">Name *</label>
+                            <label htmlFor="field-lastName" className="block text-base font-medium mb-2">Name *</label>
                             <input
+                              id="field-lastName"
                               type="text"
                               name="lastName"
                               value={formData.lastName}
                               onChange={handleChange}
+                              aria-required="true"
+                              aria-describedby={error ? 'form-error' : undefined}
                               className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
                               required
                             />
                           </div>
                           <div>
-                            <label className="block text-base font-medium mb-2">Vorname *</label>
+                            <label htmlFor="field-firstName" className="block text-base font-medium mb-2">Vorname *</label>
                             <input
+                              id="field-firstName"
                               type="text"
                               name="firstName"
                               value={formData.firstName}
                               onChange={handleChange}
+                              aria-required="true"
+                              aria-describedby={error ? 'form-error' : undefined}
                               className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
                               required
                             />
                           </div>
                         </div>
                         <div className="mt-4">
-                          <label className="block text-base font-medium mb-2">Geburtsdatum</label>
+                          <label htmlFor="field-dateOfBirth" className="block text-base font-medium mb-2">Geburtsdatum</label>
                           <input
+                            id="field-dateOfBirth"
                             type="date"
                             name="dateOfBirth"
                             value={formData.dateOfBirth}
@@ -326,8 +333,9 @@ export default function Join() {
                         <h3 className="text-lg font-semibold mb-4">Adresse</h3>
                         <div className="space-y-4">
                           <div>
-                            <label className="block text-base font-medium mb-2">Straße & Hausnummer</label>
+                            <label htmlFor="field-street" className="block text-base font-medium mb-2">Straße & Hausnummer</label>
                             <input
+                              id="field-street"
                               type="text"
                               name="street"
                               value={formData.street}
@@ -337,8 +345,9 @@ export default function Join() {
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
-                              <label className="block text-base font-medium mb-2">PLZ</label>
+                              <label htmlFor="field-zipCode" className="block text-base font-medium mb-2">PLZ</label>
                               <input
+                                id="field-zipCode"
                                 type="text"
                                 name="zipCode"
                                 value={formData.zipCode}
@@ -348,8 +357,9 @@ export default function Join() {
                               />
                             </div>
                             <div className="md:col-span-2">
-                              <label className="block text-base font-medium mb-2">Ort</label>
+                              <label htmlFor="field-city" className="block text-base font-medium mb-2">Ort</label>
                               <input
+                                id="field-city"
                                 type="text"
                                 name="city"
                                 value={formData.city}
@@ -366,8 +376,9 @@ export default function Join() {
                         <h3 className="text-lg font-semibold mb-4">Kontaktdaten</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-base font-medium mb-2">Telefon</label>
+                            <label htmlFor="field-phone" className="block text-base font-medium mb-2">Telefon</label>
                             <input
+                              id="field-phone"
                               type="tel"
                               name="phone"
                               value={formData.phone}
@@ -376,12 +387,15 @@ export default function Join() {
                             />
                           </div>
                           <div>
-                            <label className="block text-base font-medium mb-2">E-Mail *</label>
+                            <label htmlFor="field-email" className="block text-base font-medium mb-2">E-Mail *</label>
                             <input
+                              id="field-email"
                               type="email"
                               name="email"
                               value={formData.email}
                               onChange={handleChange}
+                              aria-required="true"
+                              aria-describedby={error ? 'form-error' : undefined}
                               className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
                               required
                             />
@@ -391,8 +405,9 @@ export default function Join() {
 
                       {/* Preferences */}
                       <div>
-                        <h3 className="text-lg font-semibold mb-4">Bevorzugter Standort</h3>
+                        <label htmlFor="field-preferredLocation" className="text-lg font-semibold mb-4 block">Bevorzugter Standort</label>
                         <select
+                          id="field-preferredLocation"
                           name="preferredLocation"
                           value={formData.preferredLocation}
                           onChange={handleChange}
@@ -411,8 +426,9 @@ export default function Join() {
 
                       {/* Message */}
                       <div>
-                        <label className="block text-base font-medium mb-2">Nachricht (optional)</label>
+                        <label htmlFor="field-message" className="block text-base font-medium mb-2">Nachricht (optional)</label>
                         <textarea
+                          id="field-message"
                           name="message"
                           value={formData.message}
                           onChange={handleChange}
@@ -424,12 +440,14 @@ export default function Join() {
 
                       {/* Privacy */}
                       <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
-                        <label className="flex items-start gap-3">
+                        <label htmlFor="field-privacy" className="flex items-start gap-3">
                           <input
+                            id="field-privacy"
                             type="checkbox"
                             name="privacy"
                             checked={formData.privacy}
                             onChange={handleChange}
+                            aria-required="true"
                             className="mt-1 w-4 h-4"
                             required
                           />

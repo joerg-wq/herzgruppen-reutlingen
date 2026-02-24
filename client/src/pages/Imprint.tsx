@@ -10,7 +10,7 @@ export default function Imprint() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         {/* Hero */}
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/5 py-8 md:py-10">
           <div className="container">

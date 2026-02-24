@@ -61,6 +61,12 @@ export const ROUTE_META: RouteMeta[] = [
     description:
       "Datenschutzerklärung für die Online-Angebote der Herzgruppen im Kreis Reutlingen.",
   },
+  {
+    path: "/barrierefreiheit",
+    title: `Barrierefreiheit | ${SITE_NAME}`,
+    description:
+      "Erklärung zur digitalen Barrierefreiheit der Website der Herzgruppen im Kreis Reutlingen.",
+  },
 ];
 
 export function getMetaForPath(pathname: string): RouteMeta | undefined {

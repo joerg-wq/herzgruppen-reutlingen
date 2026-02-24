@@ -149,7 +149,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/5 section-padding">
           {/* Decorative blur circles */}

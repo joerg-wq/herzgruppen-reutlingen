@@ -89,6 +89,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/barrierefreiheit">
+                  <a className="opacity-90 hover:opacity-100 hover:underline underline-offset-2 transition-opacity">Barrierefreiheit</a>
+                </Link>
+              </li>
+              <li>
                 <p className="text-sm opacity-80 leading-relaxed">
                   <span className="font-semibold">Über diese Website:</span> Informationsangebot der ambulanten Herzgruppen im Kreis Reutlingen (ARGE Reutlingen e.V.).
                 </p>

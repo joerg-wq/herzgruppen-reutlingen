@@ -24,6 +24,14 @@ export default function Header() {
   ];
 
   return (
+    <>
+    {/* Skip to content link for keyboard/screen reader users */}
+    <a
+      href="#main"
+      className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:text-base focus:font-medium focus:shadow-lg"
+    >
+      Zum Inhalt springen
+    </a>
     <motion.header
       className="sticky top-0 z-50 border-b transition-colors duration-300"
       animate={{
@@ -63,7 +71,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
-              <a className="px-3 py-2 text-[0.9rem] font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">
+              <a className="px-3 py-2 text-[0.9rem] font-medium text-foreground underline decoration-transparent underline-offset-4 hover:text-primary hover:decoration-current hover:bg-primary/5 rounded-lg transition-colors">
                 {item.label}
               </a>
             </Link>
@@ -84,7 +92,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden p-2 hover:bg-muted rounded-lg transition-colors"
+          className="lg:hidden p-2 min-w-11 min-h-11 flex items-center justify-center hover:bg-muted rounded-lg transition-colors"
           aria-label={isMenuOpen ? 'Hauptmenü schließen' : 'Hauptmenü öffnen'}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -138,5 +146,6 @@ export default function Header() {
         )}
       </AnimatePresence>
     </motion.header>
+    </>
   );
 }
