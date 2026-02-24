@@ -44,8 +44,26 @@ function MetaUpdater() {
     const meta = getMetaForPath(location);
     if (meta) {
       document.title = meta.title;
-      const desc = document.querySelector('meta[name="description"]');
-      if (desc) desc.setAttribute("content", meta.description);
+
+      const setMeta = (selector: string, content: string) => {
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute("content", content);
+      };
+
+      setMeta('meta[name="description"]', meta.description);
+      setMeta('meta[property="og:title"]', meta.title);
+      setMeta('meta[property="og:description"]', meta.description);
+      setMeta('meta[property="og:url"]', `https://herzgruppen.de${meta.path === "/" ? "" : meta.path}`);
+      setMeta('meta[name="twitter:title"]', meta.title);
+      setMeta('meta[name="twitter:description"]', meta.description);
+
+      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+      }
+      canonical.href = `https://herzgruppen.de${meta.path === "/" ? "" : meta.path}`;
     }
   }, [location]);
   return null;

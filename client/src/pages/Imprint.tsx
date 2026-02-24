@@ -18,7 +18,7 @@ export default function Imprint() {
               Impressum
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Angaben gemäß § 5 TMG und § 7 Abs. 1 ECG
+              Angaben gemäß § 5 DDG
             </p>
           </div>
         </section>
@@ -30,7 +30,7 @@ export default function Imprint() {
               {/* Verantwortliche Stelle */}
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">Verantwortliche Stelle</h2>
-                <div className="spacey-1 text-sm text-foreground">
+                <div className="space-y-1 text-sm text-foreground">
                   <p className="font-semibold">ARGE Reutlingen e.V.</p>
                   <p>Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.</p>
                   <p>Lindachstr. 18</p>
@@ -61,8 +61,11 @@ export default function Imprint() {
               {/* Vertretungsberechtigte */}
               <Card className="p-5">
                 <h2 className="text-xl font-bold mb-3">Vertretungsberechtigte Personen</h2>
+                <p className="text-sm text-foreground mb-2">
+                  Vertreten durch den Vorsitzenden Dr. med. Martin Jauernig
+                </p>
                 <p className="text-sm text-muted-foreground">
-                  Der Verein wird vertreten durch die Mitglieder des Vorstands gemäß der Satzung der ARGE Reutlingen e.V. Die Ortsgruppen (z.&nbsp;B. Pfullingen, Reutlingen) sind Angebote der ARGE Reutlingen e.V.
+                  Die Ortsgruppen (z.&nbsp;B. Pfullingen, Reutlingen) sind Angebote der ARGE Reutlingen e.V.
                 </p>
               </Card>
 

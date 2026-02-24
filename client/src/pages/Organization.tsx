@@ -155,13 +155,13 @@ export default function Organization() {
                   {
                     role: 'Schriftführer',
                     name: 'Hartmut Fach',
-                    address: 'Adresse wird derzeit aktualisiert',
+                    address: 'Kontakt über Geschäftsstelle',
                     phone: '',
                   },
                   {
                     role: 'Kassenwart',
                     name: 'Bernhard Walker',
-                    address: 'Adresse wird derzeit aktualisiert',
+                    address: 'Kontakt über Geschäftsstelle',
                     phone: '',
                   },
                 ].map((member, index) => (

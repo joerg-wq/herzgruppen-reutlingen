@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
@@ -77,8 +77,8 @@ export default function FAQ() {
           a: 'Der Arzt prüft Ihre Untersuchungsbefunde, beurteilt Ihre Belastbarkeit und legt in Abstimmung mit der Übungsleitung Ihre individuellen Belastungsvorgaben schriftlich fest. Zudem berät er Sie zu Medikation und Lebensstil. Die Ärzte sind Fachärzte für Innere Medizin, Kardiologie oder Sportmedizin.',
         },
         {
-          q: 'Welche Qualifikation haben die Übungsleiter?',
-          a: 'Unsere Übungsleiter besitzen die Lizenz „Übungsleiter B Innere Medizin". Diese Spezialausbildung umfasst tiefgehendes Wissen über Kardiologie und Notfallmanagement – weit über das hinaus, was ein normaler Fitnesstrainer mitbringt.',
+          q: 'Welche Qualifikation hat die Übungsleitung?',
+          a: 'Unsere Übungsleitung besitzt die Lizenz „Übungsleiter B Innere Medizin". Diese Spezialausbildung umfasst tiefgehendes Wissen über Kardiologie und Notfallmanagement – weit über das hinaus, was ein normaler Fitnesstrainer mitbringt.',
         },
       ],
     },
@@ -150,6 +150,26 @@ export default function FAQ() {
       ],
     },
   ];
+
+  // Inject FAQPage JSON-LD for Google Rich Snippets
+  useEffect(() => {
+    const allItems = faqs.flatMap(section =>
+      section.items.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a },
+      }))
+    );
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": allItems,
+    });
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

@@ -555,8 +555,8 @@ export default function Home() {
                 {[
                   { end: 35, suffix: '+', label: 'Jahre Erfahrung', icon: <Shield className="text-primary" size={28} /> },
                   { end: 7, suffix: '', label: 'Standorte im Kreis', icon: <MapPin className="text-secondary" size={28} /> },
-                  { end: 29, suffix: '', label: 'Herzgruppen', icon: <Heart className="text-primary" size={28} /> },
-                  { end: 29, suffix: '', label: 'Trainingseinheiten / Woche', icon: <Activity className="text-accent" size={28} /> },
+                  { end: 30, suffix: '', label: 'Herzgruppen', icon: <Heart className="text-primary" size={28} /> },
+                  { end: 30, suffix: '', label: 'Trainingseinheiten / Woche', icon: <Activity className="text-accent" size={28} /> },
                 ].map((stat, index) => {
                   const { count, ref } = useCountUp(stat.end);
                   return (

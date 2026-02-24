@@ -167,7 +167,7 @@ export default function Privacy() {
 
               {/* Kontakt */}
               <Card className="p-5">
-                <h2 className="text-xl font-bold mb-3">11. Datenschutzbeauftragter</h2>
+                <h2 className="text-xl font-bold mb-3">11. Kontakt für Datenschutzfragen</h2>
                 <p className="text-sm text-muted-foreground mb-3">
                   Bei Fragen zum Datenschutz kontaktieren Sie bitte:
                 </p>
@@ -191,12 +191,12 @@ export default function Privacy() {
                   Sie haben das Recht, sich bei der Datenschutzaufsichtsbehörde zu beschweren:
                 </p>
                 <div className="space-y-1 text-sm text-foreground">
-                  <p className="font-semibold">Landesbeauftragte für Datenschutz und Informationsfreiheit Baden-Württemberg</p>
+                  <p className="font-semibold">Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI)</p>
                   <p>Königstraße 10a</p>
                   <p>70173 Stuttgart</p>
                   <p>
-                    <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      www.bfdi.bund.de
+                    <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      www.baden-wuerttemberg.datenschutz.de
                     </a>
                   </p>
                 </div>
