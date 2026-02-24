@@ -53,7 +53,7 @@ function MetaUpdater() {
       setMeta('meta[name="description"]', meta.description);
       setMeta('meta[property="og:title"]', meta.title);
       setMeta('meta[property="og:description"]', meta.description);
-      setMeta('meta[property="og:url"]', `https://herzgruppen.de${meta.path === "/" ? "" : meta.path}`);
+      setMeta('meta[property="og:url"]', `https://herzgruppen-reutlingen.pages.dev${meta.path === "/" ? "" : meta.path}`);
       setMeta('meta[name="twitter:title"]', meta.title);
       setMeta('meta[name="twitter:description"]', meta.description);
 
@@ -63,7 +63,7 @@ function MetaUpdater() {
         canonical.rel = "canonical";
         document.head.appendChild(canonical);
       }
-      canonical.href = `https://herzgruppen.de${meta.path === "/" ? "" : meta.path}`;
+      canonical.href = `https://herzgruppen-reutlingen.pages.dev${meta.path === "/" ? "" : meta.path}`;
     }
   }, [location]);
   return null;
