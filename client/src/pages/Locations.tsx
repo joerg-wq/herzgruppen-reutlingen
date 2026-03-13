@@ -158,7 +158,12 @@ export default function Locations() {
 
         {/* Venues List */}
         <section className="section-padding">
-          <div className="container">
+          <div className="container" aria-live="polite">
+            <p className="sr-only">
+              {filteredVenues.length === 0
+                ? 'Keine Standorte gefunden.'
+                : `${filteredVenues.length} ${filteredVenues.length === 1 ? 'Standort' : 'Standorte'} gefunden.`}
+            </p>
             {filteredVenues.length === 0 ? (
               <div className="text-center py-16">
                 <p className="text-lg text-muted-foreground mb-5">

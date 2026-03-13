@@ -52,8 +52,10 @@ export default function Header() {
             aria-label={`Zur Startseite der ARGE Reutlingen – ${SITE_NAME}`}
           >
             <img
-              src="/logo-512.png"
+              src="/logo-96.png"
               alt="ARGE Reutlingen Logo"
+              width={44}
+              height={44}
               className="w-11 h-11 object-contain"
             />
             <div className="hidden sm:block">
@@ -94,6 +96,7 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden p-2 min-w-11 min-h-11 flex items-center justify-center hover:bg-muted rounded-lg transition-colors"
           aria-label={isMenuOpen ? 'Hauptmenü schließen' : 'Hauptmenü öffnen'}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

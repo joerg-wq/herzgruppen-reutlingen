@@ -2,20 +2,22 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
+import { Loader2 } from "lucide-react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { getMetaForPath } from "./routes";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Locations from "./pages/Locations";
-import Join from "./pages/Join";
-import Organization from "./pages/Organization";
-import FAQ from "./pages/FAQ";
-import Contact from "./pages/Contact";
-import Imprint from "./pages/Imprint";
-import Privacy from "./pages/Privacy";
-import Accessibility from "./pages/Accessibility";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Locations = lazy(() => import("./pages/Locations"));
+const Join = lazy(() => import("./pages/Join"));
+const Organization = lazy(() => import("./pages/Organization"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Imprint = lazy(() => import("./pages/Imprint"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -69,9 +71,17 @@ function MetaUpdater() {
   return null;
 }
 
+function PageSpinner() {
+  return (
+    <div className="flex items-center justify-center min-h-[60vh]">
+      <Loader2 className="w-8 h-8 animate-spin text-primary" />
+    </div>
+  );
+}
+
 function Router() {
   return (
-    <>
+    <Suspense fallback={<PageSpinner />}>
       <ScrollToTop />
       <MetaUpdater />
       <Switch>
@@ -88,7 +98,7 @@ function Router() {
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>
-    </>
+    </Suspense>
   );
 }
 
