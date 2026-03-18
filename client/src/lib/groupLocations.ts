@@ -52,10 +52,9 @@ const DAY_ORDER: Record<string, number> = {
 };
 
 function extractDoctor(notes: string): string {
-  const match = notes.match(/Verantwortliche[r]?\s+(Arzt|Ärztin):\s*((?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+)/);
+  const match = notes.match(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*((?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+)/);
   if (!match) return '';
-  const label = match[1] === 'Ärztin' ? 'Ihre Ärztin' : 'Ihr Arzt';
-  return `${label}: ${match[2].trim()}`;
+  return `Verantwortliche/r Arzt/Ärztin: ${match[1].trim()}`;
 }
 
 function extractVenueName(address: string): string {
@@ -73,7 +72,6 @@ function parseSubtype(name: string): string | undefined {
 function typeLabel(type: string): string {
   switch (type) {
     case 'herzinsuffizienz': return 'Herzinsuffizienz';
-    case 'schlaganfall': return 'Schlaganfall';
     default: return 'Herzsport';
   }
 }

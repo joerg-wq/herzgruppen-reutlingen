@@ -13,8 +13,6 @@ function typeBadgeClass(type: string): string {
   switch (type) {
     case 'herzinsuffizienz':
       return 'bg-primary/10 text-primary';
-    case 'schlaganfall':
-      return 'bg-secondary/15 text-secondary';
     default:
       return 'bg-muted text-muted-foreground';
   }
@@ -24,8 +22,6 @@ function typeBadgeLabel(type: string): string {
   switch (type) {
     case 'herzinsuffizienz':
       return 'Herzinsuffizienz';
-    case 'schlaganfall':
-      return 'Schlaganfall';
     default:
       return 'Herzsport';
   }
@@ -37,16 +33,8 @@ export default function VenueCard({ venue }: VenueCardProps) {
   return (
     <Card className="p-6 card-hover h-full flex flex-col">
       {/* Header: Venue name + type badges */}
-      <div className="flex items-start justify-between gap-3 mb-1">
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">
-            {venue.venueName}
-          </h3>
-          <p className="text-sm text-muted-foreground mt-0.5">
-            {venue.city} &middot; {totalGroups} {totalGroups === 1 ? 'Gruppe' : 'Gruppen'}
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-1.5 justify-end">
+      <div className="mb-1">
+        <div className="flex flex-wrap gap-1.5 mb-2">
           {Array.from(venue.types).map(type => (
             <span
               key={type}
@@ -56,6 +44,12 @@ export default function VenueCard({ venue }: VenueCardProps) {
             </span>
           ))}
         </div>
+        <h3 className="text-lg font-semibold text-foreground">
+          {venue.venueName}
+        </h3>
+        <p className="text-sm text-muted-foreground mt-0.5">
+          {venue.city} &middot; {totalGroups} {totalGroups === 1 ? 'Gruppe' : 'Gruppen'}
+        </p>
       </div>
 
       {/* Address + Maps link */}

@@ -263,7 +263,7 @@ export default function About() {
                       </div>
                       <div>
                         <dt className="font-medium text-foreground">Ärztliche Betreuung</dt>
-                        <dd className="text-muted-foreground">Regelmäßige Visite (mind. alle 6 Wochen)</dd>
+                        <dd className="text-muted-foreground">Arzt ständig im Übungsraum</dd>
                       </div>
                       <div>
                         <dt className="font-medium text-foreground">Standorte</dt>
@@ -337,12 +337,12 @@ export default function About() {
                   {
                     minutes: 30,
                     title: 'Haupttraining',
-                    description: 'Ausdauertraining (z. B. Gehen, Radfahren) und Krafttraining mit individueller Anpassung.',
+                    description: 'Ausdauertraining und Kräftigungsübungen mit individueller Anpassung.',
                   },
                   {
                     minutes: 15,
                     title: 'Abwärmen & Entspannung',
-                    description: 'Stretching, Entspannungsübungen und Zeit für den Austausch in der Gruppe.',
+                    description: 'Stretching, Entspannungsübungen, Spiele und Zeit für den Austausch in der Gruppe.',
                   },
                 ].map((phase, index) => (
                   <motion.div

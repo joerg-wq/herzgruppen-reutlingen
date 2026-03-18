@@ -75,7 +75,7 @@ export default function Organization() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Seit über 35 Jahren fördern wir den Aufbau und die Betreuung von Herzgruppen in der Region und achten auf klare Qualitätsstandards im Rehasport.
+                Seit über 45 Jahren fördern wir den Aufbau und die Betreuung von Herzgruppen in der Region und achten auf klare Qualitätsstandards im Rehasport.
               </motion.p>
             </motion.div>
           </div>
@@ -105,7 +105,7 @@ export default function Organization() {
                   },
                   {
                     title: 'Gemeinschaft schaffen',
-                    description: 'Wir bringen Menschen mit ähnlichen Erfahrungen zusammen, um Unterstützung, Verständnis und Freundschaft zu fördern.',
+                    description: 'Wir bringen Menschen mit ähnlichen Erfahrungen zusammen, um Unterstützung, Verständnis und Freundschaft zu fördern. Alle Gruppen haben einen Patientenrat, der soziale Aktivitäten organisiert.',
                   },
                   {
                     title: 'Qualität sichern',
@@ -153,13 +153,13 @@ export default function Organization() {
                     phone: '07121 / 20 38 30',
                   },
                   {
-                    role: 'Schriftführer',
+                    role: 'Stellvertretender Vorsitzender und Schriftführer',
                     name: 'Hartmut Fach',
                     address: 'Kontakt über Geschäftsstelle',
                     phone: '',
                   },
                   {
-                    role: 'Kassenwart',
+                    role: 'Geschäftsführer und Kassenwart',
                     name: 'Bernhard Walker',
                     address: 'Kontakt über Geschäftsstelle',
                     phone: '',
@@ -284,10 +284,9 @@ export default function Organization() {
                   { label: 'Herzsport Reutlingen', cityParam: 'Reutlingen' },
                   { label: 'Herzsport Bad Urach', cityParam: 'Bad Urach' },
                   { label: 'Herzsport Pfullingen', cityParam: 'Pfullingen' },
-                  { label: 'Herzsport Neckar-Schönbuch', cityParam: '' },
+                  { label: 'Herzsport Neckar-Schönbuch', cityParam: 'Neckar-Schönbuch' },
                   { label: 'Herzsport Metzingen', cityParam: 'Metzingen' },
                   { label: 'Herzsport Dettingen/E.', cityParam: 'Dettingen/E.' },
-                  { label: 'Schlaganfallgruppe Bad Urach', cityParam: '' },
                 ].map((group, index) => (
                   <motion.div
                     key={index}

@@ -8,8 +8,6 @@ function typeBadgeClass(type: string): string {
   switch (type) {
     case 'herzinsuffizienz':
       return 'bg-primary/10 text-primary';
-    case 'schlaganfall':
-      return 'bg-secondary/15 text-secondary';
     default:
       return 'bg-muted text-muted-foreground';
   }
@@ -21,11 +19,11 @@ export default function TimeSlotRow({ slot }: TimeSlotRowProps) {
     : `${slot.groupCount} Gruppen`;
 
   return (
-    <div className="flex items-center justify-between gap-3 py-2 text-base">
-      <span className="font-medium text-foreground whitespace-nowrap min-w-[140px]">
+    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-2 text-base">
+      <span className="font-medium text-foreground whitespace-nowrap">
         {slot.time}
       </span>
-      <div className="flex items-center gap-2 flex-wrap flex-1">
+      <div className="flex items-center gap-2 flex-wrap">
         {slot.types.map(t => (
           <span
             key={t.type}
@@ -40,7 +38,7 @@ export default function TimeSlotRow({ slot }: TimeSlotRowProps) {
           </span>
         )}
       </div>
-      <span className="text-sm text-muted-foreground whitespace-nowrap">
+      <span className="text-sm text-muted-foreground whitespace-nowrap ml-auto">
         {groupLabel}
       </span>
     </div>

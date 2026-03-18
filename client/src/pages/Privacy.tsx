@@ -56,7 +56,7 @@ export default function Privacy() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Anmeldungsdaten</h3>
                     <p>
-                      Bei der Anmeldung zu unseren Trainingsgruppen erfassen wir: Vorname, Nachname, E-Mail-Adresse, Telefonnummer, Geburtsdatum, Informationen zu Ihrer Herzerkrankung, ärztliche Empfehlungen und bevorzugte Trainingsstandorte. Die Übermittlung erfolgt derzeit ausschließlich per E-Mail.
+                      Bei der Anmeldung zu unseren Trainingsgruppen erfassen wir: Vorname, Nachname, E-Mail-Adresse, Telefonnummer, Geburtsdatum, Informationen zu Ihrer Herzerkrankung, ärztliche Verordnungen und bevorzugte Trainingsstandorte. Die Übermittlung erfolgt derzeit ausschließlich per E-Mail.
                     </p>
                   </div>
                   <div>

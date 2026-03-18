@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { CheckCircle, AlertCircle, Mail, ArrowRight, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { CONTACT_EMAIL } from '@/config';
+import { CONTACT_EMAIL, LOCATION_EMAILS } from '@/config';
 import { toast } from 'sonner';
 import { fadeInUp, stagger } from '@/lib/animations';
 
@@ -52,7 +52,7 @@ export default function Join() {
 
     try {
       setIsLoading(true);
-      const mailto = CONTACT_EMAIL;
+      const mailto = LOCATION_EMAILS[formData.preferredLocation] ?? CONTACT_EMAIL;
       const subject = encodeURIComponent('Interesse an Herzgruppe – Kontaktaufnahme');
       const bodyLines = [
         'Guten Tag,',
@@ -166,7 +166,7 @@ export default function Join() {
                     number: '2',
                     title: 'Rehasportverordnung holen',
                     description:
-                      'Ihr Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport aus (Formular 56).',
+                      'Ihr Hausarzt oder Kardiologe stellt eine Verordnung für Rehasport aus (Muster 56).',
                   },
                   {
                     number: '3',
@@ -202,14 +202,14 @@ export default function Join() {
                 ))}
               </div>
 
-              {/* Formular 56 Hinweis */}
+              {/* Muster 56 Hinweis */}
               <motion.div
                 className="mt-8 bg-primary/5 border border-primary/20 rounded-xl p-5 max-w-3xl mx-auto"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 <p className="text-base text-foreground">
-                  <strong>Gut zu wissen:</strong> Die eigentliche Anmeldung erfolgt über die Rehasportverordnung (Formular 56) Ihres Arztes.{' '}
+                  <strong>Gut zu wissen:</strong> Die eigentliche Anmeldung erfolgt über die Rehasportverordnung (Muster 56) Ihres Arztes.{' '}
                   <a
                     href="https://www.dmrz.de/wissen/ratgeber/rehasportverordnung"
                     target="_blank"
@@ -278,7 +278,7 @@ export default function Join() {
                         <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                           <li>Dies ist <strong>keine formelle Anmeldung</strong>, sondern eine Kontaktanfrage an den Verein.</li>
                           <li>Ihre Angaben werden nicht auf einem Server gespeichert, sondern nur in einer vorbefüllten E-Mail geöffnet.</li>
-                          <li>Die eigentliche Anmeldung erfolgt später mit einer Rehasportverordnung (Formular 56).</li>
+                          <li>Die eigentliche Anmeldung erfolgt später mit einer Rehasportverordnung (Muster 56).</li>
                         </ul>
                       </div>
 
@@ -414,13 +414,13 @@ export default function Join() {
                           className="w-full px-4 py-3 border border-border rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary"
                         >
                           <option value="">Keine besondere Angabe</option>
-                          <option value="Reutlingen">Herzsport Reutlingen</option>
-                          <option value="Pfullingen">Herzsport Pfullingen</option>
-                          <option value="Neckar-Schönbuch">Herzsport Neckar-Schönbuch</option>
-                          <option value="Metzingen">Herzsport Metzingen</option>
-                          <option value="Dettingen">Herzsport Dettingen</option>
                           <option value="Bad Urach">Herzsport Bad Urach</option>
+                          <option value="Dettingen">Herzsport Dettingen</option>
+                          <option value="Metzingen">Herzsport Metzingen</option>
                           <option value="Münsingen">Herzsport Münsingen</option>
+                          <option value="Neckar-Schönbuch">Herzsport Neckar-Schönbuch</option>
+                          <option value="Pfullingen">Herzsport Pfullingen</option>
+                          <option value="Reutlingen">Herzsport Reutlingen</option>
                         </select>
                       </div>
 
@@ -498,7 +498,7 @@ export default function Join() {
                 {([
                   {
                     question: 'Benötige ich eine ärztliche Verordnung?',
-                    answer: 'Ja, für die Teilnahme benötigen Sie eine Rehasportverordnung (Formular 56) von Ihrem Arzt. Über unser Formular melden Sie erst einmal Ihr Interesse – die Verordnung bringen Sie dann zum Einstieg mit.',
+                    answer: 'Ja, für die Teilnahme benötigen Sie eine Rehasportverordnung (Muster 56) von Ihrem Arzt. Über unser Formular melden Sie erst einmal Ihr Interesse – die Verordnung bringen Sie dann zum Einstieg mit.',
                   },
                   {
                     question: 'Muss ich auf die Genehmigung der Kasse warten?',

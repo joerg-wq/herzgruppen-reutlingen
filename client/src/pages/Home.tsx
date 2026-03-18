@@ -255,7 +255,7 @@ export default function Home() {
                   },
                   {
                     q: 'Wie komme ich rein?',
-                    a: 'Mit einer ärztlichen Empfehlung oder Verordnung. Suchen Sie einen passenden Standort aus und melden Sie Ihr Interesse über unser Kontaktformular.',
+                    a: 'Mit einer ärztlichen Verordnung. Suchen Sie einen passenden Standort aus und melden Sie Ihr Interesse über unser Kontaktformular.',
                   },
                 ].map((item, i) => (
                   <motion.div
@@ -463,13 +463,13 @@ export default function Home() {
                   <h3 className="text-xl font-semibold">Was Sie wissen sollten</h3>
                 </div>
                 <p className="text-base text-muted-foreground mb-5">
-                  Für die Teilnahme benötigen Sie eine ärztliche Empfehlung oder Verordnung. Dies ist ein wichtiger Sicherheitsaspekt.
+                  Für die Teilnahme benötigen Sie eine ärztliche Verordnung.
                 </p>
                 <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 mb-5">
                   <h4 className="font-semibold text-base mb-3">Wichtige Voraussetzungen:</h4>
                   <ul className="space-y-2.5 text-base text-foreground">
                     <li className="flex items-center gap-2">
-                      <span className="text-primary">&#10003;</span> Ärztliche Freigabe oder Verordnung
+                      <span className="text-primary">&#10003;</span> Ärztliche Verordnung
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-primary">&#10003;</span> Sportgeeignete Kleidung und Schuhe
@@ -520,8 +520,8 @@ export default function Home() {
                   },
                   {
                     icon: <Smile className="text-secondary" size={36} />,
-                    title: '35+ Jahre Erfahrung',
-                    description: 'Die ARGE Reutlingen besteht seit über 35 Jahren und hat umfangreiche Erfahrung in der Betreuung von Herzpatienten im gesamten Kreis.',
+                    title: '45+ Jahre Erfahrung',
+                    description: 'Die ARGE Reutlingen besteht seit über 45 Jahren und hat umfangreiche Erfahrung in der Betreuung von Herzpatienten im gesamten Kreis.',
                   },
                   {
                     icon: <Users className="text-accent" size={36} />,
@@ -566,7 +566,7 @@ export default function Home() {
               </motion.h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { end: 35, suffix: '+', label: 'Jahre Erfahrung', icon: <Shield className="text-primary" size={28} /> },
+                  { end: 45, suffix: '+', label: 'Jahre Erfahrung', icon: <Shield className="text-primary" size={28} /> },
                   { end: 7, suffix: '', label: 'Standorte im Kreis', icon: <MapPin className="text-secondary" size={28} /> },
                   { end: 30, suffix: '', label: 'Herzgruppen', icon: <Heart className="text-primary" size={28} /> },
                   { end: 30, suffix: '', label: 'Trainingseinheiten / Woche', icon: <Activity className="text-accent" size={28} /> },

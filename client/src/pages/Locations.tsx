@@ -28,7 +28,7 @@ export default function Locations() {
           const cityParam = params.get('city') ?? '';
           const typeParam = params.get('type') ?? '';
           setSelectedCity(cityParam);
-          if (['herzgruppe', 'herzinsuffizienz', 'schlaganfall'].includes(typeParam)) {
+          if (['herzgruppe', 'herzinsuffizienz'].includes(typeParam)) {
             setSelectedType(typeParam);
           }
         } catch {
@@ -137,7 +137,6 @@ export default function Locations() {
                   <option value="">Alle Gruppentypen</option>
                   <option value="herzgruppe">Herzsport</option>
                   <option value="herzinsuffizienz">Herzinsuffizienz</option>
-                  <option value="schlaganfall">Schlaganfall</option>
                 </select>
               </div>
             </div>
@@ -158,8 +157,8 @@ export default function Locations() {
 
         {/* Venues List */}
         <section className="section-padding">
-          <div className="container" aria-live="polite">
-            <p className="sr-only">
+          <div className="container">
+            <p className="sr-only" aria-live="polite">
               {filteredVenues.length === 0
                 ? 'Keine Standorte gefunden.'
                 : `${filteredVenues.length} ${filteredVenues.length === 1 ? 'Standort' : 'Standorte'} gefunden.`}
@@ -222,7 +221,7 @@ export default function Locations() {
                 <motion.div variants={fadeInUp} transition={{ duration: 0.5 }}>
                   <h3 className="text-lg font-semibold mb-3">Wie melde ich mich an?</h3>
                   <p className="text-base text-muted-foreground mb-3 leading-relaxed">
-                    Der Einstieg ist einfach: Kontaktieren Sie die Gruppe direkt zu den angegebenen Übungszeiten oder melden Sie Ihr Interesse über unser Online-Formular. Sie benötigen eine ärztliche Freigabe oder Verordnung.
+                    Der Einstieg ist einfach: Kontaktieren Sie die Gruppe direkt zu den angegebenen Übungszeiten oder melden Sie Ihr Interesse über unser Online-Formular. Sie benötigen eine ärztliche Verordnung.
                   </p>
                   <p className="text-base text-muted-foreground mb-5 leading-relaxed">
                     Tipp: Kommen Sie einfach zu einer der angegebenen Gruppenstunden – die Ansprechpartner vor Ort beraten Sie gern zu Einstieg und Formalitäten.

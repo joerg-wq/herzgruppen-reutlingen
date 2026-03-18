@@ -56,8 +56,8 @@ export default function FAQ() {
           a: 'Ja, gesetzliche Krankenkassen übernehmen in der Regel die Kosten für zertifizierte Herzgruppen. Private Krankenkassen regeln dies individuell – sprechen Sie mit Ihrer Kasse für Details.',
         },
         {
-          q: 'Kann ich die Kosten von der Rentenversicherung erstattet bekommen?',
-          a: 'Ja, wenn Sie eine Verordnung von der Rentenversicherung haben, können die Kosten erstattet werden. Dies ist besonders relevant, wenn Sie sich in einer Rehabilitationsmaßnahme befinden oder eine solche abgeschlossen haben.',
+          q: 'Werden die Kosten von der Rentenversicherung übernommen?',
+          a: 'Ja, wenn der Arzt im Rahmen einer stationären Rehamaßnahme eine Verordnung ausstellt, werden die Kosten für 6 Monate von der Rentenversicherung übernommen.',
         },
         {
           q: 'Muss ich auf die Genehmigung meiner Krankenkasse warten?',
@@ -96,7 +96,7 @@ export default function FAQ() {
         },
         {
           q: 'Wie schnell ist im Notfall Hilfe vor Ort?',
-          a: 'Unsere Sicherheitskette ist auf Unverzüglichkeit ausgelegt. Im Ernstfall wird parallel zum internen Alarm immer sofort der Notruf 112 abgesetzt. Die Rettungskraft oder der Arzt trifft ohne Verzögerung im Übungsraum ein – orientiert an der regionalen 8-Minuten-Hilfsfrist.',
+          a: 'Unsere Sicherheitskette ist auf Unverzüglichkeit ausgelegt. Im Ernstfall wird parallel zum internen Alarm immer sofort der Notruf 112 abgesetzt. Die Rettungskraft oder der Arzt trifft ohne Verzögerung im Übungsraum ein – orientiert an der regionalen 12-Minuten-Hilfsfrist.',
         },
         {
           q: 'Welche Qualifikation hat das Notfallpersonal?',
@@ -104,7 +104,7 @@ export default function FAQ() {
         },
         {
           q: 'Werden Notfälle regelmäßig geübt?',
-          a: 'Ja, mindestens zweimal pro Jahr finden verpflichtende Notfallübungen statt. Das Team trainiert die medizinischen Handgriffe und auch Sie als Teilnehmer lernen die Funktionsweise des AED kennen.',
+          a: 'Ja, einmal jährlich finden verpflichtende Notfallübungen statt. Das Team trainiert die medizinischen Handgriffe und auch Sie als Teilnehmer lernen die Funktionsweise des AED kennen.',
         },
         {
           q: 'Kann ich meine Medikamente weiterhin nehmen?',

@@ -3,7 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
 import { useEffect, lazy, Suspense } from "react";
-import { Loader2 } from "lucide-react";
+import { Spinner } from "@/components/ui/spinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { getMetaForPath } from "./routes";
@@ -71,19 +71,16 @@ function MetaUpdater() {
   return null;
 }
 
-function PageSpinner() {
-  return (
-    <div className="flex items-center justify-center min-h-[60vh]">
-      <Loader2 className="w-8 h-8 animate-spin text-primary" />
-    </div>
-  );
-}
-
 function Router() {
   return (
-    <Suspense fallback={<PageSpinner />}>
+    <>
       <ScrollToTop />
       <MetaUpdater />
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <Spinner className="w-8 h-8 text-primary" />
+        </div>
+      }>
       <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
@@ -98,7 +95,8 @@ function Router() {
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>
-    </Suspense>
+      </Suspense>
+    </>
   );
 }
 
