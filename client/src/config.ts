@@ -16,12 +16,12 @@ export const CONTACT_EMAIL = "arge-herzsport@web.de";
 /** Standort-spezifische E-Mail-Adressen für Kontaktformular. */
 export const LOCATION_EMAILS: Record<string, string> = {
   "Bad Urach": "margret.traub@googlemail.com",
-  "Pfullingen": "Hartmut.fach@gmx.de",
-  "Neckar-Schönbuch": "Hartmut.fach@gmx.de",
-  "Reutlingen": "Hartmut.fach@gmx.de",
+  "Pfullingen": "hartmut.fach@gmx.de",
+  "Neckar-Schönbuch": "hartmut.fach@gmx.de",
+  "Reutlingen": "hartmut.fach@gmx.de",
   "Dettingen": "stefhartwich@gmx.de",
   "Dettingen/E.": "stefhartwich@gmx.de",
-  "Münsingen": "Renate.Geiselhart@web.de",
+  "Münsingen": "renate.geiselhart@web.de",
   "Metzingen": "brigittefritz.9999@web.de",
 };
 
