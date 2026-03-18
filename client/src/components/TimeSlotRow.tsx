@@ -32,11 +32,14 @@ export default function TimeSlotRow({ slot }: TimeSlotRowProps) {
             {t.label}
           </span>
         ))}
-        {slot.subtype && (
-          <span className="text-xs text-muted-foreground">
-            ({slot.subtype})
+        {slot.subtypes.map(st => (
+          <span
+            key={st}
+            className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-secondary/10 text-secondary"
+          >
+            {st}
           </span>
-        )}
+        ))}
       </div>
       <span className="text-sm text-muted-foreground whitespace-nowrap ml-auto">
         {groupLabel}

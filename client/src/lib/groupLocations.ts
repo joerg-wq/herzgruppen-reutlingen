@@ -17,7 +17,7 @@ export interface TimeSlot {
   time: string;
   types: SlotType[];
   groupCount: number;
-  subtype?: string;
+  subtypes: string[];
 }
 
 export interface SlotType {
@@ -124,25 +124,28 @@ export function groupByVenue(locations: Location[]): Venue[] {
     for (const [time, locs] of Array.from(slotMap.entries())) {
       // Collect unique types at this time
       const typeMap = new Map<string, number>();
-      let subtype: string | undefined;
+      const subtypeSet = new Set<string>();
 
       for (const loc of locs) {
         const t = loc.type;
         typeMap.set(t, (typeMap.get(t) ?? 0) + 1);
         venueTypes.add(t);
-        if (!subtype) subtype = parseSubtype(loc.name);
+        const st = parseSubtype(loc.name);
+        if (st) subtypeSet.add(st);
       }
 
+      const TYPE_ORDER: Record<string, number> = { herzinsuffizienz: 0, herzgruppe: 1 };
       const types: SlotType[] = [];
       for (const [t] of Array.from(typeMap.entries())) {
         types.push({ type: t, label: typeLabel(t) });
       }
+      types.sort((a, b) => (TYPE_ORDER[a.type] ?? 9) - (TYPE_ORDER[b.type] ?? 9));
 
       slots.push({
         time,
         types,
         groupCount: locs.length,
-        subtype,
+        subtypes: Array.from(subtypeSet),
       });
     }
 
