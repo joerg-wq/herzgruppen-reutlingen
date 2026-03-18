@@ -294,7 +294,7 @@ export default function About() {
                       </div>
                       <div>
                         <dt className="font-medium text-foreground">Standorte</dt>
-                        <dd className="text-muted-foreground">Bad Urach, Metzingen, Pfullingen</dd>
+                        <dd className="text-muted-foreground">Bad Urach, Metzingen, Pfullingen, Reutlingen</dd>
                       </div>
                     </dl>
                   </Card>

@@ -182,7 +182,7 @@ export default function Contact() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                Viele Fragen können Sie in unserem FAQ-Bereich finden.
+                Antworten auf viele Fragen finden Sie in unserem FAQ-Bereich.
               </motion.p>
               <motion.div
                 variants={fadeInUp}

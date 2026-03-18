@@ -54,6 +54,12 @@ export default function Privacy() {
                 <h2 className="text-xl font-bold mb-3">3. Arten der verarbeiteten Daten</h2>
                 <div className="space-y-3 text-sm text-muted-foreground">
                   <div>
+                    <h3 className="font-semibold text-foreground mb-1">Hosting und Serverlogdaten</h3>
+                    <p>
+                      Diese Website wird über Cloudflare Pages (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA) bereitgestellt. Beim Aufruf unserer Seiten werden durch Cloudflare automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser übermittelt. Dazu gehören: IP-Adresse, Browsertyp und -version, Betriebssystem, Referrer-URL, aufgerufene Seite, Datum und Uhrzeit des Zugriffs. Diese Daten werden zur Gewährleistung der Sicherheit und Auslieferung der Website verarbeitet (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Weitere Informationen finden Sie in der Datenschutzerklärung von Cloudflare unter cloudflare.com/privacypolicy.
+                    </p>
+                  </div>
+                  <div>
                     <h3 className="font-semibold text-foreground mb-1">Anmeldungsdaten</h3>
                     <p>
                       Bei der Anmeldung zu unseren Trainingsgruppen erfassen wir: Vorname, Nachname, E-Mail-Adresse, Telefonnummer, Geburtsdatum, Informationen zu Ihrer Herzerkrankung, ärztliche Verordnungen und bevorzugte Trainingsstandorte. Die Übermittlung erfolgt derzeit ausschließlich per E-Mail.

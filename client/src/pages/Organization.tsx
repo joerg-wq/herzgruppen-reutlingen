@@ -5,14 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CONTACT_EMAIL } from '@/config';
 import { fadeInUp, stagger } from '@/lib/animations';
-
-/** Normalisiert eine deutsche Telefonnummer für tel:-Links (ohne Leerzeichen/Schrägstrich). */
-function normalizePhoneForLink(display: string): string {
-  const digits = display.replace(/\D/g, '');
-  if (digits.startsWith('0')) return `+49${digits.slice(1)}`;
-  if (!digits.startsWith('49')) return `+49${digits}`;
-  return `+${digits}`;
-}
+import { normalizePhoneForLink } from '@/lib/utils';
 
 export default function Organization() {
   return (
@@ -287,6 +280,7 @@ export default function Organization() {
                   { label: 'Herzsport Neckar-Schönbuch', cityParam: 'Neckar-Schönbuch' },
                   { label: 'Herzsport Metzingen', cityParam: 'Metzingen' },
                   { label: 'Herzsport Dettingen/E.', cityParam: 'Dettingen/E.' },
+                  { label: 'Herzsport Münsingen', cityParam: 'Münsingen' },
                 ].map((group, index) => (
                   <motion.div
                     key={index}

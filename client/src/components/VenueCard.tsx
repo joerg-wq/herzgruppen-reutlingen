@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, MapPinned, ArrowRight, Stethoscope, User } from 'lucide-react';
 import { Link } from 'wouter';
+import { normalizePhoneForLink } from '@/lib/utils';
 import TimeSlotRow from './TimeSlotRow';
 import type { Venue } from '@/lib/groupLocations';
 
@@ -94,7 +95,7 @@ export default function VenueCard({ venue }: VenueCardProps) {
             </div>
           )}
           <a
-            href={`tel:${venue.contactPhone}`}
+            href={`tel:${normalizePhoneForLink(venue.contactPhone)}`}
             className="flex items-center gap-2 text-primary hover:underline"
           >
             <Phone size={16} className="flex-shrink-0" aria-hidden="true" />
