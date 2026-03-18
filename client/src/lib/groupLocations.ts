@@ -52,9 +52,9 @@ const DAY_ORDER: Record<string, number> = {
 };
 
 function extractDoctor(notes: string): string {
-  const match = notes.match(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*((?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+)/);
+  const match = notes.match(/(Verantwortliche[r]?\s+(?:Arzt|Ärztin)):\s*((?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+)/);
   if (!match) return '';
-  return `Verantwortliche/r Arzt/Ärztin: ${match[1].trim()}`;
+  return `${match[1]}: ${match[2].trim()}`;
 }
 
 function extractVenueName(address: string): string {
