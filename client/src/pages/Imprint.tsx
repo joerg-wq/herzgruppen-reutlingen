@@ -76,7 +76,7 @@ export default function Imprint() {
                   <p><span className="font-semibold">Vereinsregister:</span> Amtsgericht Stuttgart</p>
                   <p><span className="font-semibold">Registernummer:</span> VR 350490</p>
                   <p><span className="font-semibold">Steuernummer:</span> 78042/02157 FA. Reutlingen</p>
-                  <p><span className="font-semibold">Geltungsbereich:</span> Dieses Impressum gilt für die Online-Angebote der Herzgruppen im Kreis Reutlingen (herzgruppen-reutlingen.pages.dev).</p>
+                  <p><span className="font-semibold">Geltungsbereich:</span> Dieses Impressum gilt für die Online-Angebote der Herzgruppen im Kreis Reutlingen.</p>
                 </div>
               </Card>
 

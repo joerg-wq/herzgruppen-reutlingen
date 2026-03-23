@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { CONTACT_EMAIL } from '@/config';
+import { CONTACT_EMAIL, HOSTING_DISCLOSURE } from '@/config';
 
 export default function Privacy() {
   return (
@@ -56,7 +56,15 @@ export default function Privacy() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Hosting und Serverlogdaten</h3>
                     <p>
-                      Diese Website wird über Cloudflare Pages (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA) bereitgestellt. Beim Aufruf unserer Seiten werden durch Cloudflare automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser übermittelt. Dazu gehören: IP-Adresse, Browsertyp und -version, Betriebssystem, Referrer-URL, aufgerufene Seite, Datum und Uhrzeit des Zugriffs. Diese Daten werden zur Gewährleistung der Sicherheit und Auslieferung der Website verarbeitet (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Weitere Informationen finden Sie in der Datenschutzerklärung von Cloudflare unter cloudflare.com/privacypolicy.
+                      {HOSTING_DISCLOSURE === "allinkl" ? (
+                        <>
+                          Diese Website wird bei ALL-INKL.COM (Hauptstraße 68, 02742 Friedersdorf, Deutschland) gehostet. Beim Aufruf unserer Seiten werden durch den Webserver automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser übermittelt. Dazu gehören: IP-Adresse, Browsertyp und -version, Betriebssystem, Referrer-URL, aufgerufene Seite, Datum und Uhrzeit des Zugriffs. Diese Daten werden zur Gewährleistung der Sicherheit und Auslieferung der Website verarbeitet (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Die Daten werden ausschließlich auf Servern in Deutschland verarbeitet. Weitere Informationen finden Sie in der Datenschutzerklärung von ALL-INKL.COM unter all-inkl.com/datenschutzinformationen.
+                        </>
+                      ) : (
+                        <>
+                          Diese Website wird über Cloudflare Pages (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA) bereitgestellt. Beim Aufruf unserer Seiten werden durch Cloudflare automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser übermittelt. Dazu gehören: IP-Adresse, Browsertyp und -version, Betriebssystem, Referrer-URL, aufgerufene Seite, Datum und Uhrzeit des Zugriffs. Diese Daten werden zur Gewährleistung der Sicherheit und Auslieferung der Website verarbeitet (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Weitere Informationen finden Sie in der Datenschutzerklärung von Cloudflare unter cloudflare.com/privacypolicy.
+                        </>
+                      )}
                     </p>
                   </div>
                   <div>

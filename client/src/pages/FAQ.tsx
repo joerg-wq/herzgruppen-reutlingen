@@ -155,6 +155,10 @@ export default function FAQ() {
 
   // Inject FAQPage JSON-LD for Google Rich Snippets
   useEffect(() => {
+    const id = "faq-jsonld";
+    const existing = document.getElementById(id);
+    if (existing) existing.remove();
+
     const allItems = faqs.flatMap(section =>
       section.items.map(item => ({
         "@type": "Question",
@@ -163,6 +167,7 @@ export default function FAQ() {
       }))
     );
     const script = document.createElement("script");
+    script.id = id;
     script.type = "application/ld+json";
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
@@ -170,7 +175,7 @@ export default function FAQ() {
       "mainEntity": allItems,
     });
     document.head.appendChild(script);
-    return () => { document.head.removeChild(script); };
+    return () => { document.getElementById(id)?.remove(); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
