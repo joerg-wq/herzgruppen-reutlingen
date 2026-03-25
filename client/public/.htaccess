@@ -3,16 +3,13 @@
 # Apache-Konfiguration für Alfahosting (SPA + Security Headers)
 # ============================================================
 
-# Verzeichnislisten abschalten (wirft 500, falls der Hoster Options verbietet – dann Zeile entfernen)
-Options -Indexes
-
-# --- HTTPS wird serverseitig von ALL-INKL erzwungen (KAS → SSL erzwingen: Ja) ---
-RewriteEngine On
-
 # --- SPA Routing: alle Pfade auf index.html ---
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ /index.html [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /index.html [L]
+</IfModule>
 
 # --- Security Headers ---
 <IfModule mod_headers.c>
@@ -29,6 +26,13 @@ RewriteRule ^ /index.html [L]
   <FilesMatch "\.(js|css|woff2?|ttf|eot|svg|png|jpg|jpeg|webp|avif|ico)$">
     ExpiresDefault "access plus 1 year"
     Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# --- Kein Cache für Daten-Dateien (werden bei jedem Laden neu geprüft) ---
+<IfModule mod_headers.c>
+  <FilesMatch "\.json$">
+    Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
 
