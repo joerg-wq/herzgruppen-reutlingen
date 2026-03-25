@@ -18,6 +18,7 @@ export interface TimeSlot {
   types: SlotType[];
   groupCount: number;
   subtypes: string[];
+  slotNotes: string[];
 }
 
 export interface SlotType {
@@ -125,6 +126,7 @@ export function groupByVenue(locations: Location[]): Venue[] {
       // Collect unique types at this time
       const typeMap = new Map<string, number>();
       const subtypeSet = new Set<string>();
+      const slotNoteSet = new Set<string>();
 
       for (const loc of locs) {
         const t = loc.type;
@@ -132,6 +134,16 @@ export function groupByVenue(locations: Location[]): Venue[] {
         venueTypes.add(t);
         const st = parseSubtype(loc.name);
         if (st) subtypeSet.add(st);
+
+        // Slot-spezifische Notes sammeln
+        const cleaned = loc.notes
+          .replace(/Verantwortliche[r]?\s+(?:Arzt|Ärztin):\s*(?:Frau\s+)?Dr\.\s*[A-ZÄÖÜa-zäöüß-]+\.?\s*/g, '')
+          .replace(/Zweite\s+(parallele\s+)?(Gruppe|Übungsgruppe|Trainingsgruppe|Herzinsuffizienz-Gruppe)[^.]*\.?\s*/gi, '')
+          .trim();
+        if (cleaned) {
+          slotNoteSet.add(cleaned);
+          noteSet.delete(cleaned);
+        }
       }
 
       const TYPE_ORDER: Record<string, number> = { herzinsuffizienz: 0, herzgruppe: 1 };
@@ -146,6 +158,7 @@ export function groupByVenue(locations: Location[]): Venue[] {
         types,
         groupCount: locs.length,
         subtypes: Array.from(subtypeSet),
+        slotNotes: Array.from(slotNoteSet),
       });
     }
 

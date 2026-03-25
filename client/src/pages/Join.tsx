@@ -211,7 +211,7 @@ export default function Join() {
                 <p className="text-base text-foreground">
                   <strong>Gut zu wissen:</strong> Die eigentliche Anmeldung erfolgt über die Rehasportverordnung (Muster 56) Ihres Arztes.{' '}
                   <a
-                    href="https://www.dmrz.de/wissen/ratgeber/rehasportverordnung"
+                    href="https://www.wbrs-online.net/reha-sport/aktuelles/1332-neues-muster-56-zum-1-januar-2023"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline inline-flex items-center gap-1"

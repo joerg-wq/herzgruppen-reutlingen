@@ -17,7 +17,7 @@ export default function Locations() {
   const [selectedType, setSelectedType] = useState<string>('');
 
   useEffect(() => {
-    fetch('/data/locations.json')
+    fetch(`/data/locations.json?v=${Date.now()}`)
       .then(res => res.json())
       .then((data: Location[]) => {
         const grouped = groupByVenue(data);

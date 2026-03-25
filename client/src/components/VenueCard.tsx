@@ -117,30 +117,39 @@ export default function VenueCard({ venue }: VenueCardProps) {
         </div>
       </div>
 
-      {/* Notes */}
-      {venue.notes.length > 0 && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-4">
-          {venue.notes.map((note, i) => (
-            <p key={i} className="text-base text-foreground">
-              {note.split(/((?:https?:\/\/)?[\w.-]+\.[a-z]{2,}(?:\/\S*)?)/gi).map((part, j) =>
-                /^(?:https?:\/\/)?[\w.-]+\.[a-z]{2,}/i.test(part) ? (
-                  <a
-                    key={j}
-                    href={part.startsWith('http') ? part : `http://${part}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    {part}
-                  </a>
-                ) : (
-                  <span key={j}>{part}</span>
-                )
-              )}
-            </p>
-          ))}
-        </div>
-      )}
+      {/* Notes + Slot-Fußnoten */}
+      {(() => {
+        const slotFootnotes = venue.slots.flatMap(s => s.slotNotes);
+        const allNotes = [
+          ...venue.notes.map(n => ({ text: n, isFootnote: false })),
+          ...slotFootnotes.map(n => ({ text: n, isFootnote: true })),
+        ];
+        if (allNotes.length === 0) return null;
+        return (
+          <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-4">
+            {allNotes.map((note, i) => (
+              <p key={i} className={note.isFootnote ? 'text-sm text-muted-foreground' : 'text-base text-foreground'}>
+                {note.isFootnote && <span className="font-medium">* </span>}
+                {note.text.split(/((?:https?:\/\/)?[\w.-]+\.[a-z]{2,}(?:\/\S*)?)/gi).map((part, j) =>
+                  /^(?:https?:\/\/)?[\w.-]+\.[a-z]{2,}/i.test(part) ? (
+                    <a
+                      key={j}
+                      href={part.startsWith('http') ? part : `http://${part}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      {part}
+                    </a>
+                  ) : (
+                    <span key={j}>{part}</span>
+                  )
+                )}
+              </p>
+            ))}
+          </div>
+        );
+      })()}
 
       {/* CTA */}
       <Link href="/join#formular">

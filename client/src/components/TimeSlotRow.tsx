@@ -24,14 +24,27 @@ export default function TimeSlotRow({ slot }: TimeSlotRowProps) {
         {slot.time}
       </span>
       <div className="flex items-center gap-2 flex-wrap">
-        {slot.types.map(t => (
-          <span
-            key={t.type}
-            className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ${typeBadgeClass(t.type)}`}
-          >
-            {t.label}
-          </span>
-        ))}
+        {slot.subtypes.length > 0
+          ? slot.subtypes.map(st => {
+              const hasNote = slot.slotNotes.length > 0 &&
+                slot.slotNotes.some(n => n.toLowerCase().startsWith(st.toLowerCase()));
+              return (
+                <span
+                  key={st}
+                  className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-muted text-muted-foreground"
+                >
+                  {st}{hasNote ? '*' : ''}
+                </span>
+              );
+            })
+          : slot.types.map(t => (
+              <span
+                key={t.type}
+                className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ${typeBadgeClass(t.type)}`}
+              >
+                {t.label}
+              </span>
+            ))}
       </div>
       <span className="text-sm text-muted-foreground whitespace-nowrap ml-auto">
         {groupLabel}

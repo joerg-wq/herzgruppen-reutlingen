@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://herzgruppen-reutlingen.pages.dev/sitemap.xml
+Sitemap: https://herzsport-reutlingen.org/sitemap.xml
