@@ -119,7 +119,7 @@ export default function VenueCard({ venue }: VenueCardProps) {
 
       {/* Notes + Slot-Fußnoten */}
       {(() => {
-        const slotFootnotes = venue.slots.flatMap(s => s.slotNotes);
+        const slotFootnotes = [...new Set(venue.slots.flatMap(s => s.slotNotes))];
         const allNotes = [
           ...venue.notes.map(n => ({ text: n, isFootnote: false })),
           ...slotFootnotes.map(n => ({ text: n, isFootnote: true })),
