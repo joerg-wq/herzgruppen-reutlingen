@@ -7,17 +7,12 @@ import { Spinner } from "@/components/ui/spinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import SEO from "./components/SEO";
+import { ROUTE_META } from "./routes";
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Locations = lazy(() => import("./pages/Locations"));
-const Join = lazy(() => import("./pages/Join"));
-const Organization = lazy(() => import("./pages/Organization"));
-const FAQ = lazy(() => import("./pages/FAQ"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Imprint = lazy(() => import("./pages/Imprint"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Accessibility = lazy(() => import("./pages/Accessibility"));
+const lazyRoutes = ROUTE_META.map((r) => ({
+  path: r.path,
+  component: lazy(r.load),
+}));
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -51,16 +46,9 @@ function Router() {
         </div>
       }>
       <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/locations" component={Locations} />
-      <Route path="/join" component={Join} />
-      <Route path="/organization" component={Organization} />
-      <Route path="/faq" component={FAQ} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/impressum" component={Imprint} />
-      <Route path="/datenschutz" component={Privacy} />
-      <Route path="/barrierefreiheit" component={Accessibility} />
+      {lazyRoutes.map((r) => (
+        <Route key={r.path} path={r.path} component={r.component} />
+      ))}
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>

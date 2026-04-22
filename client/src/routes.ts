@@ -1,71 +1,83 @@
+import type { ComponentType } from "react";
 import { SITE_NAME, SITE_DESCRIPTION } from "./config";
 
 export interface RouteMeta {
   path: string;
   title: string;
   description: string;
+  load: () => Promise<{ default: ComponentType }>;
 }
 
-/** Zentrale Route-Metadaten für SEO und Social Sharing. */
+/** Zentrale Route-Metadaten, SEO-Daten und Seiten-Loader. Single Source of Truth. */
 export const ROUTE_META: RouteMeta[] = [
   {
     path: "/",
     title: `${SITE_NAME} | Startseite`,
     description: SITE_DESCRIPTION,
+    load: () => import("./pages/Home"),
   },
   {
     path: "/about",
     title: `Was ist eine ambulante Herzgruppe? | ${SITE_NAME}`,
     description:
       "Ärztlich betreute Rehasport-Gruppe wohnortnah im Kreis Reutlingen – Ziele, Ablauf und Sicherheit des Trainings.",
+    load: () => import("./pages/About"),
   },
   {
     path: "/locations",
     title: `Standorte & Übungstermine | ${SITE_NAME}`,
     description:
       "Alle Standorte und Übungstermine der Herzgruppen im Kreis Reutlingen – von Reutlingen über Pfullingen bis Bad Urach und Münsingen.",
+    load: () => import("./pages/Locations"),
   },
   {
     path: "/join",
     title: `Teilnahme & Voraussetzungen | ${SITE_NAME}`,
     description:
       "Informationen zu ärztlicher Verordnung, Genehmigung durch die Krankenkasse und Einstieg in die Herzgruppen im Kreis Reutlingen.",
+    load: () => import("./pages/Join"),
   },
   {
     path: "/organization",
     title: `ARGE Reutlingen & Ortsgruppen | ${SITE_NAME}`,
     description:
       "Die ARGE Reutlingen e.V., ihr Vorstand und die Ortsgruppen mit ihren Patientenräten im Kreis Reutlingen.",
+    load: () => import("./pages/Organization"),
   },
   {
     path: "/faq",
     title: `FAQ | ${SITE_NAME}`,
     description:
       "Antworten auf häufige Fragen zu Voraussetzungen, Kostenübernahme, Training und Sicherheit in den Herzgruppen.",
+    load: () => import("./pages/FAQ"),
   },
   {
     path: "/contact",
     title: `Kontakt | ${SITE_NAME}`,
     description:
       "Kontakt zur Geschäftsstelle der ARGE Reutlingen – Adresse, Telefon und E-Mail.",
+    load: () => import("./pages/Contact"),
   },
   {
     path: "/impressum",
     title: `Impressum | ${SITE_NAME}`,
     description:
       "Impressum der ARGE Reutlingen – Arbeitsgemeinschaft für ambulante Herzgruppen im Kreis Reutlingen e.V.",
+    load: () => import("./pages/Imprint"),
   },
   {
     path: "/datenschutz",
     title: `Datenschutz | ${SITE_NAME}`,
     description:
       "Datenschutzerklärung für die Online-Angebote der Herzgruppen im Kreis Reutlingen.",
+    load: () => import("./pages/Privacy"),
   },
   {
     path: "/barrierefreiheit",
     title: `Barrierefreiheit | ${SITE_NAME}`,
     description:
       "Erklärung zur digitalen Barrierefreiheit der Website der Herzgruppen im Kreis Reutlingen.",
+    load: () => import("./pages/Accessibility"),
   },
 ];
 
