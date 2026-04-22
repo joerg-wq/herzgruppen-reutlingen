@@ -6,8 +6,7 @@ import { useEffect, lazy, Suspense } from "react";
 import { Spinner } from "@/components/ui/spinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { getMetaForPath } from "./routes";
-import { BASE_URL } from "./config";
+import SEO from "./components/SEO";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -41,42 +40,11 @@ function ScrollToTop() {
   return null;
 }
 
-function MetaUpdater() {
-  const [location] = useLocation();
-  useEffect(() => {
-    const meta = getMetaForPath(location);
-    if (meta) {
-      document.title = meta.title;
-
-      const setMeta = (selector: string, content: string) => {
-        const el = document.querySelector(selector);
-        if (el) el.setAttribute("content", content);
-      };
-
-      setMeta('meta[name="description"]', meta.description);
-      setMeta('meta[property="og:title"]', meta.title);
-      setMeta('meta[property="og:description"]', meta.description);
-      setMeta('meta[property="og:url"]', `${BASE_URL}${meta.path === "/" ? "" : meta.path}`);
-      setMeta('meta[name="twitter:title"]', meta.title);
-      setMeta('meta[name="twitter:description"]', meta.description);
-
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!canonical) {
-        canonical = document.createElement("link");
-        canonical.rel = "canonical";
-        document.head.appendChild(canonical);
-      }
-      canonical.href = `${BASE_URL}${meta.path === "/" ? "" : meta.path}`;
-    }
-  }, [location]);
-  return null;
-}
-
 function Router() {
   return (
     <>
       <ScrollToTop />
-      <MetaUpdater />
+      <SEO />
       <Suspense fallback={
         <div className="flex items-center justify-center min-h-[60vh]">
           <Spinner className="w-8 h-8 text-primary" />
