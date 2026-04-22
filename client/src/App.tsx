@@ -6,19 +6,13 @@ import { useEffect, lazy, Suspense } from "react";
 import { Spinner } from "@/components/ui/spinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { getMetaForPath } from "./routes";
-import { BASE_URL } from "./config";
+import SEO from "./components/SEO";
+import { ROUTE_META } from "./routes";
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Locations = lazy(() => import("./pages/Locations"));
-const Join = lazy(() => import("./pages/Join"));
-const Organization = lazy(() => import("./pages/Organization"));
-const FAQ = lazy(() => import("./pages/FAQ"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Imprint = lazy(() => import("./pages/Imprint"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Accessibility = lazy(() => import("./pages/Accessibility"));
+const lazyRoutes = ROUTE_META.map((r) => ({
+  path: r.path,
+  component: lazy(r.load),
+}));
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -41,58 +35,20 @@ function ScrollToTop() {
   return null;
 }
 
-function MetaUpdater() {
-  const [location] = useLocation();
-  useEffect(() => {
-    const meta = getMetaForPath(location);
-    if (meta) {
-      document.title = meta.title;
-
-      const setMeta = (selector: string, content: string) => {
-        const el = document.querySelector(selector);
-        if (el) el.setAttribute("content", content);
-      };
-
-      setMeta('meta[name="description"]', meta.description);
-      setMeta('meta[property="og:title"]', meta.title);
-      setMeta('meta[property="og:description"]', meta.description);
-      setMeta('meta[property="og:url"]', `${BASE_URL}${meta.path === "/" ? "" : meta.path}`);
-      setMeta('meta[name="twitter:title"]', meta.title);
-      setMeta('meta[name="twitter:description"]', meta.description);
-
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!canonical) {
-        canonical = document.createElement("link");
-        canonical.rel = "canonical";
-        document.head.appendChild(canonical);
-      }
-      canonical.href = `${BASE_URL}${meta.path === "/" ? "" : meta.path}`;
-    }
-  }, [location]);
-  return null;
-}
-
 function Router() {
   return (
     <>
       <ScrollToTop />
-      <MetaUpdater />
+      <SEO />
       <Suspense fallback={
         <div className="flex items-center justify-center min-h-[60vh]">
           <Spinner className="w-8 h-8 text-primary" />
         </div>
       }>
       <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/locations" component={Locations} />
-      <Route path="/join" component={Join} />
-      <Route path="/organization" component={Organization} />
-      <Route path="/faq" component={FAQ} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/impressum" component={Imprint} />
-      <Route path="/datenschutz" component={Privacy} />
-      <Route path="/barrierefreiheit" component={Accessibility} />
+      {lazyRoutes.map((r) => (
+        <Route key={r.path} path={r.path} component={r.component} />
+      ))}
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>
